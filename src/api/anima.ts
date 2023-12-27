@@ -1,3 +1,7 @@
+import React from 'react'
+
+const anima = () => {
+    
 //useQuery 세팅 예시
 
 // import axios from "axios";
@@ -50,3 +54,9 @@
 
 // if (isError) {
 //   return <p>오류가 발생하였습니다...!</p>;
+  return (
+   null
+  )
+}
+
+export default anima
