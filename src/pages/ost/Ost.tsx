@@ -3,7 +3,7 @@ import {utubeApi} from 'xios/utube';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 // import * as S from '../ost/OstStlye';
-type Utube = {};
+
 
 const Ost = () => {
   const [utubeData, setUtubeDats] = useState<any>([]);
