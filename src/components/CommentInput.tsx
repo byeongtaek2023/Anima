@@ -7,6 +7,7 @@ const CommentInput = () => {
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const newComment = {};
   };
 
   return (
