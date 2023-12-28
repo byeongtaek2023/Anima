@@ -1,0 +1,2131 @@
+[
+    {
+        "id": "O298",
+        "type": "OPERATION_RECOMMEND",
+        "name": "내게 가장 멋진 히어로, 아버지",
+        "item_list": [
+            {
+                "id": 18296,
+                "name": "극장판 짱구는 못말려 9기 : 어른제국의 역습",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/6bba8831-f03e-4e7d-9bc5-532620a2df5e.jpg",
+                        "crop_ratio": "0,131,729,541"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/cfbf1345-92ac-42b2-aba7-4e846d025369.jpg",
+                        "crop_ratio": "111,13,909,462"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "극장판",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "개그",
+                    "일상"
+                ],
+                "content": "떡잎마을에 20세기 박물관이 생기자 어른들은 그곳에 푹 빠져 헤어 나오지 못한다. 그러던 어느 날, 20세기 박물관은 TV를 통해 중요한 안내 방송을 한다. 그때부터 어른들은 어린아이처럼 행동하기 시작했고, 다음 날 아침에는 박물관에서 보낸 트럭을 타고 단체로 사라진다. 그 이후 남겨진 아이들도 20세기 박물관에서 보낸 트럭에 실려 어딘가로 끌려가고, 짱구와 친구들은 이리저리 도망친다. 그러다 어른들을 찾으러 간 20세기 박물관에서 이 모든 일을 꾸민 켄을 만난다. 켄은 어른들이 20세기의 냄새에 취해 어린 시절로 돌아갔다고 하면서, 자신의 목표는 20세기를 되살리는 것이라고 한다. 한편, 짱구는 20세기 박물관에서 아버지와 어머니를 구하고, 한자리에 모인 짱구 가족들은 켄의 음모를 막기 위해 마지막 결전을 준비하는데..",
+                "avg_rating": 4.4,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 23811,
+                "name": "극장판 짱구는 못말려 22기 : 정면승부! 로봇아빠의 역습",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/64810727-7668-400c-b8d3-cb9fe9636ef8.jpg",
+                        "crop_ratio": "63,417,538,685"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/057f0873-e052-48ca-8562-44cfd1f971eb.jpg",
+                        "crop_ratio": "30,38,986,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "극장판",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "개그",
+                    "일상"
+                ],
+                "content": "\"어느 날, 로봇이 되어 돌아온 짱구 아빠!\r\n짱구는 그 동안 영화에서만 봤던 슈퍼히어로가 되어 특별한 능력을 보여주는 로봇 아빠가 자랑스럽다. \r\n그러나 갑자기 무시무시한 모습으로 변하는 로봇 아빠와 함께 떡잎마을을 무너뜨리려는 거대한 음모가 드러나는데… \r\n\r\n과연, 로봇 아빠와 짱구 가족은 마을의 평화를 지켜낼 수 있을까? \r\n가족의 운명을 건 거대한 전쟁이 시작된다!\"",
+                "avg_rating": 4.3,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39363,
+                "name": "우리 딸을 위해서라면, 나는 마왕도 쓰러뜨릴 수 있을지 몰라",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/17f980be-e15c-444e-9428-803bdd8a0a87.jpg",
+                        "crop_ratio": "0,180,600,518"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/408716c5-bc34-41e4-86dc-9b6d265780d1.jpg",
+                        "crop_ratio": "0,0,630,354"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "치유"
+                ],
+                "content": "젊은 나이에 두각을 드러내며 인근에 그 이름을 알린 모험가 청년 데일. 어느 의뢰로 깊은 숲 속에 발을 들인 그는 그곳에서 바짝 마른 어린 마족 소녀와 만난다. 죄인의 낙인을 짊어진 소녀 라티나를 그대로 숲에 버려두지 못하고 데일은 그녀의 보호자가 되기로 결심하지만, 정신을 차리고 보니 완전히 딸바보가 되어 있다!?",
+                "avg_rating": 4.3,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39833,
+                "name": "ID:INVADED",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2f553055-798e-4284-895c-5790e6270e88.jpg",
+                        "crop_ratio": "0,307,1024,883"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/cadefa82-3611-4d8a-a107-c7615c637a38.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": true,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": true,
+                "is_laftel_original": false,
+                "content_rating": "성인 이용가",
+                "is_ending": true,
+                "genre": [
+                    "액션",
+                    "SF",
+                    "추리",
+                    "범죄"
+                ],
+                "content": "살의를 감지할 수 있는 시스템 '미즈하노메'를 사용하여 범죄사건을 조사하는 조직, 통칭 '쿠라'.\r\n그리고 '미즈하노메'의 파일럿으로 범인의 심층심리 '살의의 세계(이드)'에 들어가 사건을 추리하는 명탐정 사카이도.\r\n빈발하는 흉악한 수수께끼의 사건과 그 곳에 모습을 드러냈다 숨겼다를 반복하는 연쇄살인마 메이커 '존 워커'를 쫓는다",
+                "avg_rating": 4.7,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40815,
+                "name": "(자막) SPY×FAMILY part 1",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/5feff6ad-7df5-4bcf-9839-a1a54c9a0551.jpg",
+                        "crop_ratio": "0,115,1024,691"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/827cf81b-aeb8-4fdb-aa7f-7c12e1ee56b6.jpg",
+                        "crop_ratio": "0,0,640,360"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "액션",
+                    "개그",
+                    "로맨스"
+                ],
+                "content": "'사람은 누구나 아무에게도 보여줄 수 없는 자신을 갖고 있다--\r\n\r\n세계 각국이 물밑에서 치열하게 정보전을 펼치는 시대.\r\n오스타니아와 웨스탈리스는 십수 년간에 걸쳐 냉전 상태에 있었다.\r\n\r\n웨스탈리스의 정보국 대동과 <WISE> 소속의 수완가 스파이인 <황혼>은 동서 평화를 위협하는 위험인물, 오스타니아의 국가통일당 총재 도노반 데스몬드의 동향을 살피기 위해 어떤 극비 임무를 수행하게 된다.\r\n\r\n그 이름은 오퍼레이션 <올빼미>.\r\n\r\n임무 내용은 \"일주일 이내에 가족을 만들어, 데스몬드의 아들이 다니는 명문 학교의 친목회에 잠입하라\". \r\n\r\n<황혼>은 정신과 의사 로이드 포저로 위장하고 가족을 만들게 된다.\r\n\r\n하지만, 그가 만난 딸 아냐는 마음을 읽을 수 있는 초능력자, 아내 요르는 암살자였다!\r\n3명의 이해가 일치하여 서로 정체를 숨기면서 함께 생활하게 되는데.\r\n\r\n해프닝 연속인 임시 가족에게, \r\n세계의 평화는 맡겨졌다──.",
+                "avg_rating": 4.9,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41199,
+                "name": "버디 대디스",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/dd8986d0-8182-44af-b655-e0cf462fe2f4.jpg",
+                        "crop_ratio": "0,229,1024,805"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/82b47c44-8ee2-4d81-af73-edbf1a1c2c9a.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "액션",
+                    "개그",
+                    "범죄",
+                    "일상"
+                ],
+                "content": "살인청부업자 버디의 육아 분투기?!\r\n\r\n노린 타깃은 놓치지 않는다. 그런 두 살인청부업자 버디가 4살 여자아이를 돌보게 되었다. 그렇게 새롭게 시작된 건 핫 & 쿨한 두 남자와 천진난만한 소녀의 가족생활. 어떤 일이든 해내는 두 남자였지만 한 명의 애를 상대로는 악전고투했는데, 식사 준비에서부터 놀이 상대, 어린이집 등원 등으로 허둥거리기 일쑤였다. 그럼에도 일 관련 의뢰는 거절할 수 없었다.\r\n\r\n거기에 더해 여자아이는 두 사람이 처리했던 극악무도한 마피아 보스의 숨겨진 아이였다...! \r\n과연 일과 육아를 양립할 수 있을 것인가. 그리고 일시적으로 맺어진 가족에게 행복은 찾아올 수 있을 것인가.",
+                "avg_rating": 4.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41380,
+                "name": "마이 홈 히어로",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/e4888235-46d3-4428-aba3-d99ea72ab7db.jpg",
+                        "crop_ratio": "27,606,729,1001"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/0c7a52a7-12f0-4c6f-81dd-d50beaa1f502.jpg",
+                        "crop_ratio": "0,0,640,360"
+                    }
+                ],
+                "is_adult": true,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "성인 이용가",
+                "is_ending": true,
+                "genre": [
+                    "미스터리",
+                    "추리",
+                    "스릴러"
+                ],
+                "content": "[47년간 한 번도 법을 어기지 않고 살아왔다.\r\n하지만, 오늘부터는 살인귀다. 아아......]\r\n\r\n사람이 사람을 죽였을 때, 대체 어떤 기분일까를 \r\n보잘것없는 회사원, 47세의 '토스 테츠오'는\r\n울컥울컥 피를 쏟아내는 사체를 앞에 두고 생각하고 있었다──.\r\n\r\n시간을 거슬러 올라 겨우 몇 시간 전.\r\n\r\n테츠오는 반항기의 딸 '레이카'에게 경원시 되었지만 \r\n사랑하는 아내 카센과 함께 그녀의 성장을 누구보다도 바라며 일상을 보내고 있었다.\r\n\r\n어느 날, 테츠오가 독립해 자취를 시작한 레이카를 찾아갔을 때 \r\n딸의 얼굴에는 맞아서 생긴 듯한 멍이 있었다.\r\n추궁했지만 레이카는 제대로 대답하지 않았다.\r\n\r\n굳게 결심한 테츠오는 레이카의 집에 몰래 들어가 옷장에 몸을 숨긴다.\r\n그리고 보게 된 것이 레이카에게 손을 올린 '조직원'인 남자친구 '마토리 노부토'.\r\n게다가 노부토는 전 여자친구를 때려 죽인 과거가 있었고 조직원들과 함께\r\n레이카를 노리는 '어떤 계획'을 진행하고 있는 초 위험인물이었다──!\r\n\r\n[레이카만큼은 지켜야 해.\r\n설령 우리 부부에게 최악의 결말이 찾아오더라도......]\r\n\r\n사랑하는 가족을 위해 '평범하고 약한 아저씨'는\r\n뒷세계의 실력자들을 상대로 \r\n목숨과 지혜를 건 싸움을 시작한다!",
+                "avg_rating": 4.1,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41674,
+                "name": "모험가가 되고 싶다며 도시로 떠났던 딸이 S랭크가 되었다",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/c8977647-9f54-49f5-932d-eaf16f748e6a.jpg",
+                        "crop_ratio": "0,188,1000,751"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": false,
+                "genre": [
+                    "판타지"
+                ],
+                "content": "젊은 시절 마수에게 습격 당해 한쪽 다리를 잃은 전 모험가 ‘벨그리프'는 고향으로 돌아와 마을 사람들과 하루하루 평온하게 살아가던 중,\r\n근처 숲에 버려져 있던 여자아이를 줍고, 자신의 딸 ‘안젤린’으로서 혼자 키워낸다.\r\n이윽고 성장한 딸은 아버지를 동경하여 모험가가 되고 싶다며 수도의 길드로 떠난다.\r\n그로부터 5년 후 –\r\n마음 어딘가에서 아직 모험가로서의 자신을 꿈꾸고 있는 아버지.\r\n한편, 딸은 모험가로서 최고등급인 ‘S등급'이 되어 있었다?\r\n모험가라는 삶을 잇는, 아버지와 딸의 유대 –.",
+                "avg_rating": 3.7,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            }
+        ]
+    },
+    {
+        "id": "T177",
+        "type": "TAG_RECOMMEND",
+        "name": "그저 바라보고만 있어도 생기는 미소",
+        "item_list": [
+            {
+                "id": 13569,
+                "name": "(더빙) 코코몽 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/c084ffe8-842d-4490-8a49-88d04918219b.jpg",
+                        "crop_ratio": "0,75,160,165"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/dac16b66-e014-4156-a877-f14cf8799d54.jpg",
+                        "crop_ratio": "20,0,1004,554"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "아동",
+                    "일상",
+                    "치유"
+                ],
+                "content": "냉장고 문이 닫히면 음식들이 움직이기 시작한다! 얼음물고기에 의해서 생명력을 얻게 된 코코몽과 친구들. 소시지 원숭이 '코코몽'. 계란 토끼 '아로미' 등등! 코코몽과 친구들이 떠나는 신나고 유쾌한 모험의 세계가 펼쳐진다!!",
+                "avg_rating": 3.0,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 23792,
+                "name": "주문은 토끼입니까? 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/cc4319e9-a87f-4d64-ae4e-9ea905bd4197.jpg",
+                        "crop_ratio": "0,391,599,728"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/a4531716-0604-4c7f-889d-5b6ef402bd5f.jpg",
+                        "crop_ratio": "0,11,640,371"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "고등학교에 입학하게 되어 새로운 도시로 오게된 코코아는 길을 잃고 우연히 찻집 래빗하우스에 들어가게된다. 실은 그곳은 그녀가 생활하게 될 곳 이었는데... 모든것이 귀여운 래빗하우스에서 귀여운 그녀들의 생활이 시작된다!",
+                "avg_rating": 3.9,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 24104,
+                "name": "바라카몬",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/8769faec-5aa9-4ed2-9479-329de57e2849.jpg",
+                        "crop_ratio": "0,251,623,601"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/8c919af6-32f4-4b15-a020-37e3a14cfea7.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그",
+                    "치유"
+                ],
+                "content": "“우선……손님은 현관으로 들어오라구!”\r\n 어떤 이유로 인해 일본의 가장 서쪽 끝 섬에서 살게 된 젊은 꽃미남 서예가 ‘한다 세이슈’.\r\n익숙지 않은 시골 생활을 시작한 선생님 앞에 천진난만한 섬 어린이 나루가 나타난다!\r\n‘젠장……어떻게 생겨먹은 정보망이냐……!!’\r\n어느새 자택이 동네 꼬마들의 아지트가 되어있질 않나, 요상한 소문이 하루 만에 온 동네에 쫙 퍼지질 않나…\r\n익숙지 않은 시골 생활에 고생하는 ‘한다 세이슈’, 도시에서 자란 츤데레 선생님과 그릇이 커도 너무나 큰 섬사람들이 펼치는 하트 히트 아일랜드 코미디! \r\n이곳이라면 세이슈도 아주 조금은 솔직해질 수 있지 않을까.",
+                "avg_rating": 4.3,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 33271,
+                "name": "안녕! 보노보노 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/459cbf5f-abd7-46ff-ba19-351c42b635e5.jpg",
+                        "crop_ratio": "0,200,422,436"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/2c22c181-8bdc-495f-9c69-c0b8239cf0fe.jpg",
+                        "crop_ratio": "0,0,1022,575"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "아동",
+                    "일상",
+                    "개그",
+                    "치유"
+                ],
+                "content": "30주년 기념으로 제작되는 귀여운 아기 해달 보노보노와 친구들의 이야기",
+                "avg_rating": 4.1,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 34413,
+                "name": "(더빙) 코코몽 2기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/6d1f822a-317e-4196-bec9-11268f620d56.jpg",
+                        "crop_ratio": "0,149,729,559"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "아동",
+                    "일상",
+                    "치유"
+                ],
+                "content": "냉장고 문이 닫히면, 냉장고 속 음식과 야채들이 잠에서 깨어난대요. 골목대장 소시지 원숭이 '코코몽'과 토끼가 된 계란 반쪽 '아로미', 그리고 다양한 모습으로 변한 냉장고 속 친구들. 귀여운 코코몽과 그의 친구들이 만들어내는 신나고 재밌는 모험의 세계로 함께 떠나요.",
+                "avg_rating": 4.3,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 34416,
+                "name": "헬로 코코몽 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/8871f046-3e63-4df6-a348-2c25c1ba904c.jpg",
+                        "crop_ratio": "15,0,636,349"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "아동",
+                    "일상",
+                    "치유"
+                ],
+                "content": "채소와 과일을 먹으면 힘이 나는 로보콩과 함께 돌아온 우리 친구, 코코몽! 더 신 나고 더 재미있어진 싱싱 놀이터와 영양 만점의 싱싱한 채소들이 가득한 싱싱 농장에서 오늘도 즐겁게 뛰어노는 코코몽과 친구들! 하지만 지구 온난화 때문에 생겨난 세균킹과 그 부하들은 코코몽과 싱싱마을 친구들의 그릇된 식습관을 이용해, 싱싱에너지를 떨어뜨리고, 싱싱마을을 빼앗을 계략을 꾸미는데. 코코몽과 친구들이 싱싱마을을 지켜내고, 올바른 식습관을 가질 수 있을까?",
+                "avg_rating": 3.7,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 34417,
+                "name": "헬로 코코몽 2기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/74e186e5-4842-4fb9-9f89-855921edadf8.jpg",
+                        "crop_ratio": "0,405,729,815"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "아동",
+                    "일상",
+                    "치유"
+                ],
+                "content": "채소와 과일을 먹으면 힘이 나는 로보콩과 함께 돌아온 우리 친구, 코코몽! 더 신 나고 더 재미있어진 싱싱 놀이터와 영양 만점의 싱싱한 채소들이 가득한 싱싱 농장에서 오늘도 즐겁게 뛰어노는 코코몽과 친구들! 하지만 지구 온난화 때문에 생겨난 세균킹과 그 부하들은 코코몽과 싱싱마을 친구들의 그릇된 식습관을 이용해, 싱싱에너지를 떨어뜨리고, 싱싱마을을 빼앗을 계략을 꾸미는데. 코코몽과 친구들이 싱싱마을을 지켜내고, 올바른 식습관을 가질 수 있을까?",
+                "avg_rating": 3.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 37630,
+                "name": "센토루의 고민",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/b0cadf64-f745-4796-8548-e1fd68e0de29.jpg",
+                        "crop_ratio": "0,281,1000,844"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "주로 히메라고 불리는 키미하라 히메노는 극히 평범한 고등학교 생활을 보내고 있는 여고생이지만 조금 다른 점은 켄타로우스의 형태라는 것이었다. 하지만 용인인 노조미, 각인인 쿄코, 익인인 반장, 뱀인인 사스사스. 각기 다른 형태의 반 친구들과 즐거운 고등학교 생활을 보내고 있다. 히메의 사촌동생인 시노와 그녀의 친구 마키치, 반장의 여동생 4명도 등장해 인간이지만 인간이 아닌 소녀들의 귀여운 일상이 펼쳐진다♪",
+                "avg_rating": 3.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38535,
+                "name": "히나마츠리",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/937a8e4d-93ac-4a79-9302-154112200812.jpg",
+                        "crop_ratio": "0,360,426,600"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/3879c3b7-059f-48fc-8d1a-c5999caef42e.jpg",
+                        "crop_ratio": "2,0,1021,572"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "개그",
+                    "일상",
+                    "치유"
+                ],
+                "content": "야쿠자, 아시카와 파에서 두각을 나타내는 조직원 닛타. 어느 날 그의 집에 수수께끼의 소녀 히나가 나타난다. 히나의 엄청난 힘에 굴복하여 히나에게 의식주를 제공하게 된 닛타. 닛타는 자신을 괴롭히던 히나의 초능력이 상황에 따라 엄청난 득이 될 수도 있다는 사실을 깨닫고, 그와 동시에 닛타에게 부두목의 가혹한 명령이 떨어진다.",
+                "avg_rating": 4.3,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38922,
+                "name": "이웃집 흡혈귀 씨",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/fd6cbbb0-bec6-4552-8558-559b3a585ce6.jpg",
+                        "crop_ratio": "0,198,414,430"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/8a64a425-8029-4df4-9294-447ad2738c5b.jpg",
+                        "crop_ratio": "0,0,810,456"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그",
+                    "치유"
+                ],
+                "content": "아마노 아카리는 깊은 숲 속에서 서양식 저택을 찾고 있었다. 그곳에는 오랫동안 모습이 변하지 않는 인형 소녀가 살고 있다고 한다. 하지만, 숲 속에서 길을 잃어 버리고, 갑자기 나타난 소피라는 소녀의 도움을 받는다. 소피는 자신을 흡혈귀라고 소개하는데…",
+                "avg_rating": 4.3,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38990,
+                "name": "신 도라에몽 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/b8ab9b66-c9e9-4905-a59d-b7e97ebcba0a.jpg",
+                        "crop_ratio": "0,257,729,667"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "모험",
+                    "아동",
+                    "일상",
+                    "개그",
+                    "SF",
+                    "치유",
+                    "판타지"
+                ],
+                "content": "인기 시리즈 도라에몽이 새로운 그림체와 새로운 이야기로 돌아온다!\r\n아주 허약하고 겁많은 초등학생 진구는 하루하루를 의미없이 살아간다. 퉁퉁이과 비실이에게 괴롭힘을 당하던 어느 날, 22세기에 사는 진구의 자손이 도라에몽을 보낸다. 책상 서랍에서 타임머신을 장착하고 튀어나온 고양이 모양의 로보트 도라에몽. 귀가 없는 이 고양이를 닮은 로봇 도라에몽 덕분에 진구는 차츰 용기 있고 씩씩한 소년으로 변해간다.",
+                "avg_rating": 4.0,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39018,
+                "name": "신 도라에몽 13기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/45713ab8-7fda-40e3-9997-56714b8983ba.jpg",
+                        "crop_ratio": "0,23,729,433"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "모험",
+                    "아동",
+                    "일상",
+                    "개그",
+                    "SF",
+                    "치유",
+                    "판타지"
+                ],
+                "content": "인기 시리즈 도라에몽이 새로운 그림체와 새로운 이야기로 돌아온다! 그 열 세번째! 아주 허약하고 겁많은 초등학생 진구는 하루하루를 의미없이 살아간다. 퉁퉁이과 비실이에게 괴롭힘을 당하던 어느 날, 22세기에 사는 진구의 자손이 도라에몽을 보낸다. 책상 서랍에서 타임머신을 장착하고 튀어나온 고양이 모양의 로보트 도라에몽. 귀가 없는 이 고양이를 닮은 로봇 도라에몽 덕분에 진구는 차츰 용기 있고 씩씩한 소년으로 변해간다.",
+                "avg_rating": 4.1,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39092,
+                "name": "동거인은 무릎, 때때로 머리 위",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/d51051cf-c74a-4364-8c45-e3b3fa75a3c7.jpg",
+                        "crop_ratio": "0,112,420,348"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/b5d0d41a-2cfd-4b81-99d1-9d4dc5c594bb.jpg",
+                        "crop_ratio": "0,0,640,360"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그",
+                    "치유"
+                ],
+                "content": "\"난 지금, 고양이한테 목숨을 위협받고 있다…\"\r\n미스터리 작가 미카즈키 스바루는, 자신만의 상상의 세계를 방해하는 타인을 거북해한다.\r\n그런 스바루에게 찾아온 것은 1마리의 새끼고양이. 고양이의 불가사의한 행동을 보고 있는 와중에, 소설의 소재가 떠오르는데……!\r\n일상의 사소함이 겹겹이 쌓이며, 우리들은 「가족」이 되어간다――\r\n서툰남자×한 마리의 새끼고양이. 둘이서 찾아가는 행복한 생활",
+                "avg_rating": 4.4,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39240,
+                "name": "논논비요리 : 베케이션",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/03c7d92f-e712-4730-9044-a0c8a52a0b44.jpg",
+                        "crop_ratio": "0,140,480,410"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "극장판",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그",
+                    "치유"
+                ],
+                "content": "아사히가오카 분교의 전교생은 단 5명.\r\n학년도 성격도 모두 다르지만 항상 같은 교실에서 사계절을 함께하며 여유로운 시골 라이프(?)를 즐기고 있다.\r\n어느 날 백화점 이벤트에서 특상에 당첨되어 오키나와 여행권을 받게 된 아사히가오카 분교생들. 여름방학이 끝나기 전, 다 같이 모여 부푼 마음을 안고 오키나와로 떠나는데...\r\n\r\n느리고 소소하지만 웃음, 감동, 따뜻함이 한가득.\r\n'논논비요리'의 소녀들이 보내는 일상 속 특별함을 만나 보자.",
+                "avg_rating": 4.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39589,
+                "name": "(무삭제) 히나마츠리",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/4828491b-142d-49ae-b15b-cf21691c5b7b.jpg",
+                        "crop_ratio": "0,405,480,676"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/12e63834-1e3c-4f76-b1ed-11285e3002d2.jpg",
+                        "crop_ratio": "0,0,960,540"
+                    }
+                ],
+                "is_adult": true,
+                "is_uncensored": true,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "성인 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유",
+                    "개그"
+                ],
+                "content": "야쿠자, 아시카와 파에서 두각을 나타내는 조직원 닛타. 어느 날 그의 집에 수수께끼의 소녀 히나가 나타난다. 히나의 엄청난 힘에 굴복하여 히나에게 의식주를 제공하게 된 닛타. 닛타는 자신을 괴롭히던 히나의 초능력이 상황에 따라 엄청난 득이 될 수도 있다는 사실을 깨닫고, 그와 동시에 닛타에게 부두목의 가혹한 명령이 떨어진다.",
+                "avg_rating": 4.7,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39633,
+                "name": "우치타마?! ~우리집 타마를 모르시나요?~",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/cee1b353-7bb2-497f-9c58-d6fdeea8effa.jpg",
+                        "crop_ratio": "0,204,624,555"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/b21436bb-fe41-417c-89ad-47ebbaa2a403.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "일상",
+                    "개그",
+                    "모험",
+                    "치유"
+                ],
+                "content": "어느 마을의 3번가에는 어느 포스터가 잔뜩 붙어있었다.\r\n포스터에 그려진 것은 꼬리 끝이 살짝 꺾인 고양이와\r\n'우리 집 타마를 모르시나요?'라는 글자.\r\n그 포스터를 바라보고 있는 소년에게는 푹신푹신한 귀와 끝이 살짝 꺾인 꼬리가...!?\r\n\r\n3번가의 고양이와 개들이 인간의 모습으로 돌아다닌다!?\r\n타마와 프렌즈의 냥&멍 더블 일상을 들여다보시겠습니까?",
+                "avg_rating": 4.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40003,
+                "name": "신들에게 주워진 남자 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/36fe19dc-3d4f-4dd9-9d60-43b597235bc4.jpg",
+                        "crop_ratio": "0,364,624,715"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/16349e13-9f8f-4e4a-8d93-f5e0c359ebf7.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "일상",
+                    "치유"
+                ],
+                "content": "악덕 기업에서 시스템 엔지니어로서 일하는 39세 독신 샐러리맨  타케바야시 료마는 \r\n홀로 아파트에서 어이없는 죽음을 맞이한다.\r\n천계로 올라간 료마였지만,\r\n창조신, 사랑의 여신, 생명의 신의 도움을 받아 어린아이의 모습으로 이세계로 전생?!\r\n깊은 숲에서 혼자 느긋하게 살기 시작한 8살의 료마는 \r\n마법으로 길들인 슬라임들과의 연구에 몰두하면서 새로운 생활을 즐긴다.\r\n\r\n다정한 사람들에게 둘러싸인 매일이 즐거운\r\n한가로운 이세계 슬로 라이프 판타지!",
+                "avg_rating": 4.4,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40596,
+                "name": "(더빙) 학원 베이비시터즈 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/230fb1f1-1de2-4bac-8632-a32cf52bcbc0.jpg",
+                        "crop_ratio": "0,439,1024,1015"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/a5e90eca-e9ab-4202-9c7f-814bf36830a9.jpg",
+                        "crop_ratio": "0,0,640,360"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "7세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "비행기 추락 사고로 부모님을 여읜 중학생 류이치와 그의 어린 동생 코타로. 모리노미야 학원 이사장은 그런 두 형제의 후견인이 되어주는 대신 한 가지 조건을 내건다. 그것은 바로, 인원 부족으로 시달리는 모리노미야 학원 베이비시터부에 가입하여 아이 돌보미 일을 하라는 것! 지칠 줄 모르는 장난꾸러기 아이들이 펼치는 수많은 사건 사고들! 과연 류이치는 이 고난을 이겨내고, 어린이들과 잘 어울릴 수 있을까...?",
+                "avg_rating": 4.9,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40865,
+                "name": "(자막) 학원 베이비시터즈 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/773bac1a-3f68-4a08-9449-3cb2811f547f.jpg",
+                        "crop_ratio": "0,439,1024,1015"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/0558beed-418c-45c7-bac9-57aab894bfbe.jpg",
+                        "crop_ratio": "68,0,1024,538"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "비행기 사고로 부모님을 잃은 류이치와 코타로 형제. \r\n같은 사고로 아들 부부를 잃은 모리노미야 학원 이사장 할머니는 형제를 맡아주는 대신, \r\n류이치에게 베이비시터부에 가입하여 교내 어린이 놀이방에서 알바를 하라고 명하는데-?!",
+                "avg_rating": 4.8,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41257,
+                "name": "신들에게 주워진 남자 2기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/49062334-54f1-4211-9129-d03f4af351ed.jpg",
+                        "crop_ratio": "0,546,1024,1122"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/8b16abb8-51e3-4a88-82e3-248350dacac8.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "일상",
+                    "치유"
+                ],
+                "content": "'상냥함에 둘러 싸인 이세계 슬로 라이프를 다시 한번'\r\n\r\n신들에 의해 어린아이의 모습으로 이세계에 전생한 료마는 자밀 공작가를 시작으로 따뜻한 사람들과의 만남을 통해 이세계에서의 삶을 누리고 있었다.\r\n\r\n전생에서의 경험과 슬라임들의 능력을 구사해서 개업한 세탁소 '뱀부 포레스트'는 계속 발전했고 어느 날 다른 마을에 '2호점'를 내는 \r\n이야기가 나오게 된다.\r\n\r\n시작의 마을 기무르를 떠나... 료마에게 여행의 때가 도래한다?!\r\n\r\n넓어지는 세계의 끝에서 새로운 만남과 도전이 료마를 기다리고 있다.\r\n한가로운 이세계 슬로 라이프 판타지 시즌 2 개막!",
+                "avg_rating": 3.9,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41503,
+                "name": "외출하는 아기상어",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/d1ea9afc-abbe-4bda-96de-5828f5900172.jpg",
+                        "crop_ratio": "0,218,624,568"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": false,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "외출하는 아기 상어",
+                "avg_rating": 4.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41606,
+                "name": "천사의 3P! - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/28154621-f5d8-4924-83fb-80813315b24b.jpg",
+                        "crop_ratio": "0,279,700,673"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유",
+                    "음악",
+                    "드라마"
+                ],
+                "content": "아동복지시설 리틀 윙에서 사는 세 명의 여자아이는 리틀 윙이 사라진다는 소식에 밴드를 결성해 마지막으로 그곳에서 멋진 공연을 하고 싶어 한다. 하지만 방법을 모르는 아이들은 쿄에게 먼저 연락해 도와달라고 부탁하고 쿄는 이를 승낙한다.",
+                "avg_rating": 4.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40237,
+                "name": "마이코네 행복한 밥상",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/dadb37eb-a319-439e-a361-b0f0cd892273.jpg",
+                        "crop_ratio": "0,229,1024,805"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/bb28b8e3-463f-4d1a-864c-2f5f5f6be3d6.jpg",
+                        "crop_ratio": "0,0,819,460"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "치유",
+                    "일상",
+                    "음식"
+                ],
+                "content": "교토의 카가이를 무대로 마이코들이 일을 마치고 돌아오는 숙소에서 \r\n마이코들의 식사를 만드는 요리사가 된 키요와 교토 제일의 마이코가 되기 위해 \r\n수련하는 키요의 소꿉친구 스미레, 그리고 함께 생활하는 마이코들의 일상이 \r\n맛있는 요리와 함께 따뜻하게 펼쳐진다....",
+                "avg_rating": 4.1,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40247,
+                "name": "슈퍼커브",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2b55d2cc-6491-4ccb-aa3a-f78bfc2e580e.jpg",
+                        "crop_ratio": "0,425,1000,988"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/a3778529-b129-4fc5-ad61-53d923feffbb.jpg",
+                        "crop_ratio": "3,0,997,559"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "나에게는 아무것도 없다. 라고 생각했다.\r\n야마나시현 호쿠토시의 고등학교에 다니는 여자아이 코구마.\r\n부모님도 친구도 취미도 없는, 아무것도 없는 나날을 보내는 그녀지만, 문득 본 중고 슈퍼 커브를 구입한 것으로 조금씩 단조로웠던 매일이 변하기 시작한다.",
+                "avg_rating": 4.5,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40615,
+                "name": "유루캠△ 1기 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/c539b16a-7e39-4735-86c5-84dbfffa5111.jpg",
+                        "crop_ratio": "0,398,623,748"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/6e6e2776-9f5f-45b5-9b46-5fca7a0968be.jpg",
+                        "crop_ratio": "5,0,1019,570"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "치유",
+                    "일상",
+                    "음식"
+                ],
+                "content": "이것은 어느 겨울날의 이야기.\r\n시즈오카에서 야마나시로 전학 온 여고생 나데시코는 '천 엔 지폐에 그려진 후지산'을 보기 위해 \r\n자전거를 타고 모토스코까지 왔지만 안타깝게도 날씨는 흐림이었다.\r\n\r\n후지산도 보지 못하고 지친 나데시코는 그 자리에서 잠이 들어 버린다. 정신을 차려 보니 어느새 밤이었다.\r\n낯선 장소에 돌아가는 길이 어디인지도 모른다.\r\n불안함에 떨던 나데시코를 구원한 것은 솔로 캠핑을 좋아하는 여자아이 시마 린이었다.\r\n\r\n언 몸을 녹이기 위해 모닥불 앞에 앉는 두 사람.\r\n파직파직 하고 장작이 갈라지는 소리가 호숫가의 정적 속으로 스며든다.\r\n모닥불가에 앉아 카레면을 먹으며 이야기하는 나데시코와 린.\r\n이윽고 두 사람이 기다리고 기다리던 순간이 찾아온다.\r\n\r\n'보인다...... 후지산......'\r\n\r\n나데시코와 린 두 사람의 만남에서 시작되는\r\n아웃도어 걸즈 스토리....",
+                "avg_rating": 4.8,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            }
+        ]
+    },
+    {
+        "id": "O190",
+        "type": "OPERATION_RECOMMEND",
+        "name": "혼밥은 이제 그만! 덕후들의 밥 먹는 방법",
+        "item_list": [
+            {
+                "id": 15983,
+                "name": "(더빙) 꿈빛 파티시엘 리마스터",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/22ecb7ba-64e6-4b45-9941-d5edcb117494.jpg",
+                        "crop_ratio": "0,148,1023,723"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/22f1d09c-f7b3-4658-9c9b-7606edf4471f.jpg",
+                        "crop_ratio": "9,13,1010,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": true,
+                "is_laftel_original": false,
+                "content_rating": "7세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "로맨스",
+                    "음식"
+                ],
+                "content": "행복을 느끼게 하는 마법같은 한 입!\r\n케이크를 잘 먹는 것 외에 어떠한 장점도 없다고 생각했던 14세 여자아이 감딸기. \r\n하고 싶은 일조차 없이 하루 하루를 보내던 중, 우연히 세인트 마리 학교의 앙리 선생님과 만나게 된다. \r\n“할머니의 맛을 재현하고 싶어!” 라며 꿈을 이루기 위해 세인트 마리 학교에 전학한 감딸기는 \r\n학원에 전해 내려오는 전설의 스위트 요정과 만나게 된다. \r\n요리 실력이라고는 전혀 없는 초보자로 매일 매일이 실패의 연속이지만, \r\n감딸기는 맛있는 과자 만들기를 위한 노력을 게을리하지 않는데..",
+                "avg_rating": 4.3,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 16199,
+                "name": "요리왕 비룡",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/6e25b031-bed7-4c12-9d59-c8fa10b4b55e.jpg",
+                        "crop_ratio": "0,261,800,710"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/4e58c7bd-2f82-4807-87c3-5de208f3bd6b.jpg",
+                        "crop_ratio": "0,0,632,356"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "시대물",
+                    "음식"
+                ],
+                "content": "19세기 청나라 말기, 중국 남서부 '국화루'에서 이야기는 시작된다. 뛰어난 요리장 '파이'의 요리솜씨를 바탕으로 유명해져서 번창한 국영식당 '국화루'는 핵심인 요리장 파이의 죽음으로 위기에 처하게 된다. 파이의 죽음 이후 남은 것은 파이의 어린 두 자녀, 누나인 '카린'과 남동생인 '유마오신'뿐. 그러던 와중에 파이의 옛제자인 '쇼안'이 나타나 두 남매에게서 국화루를 가로채려고 한다. '리이'제독은 마오와 쇼안의 요리대결로 국화루의 주인을 결정하라는 판결을 내리고, 둘의 진검 승부가 시작 된다.\r\n마오는 위기일발의 상황 속에도 연구를 거듭하여 어머니 '파이'의 요리를 떠올리며 대결에서 승리한다. 마오의 요리에 감동 받은 리이제독은 마오에게 국화루의 경영을 맡기는 대신 중국 요리의 본고장인 남부지방의 요리연수를 명한다. 마오의 요리승부는 지금부터 시작된다.",
+                "avg_rating": 3.9,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 24504,
+                "name": "식극의 소마 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/a3e62326-22d0-4229-9c65-e64bf73ab7b5.jpg",
+                        "crop_ratio": "0,133,879,629"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/2859c927-5c94-4faf-91dd-45e4e998b3dd.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "음식"
+                ],
+                "content": "'주간 소년 점프'의 화제작! 아찔한 요리만화가 온다…?! 온 몸의 감각을 일깨우는 '맛'의 향연!\r\n창조하는 새 요리 만화, 여기에 개막! '식극(食戟)' 개시!!\r\n 번화가에서 식당을 운영하는 집에서 자란 중학생 유키히라 소마. 요리사인 아버지를 뛰어넘는다는 목표를 위해 소마는 매일 수련의 나날을 보내고 있었다.\r\n그러던 어느 날 갑자기 아버지로부터 요리학교에 편입하라는 말을 듣게 된다! 소마는 본가를 떠나 학교 안의 기숙사를 찾아간다.\r\n그런데 그곳에는 호랑이 기숙사 사감이 이끄는 괴짜 기숙사생들이 즐비하고 있었다! \r\n더욱이 학교에선 토오츠키 전통의 요리 대결이 시작되려 하고 있었다-- \r\n토오츠키 학원 전통의 특수한 요리대결이 펼쳐진다!",
+                "avg_rating": 4.0,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 37595,
+                "name": "이세계 식당",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/259e8a78-74c5-455a-98aa-053f92b1691d.jpg",
+                        "crop_ratio": "0,83,479,394"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/5746e217-c39f-4bd1-8808-b99fbe68a13b.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "음식"
+                ],
+                "content": "직장가와 인접한 상점가 한구석. 강아지 간판이 눈에 띄는 상가 빌딩 지하 1층에 그 가게가 있다. 고양이가 그려진 문이 표식인 식당 '양식당 네코야'. 창업한 이래 50년간 직장가 샐러리맨의 배고픔을 달래 온 곳으로, 양식당이라지만 양식 이외의 메뉴도 풍부하다는 점이 특징이라면 특징인 지극히 평범한 식당이다. 그러나 '어떤 세계' 사람들에게는 특별하고 유일무이한 공간으로 탈바꿈한다. 네코야에는 한 가지 비밀이 있다. 정기 휴일인 매주 토요일, 네코야는 '특별한 손님'들로 북적거린다. 경이로운 맛의 특별한 요리를 내놓는 네코야는 '어떤 세계'사람들에게 이렇게 불린다.'이세계 식당'. 그리고 딸랑딸랑 방울 소리는 이번 주에도 변함없이 울려 퍼진다.",
+                "avg_rating": 4.2,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38318,
+                "name": "에미야 가의 오늘의 밥상",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/078d5f4b-8397-4300-a24c-eb6992a5ee88.jpg",
+                        "crop_ratio": "0,266,623,616"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/03de6dfd-ecce-4a67-b991-878c38d1c0b5.jpg",
+                        "crop_ratio": "10,0,614,340"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "음식",
+                    "판타지"
+                ],
+                "content": "조금은 복작대는 식탁 풍경. \r\n봄에도, 여름에도, 가을에도, 겨울에도 에미야 씨네 밥상에는 매일같이 맛있는 요리가 차려진다. \r\n자 그럼, 오늘은 뭘 만들면 좋을까?",
+                "avg_rating": 4.2,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40343,
+                "name": "(더빙) 토리코 1기 part 1 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/a01368aa-5b30-4d75-876e-a460fe771d97.jpg",
+                        "crop_ratio": "0,25,1024,601"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/3d0b6d3a-df50-46c5-b805-d5885326c4f3.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "액션",
+                    "개그",
+                    "모험",
+                    "음식"
+                ],
+                "content": "때는 바야흐로 구루메 시대! 새로운 맛을 탐미하고, 희귀한 식재료를 찾아 여행하는 미식가들의 시대이다. 주인공인 토리코는 세계가 인정한 미식 헌터, 사천왕 중 한 명으로 놀라운 후각과 엄청난 괴력을 자랑하는 인물. 이 세상에 숨겨진 산해진미를 찾아내 자신만의 풀코스를 만들겠다는 포부를 지닌 미식헌터 토리코와, 소심하고 유약하지만 실력과 열정만은 누구에게도 뒤지지 않는 최고의 요리사, 마츠가 만나면서 이야기가 시작된다. 상상만으로도 즐거운 식재료들을 찾아 다니는 기상천외한 모험! 세계 최고의 진미를 찾아 떠나는 상상을 초월한 여정이 시작된다.",
+                "avg_rating": 4.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40653,
+                "name": "슬로우 루프",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/3ff1598c-ebb3-4548-b317-e0afca174f8f.jpg",
+                        "crop_ratio": "0,184,623,534"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/6cec8c30-cdf6-4dd0-9d7b-911991f3dadf.jpg",
+                        "crop_ratio": "0,0,1000,563"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "음식",
+                    "드라마",
+                    "일상"
+                ],
+                "content": "바닷가에서 홀로, 돌아가신 아버지가 가르쳐주신 제물낚시를 즐기는 소녀 히요리.\r\n\r\n평소처럼 낚시를 하고 있는데 갑자기 바다에 들어가려고 하는 천진난만한 소녀 코하루와 만나게 되었습니다.\r\n둘은 같이 낚시를 하게 되었지만, 실은 서로의 부모님이 재혼을 하게 되면서 하나의 가족으로 엮이게 되었는데...\r\n\r\n엉뚱한 만남으로 [자매]가 되어버린 히요리와 코하루와 함께, \r\n[낚시]를 하면서 느긋하게 있어 보시지 않겠습니까?",
+                "avg_rating": 4.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40237,
+                "name": "마이코네 행복한 밥상",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/dadb37eb-a319-439e-a361-b0f0cd892273.jpg",
+                        "crop_ratio": "0,229,1024,805"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/bb28b8e3-463f-4d1a-864c-2f5f5f6be3d6.jpg",
+                        "crop_ratio": "0,0,819,460"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "치유",
+                    "일상",
+                    "음식"
+                ],
+                "content": "교토의 카가이를 무대로 마이코들이 일을 마치고 돌아오는 숙소에서 \r\n마이코들의 식사를 만드는 요리사가 된 키요와 교토 제일의 마이코가 되기 위해 \r\n수련하는 키요의 소꿉친구 스미레, 그리고 함께 생활하는 마이코들의 일상이 \r\n맛있는 요리와 함께 따뜻하게 펼쳐진다....",
+                "avg_rating": 4.1,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40615,
+                "name": "유루캠△ 1기 - 판권 부활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/c539b16a-7e39-4735-86c5-84dbfffa5111.jpg",
+                        "crop_ratio": "0,398,623,748"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/6e6e2776-9f5f-45b5-9b46-5fca7a0968be.jpg",
+                        "crop_ratio": "5,0,1019,570"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "치유",
+                    "일상",
+                    "음식"
+                ],
+                "content": "이것은 어느 겨울날의 이야기.\r\n시즈오카에서 야마나시로 전학 온 여고생 나데시코는 '천 엔 지폐에 그려진 후지산'을 보기 위해 \r\n자전거를 타고 모토스코까지 왔지만 안타깝게도 날씨는 흐림이었다.\r\n\r\n후지산도 보지 못하고 지친 나데시코는 그 자리에서 잠이 들어 버린다. 정신을 차려 보니 어느새 밤이었다.\r\n낯선 장소에 돌아가는 길이 어디인지도 모른다.\r\n불안함에 떨던 나데시코를 구원한 것은 솔로 캠핑을 좋아하는 여자아이 시마 린이었다.\r\n\r\n언 몸을 녹이기 위해 모닥불 앞에 앉는 두 사람.\r\n파직파직 하고 장작이 갈라지는 소리가 호숫가의 정적 속으로 스며든다.\r\n모닥불가에 앉아 카레면을 먹으며 이야기하는 나데시코와 린.\r\n이윽고 두 사람이 기다리고 기다리던 순간이 찾아온다.\r\n\r\n'보인다...... 후지산......'\r\n\r\n나데시코와 린 두 사람의 만남에서 시작되는\r\n아웃도어 걸즈 스토리....",
+                "avg_rating": 4.8,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            }
+        ]
+    },
+    {
+        "id": "O319",
+        "type": "OPERATION_RECOMMEND",
+        "name": "인생 별거없어도 재밌게 노는 게 여학생이다",
+        "item_list": [
+            {
+                "id": 15747,
+                "name": "케이온! 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/3fc1986f-db61-4b07-8611-dcae4332661e.jpg",
+                        "crop_ratio": "0,226,640,587"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/b9b58b97-3535-4b57-9ecf-3fe91327f98b.jpg",
+                        "crop_ratio": "13,0,1014,563"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그",
+                    "음악"
+                ],
+                "content": "부원이 모자라서 폐부 위기에 처한 경음악부에 4명의 동갑내기 여고생이 모였다! \r\n모두 귀엽디 귀여운 여자아이지만, 경음악부 활동 면에서는 그리 믿음직스럽지는 않은데…! \r\n거기다가 1명은 악기나 경음악에 대해서는 전혀 아는 바 없는 초심자~! \r\n정말 이래도 되는걸까?! 그래도, 자, 연주 개시합니다!",
+                "avg_rating": 4.0,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 36753,
+                "name": "가브릴 드롭아웃",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/6493a227-6a3b-4b0c-b13f-2d6f86bdaf26.jpg",
+                        "crop_ratio": "0,411,624,762"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/1fa460ac-9793-4d04-9d80-caeb12317eb0.jpg",
+                        "crop_ratio": "0,0,800,450"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그"
+                ],
+                "content": "가브릴은 천계의 천사학교를 수석으로 졸업하고 인간계에 내려와서 고등학교를 다니며 인간들을 바른길로 인도하겠다는 사명을 가지고 있었다. 처음에는 여러가지 봉사활동을 하며 자신의 사명을 잘 수행하는 듯 싶었지만 우연히 게임에 빠져 폐인이 되어버렸다. 학교에도 제대로 나가지 않고 집은 쓰레기 더미로 꽉 차있는 등 가장 타락한 천사가 되어버렸는데.....",
+                "avg_rating": 4.2,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38816,
+                "name": "즐겁게 놀아보세",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2df1fc7b-b761-43b9-acf6-2f743bb8f1e7.jpg",
+                        "crop_ratio": "0,126,422,396"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/27f0d848-1af5-4c8c-ad36-ef332fc3fda5.jpg",
+                        "crop_ratio": "0,0,800,450"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그"
+                ],
+                "content": "우등생 같은 외모와 달리 오르지 않는 영어 점수에 고민이 많은 여중생 ‘노무라 카스미’는 어릴적\r\n부터 언니와의 내기 놀이에서 항상 지기만 하던 트라우마로 인해 놀이 자체를 기피 하고 있다.\r\n그러던 중, 전학을 온 미국인 유학생 올리비아와 혼다 하나코가 ‘참참참 놀이’를 하는 모습을 보\r\n고 미국인인 올리비아에게 영어를 배울 속셈으로 그들과 엮여 놀이에 빠지게 된다. 그러나 사실,\r\n올리비아는 일본에서 태어나고 자란 탓에 영어는 카스미만큼이나 성적이 좋지 못했다. 결국 카스\r\n미가 만들려던 영어 연구회는 놀이를 연구하는 ‘놀이인 연구회(약칭 놀연)’로 바뀌어 버리는데…\r\n얼굴 값 못하는 세 명의 미소녀들의 초현실 놀이 개그쇼!",
+                "avg_rating": 4.4,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 39269,
+                "name": "히토리 봇치의 〇〇생활",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/92a4d60d-684f-40c1-a853-eca669c27280.jpg",
+                        "crop_ratio": "0,840,1024,1416"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/ff875426-c2f6-4fa1-a4c5-6be9a34a09dc.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": true,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그"
+                ],
+                "content": "낯가림이 심한 소녀, 히토리 봇치. 단 하나 뿐인 초등학교 친구와 다른 학교가 돼 버린 봇치는 그 친구와 \"중학교 졸업할 때까지 반 전체와 친구가 된다\"는 약속을 하게 되는데... 과연 봇치의 친구 만들기 작전은 성공할 수 있을까...?\r\n외톨이 소녀, \"탈외톨이\" 힘낼게요!",
+                "avg_rating": 4.4,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40682,
+                "name": "아케비의 세일러복",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2b9fe6d8-c22a-441f-af17-5a4b70ad590b.jpg",
+                        "crop_ratio": "0,34,623,384"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/781d6197-decb-430f-b1db-8a410d0f6843.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": true,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "성인 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "드라마"
+                ],
+                "content": "무대는, 시골의 명문 여학교 사립 로우바이 학원. 어떤 계기로 이 학원의 세일러복을 입는 것이 '꿈'이었던 소녀, 아케비 코미치. 소원을 이루어 설렘과 함께 입학식 당일을 맞이했지만---\r\n\r\n'저는 세일러복을 입을래요'\r\n\r\n굳게 결심하고, 꿈의 중학교 생활이 시작된다♪\r\n반 친구들, 급식, 부활동...모든 게 '처음'인 매일에 코미치는 최선을 다해 즐긴다. 소녀들의, 반짝반짝 빛나는 청춘 일기.\r\n\r\n'친구가 많이 생길까?'",
+                "avg_rating": 4.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 41292,
+                "name": "방과 후 제방일지",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/59c0a460-036d-491c-a1a3-607a6586929c.jpg",
+                        "crop_ratio": "0,233,1022,808"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/ff8126d5-6e93-41ae-83b5-31bca01f3554.jpg",
+                        "crop_ratio": "0,0,1000,563"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": true,
+                "is_laftel_original": false,
+                "content_rating": "12세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "개그"
+                ],
+                "content": "도시에서 갓 시골로 이사 온 신입생 츠루기 히나는 생물을 무서워하는 인도어파.\r\n수예부에 들어가서 즐거운 고등학교 생활을 보낼 예정이었지만, 산책 중에 쿠로이와 유우키와 만난 것을 계기로 수수께끼의 '제방부'에 가입되어 버리고, 낚시를 시작하게 되는데...\r\n개성적인 부원들에 둘러싸여, 히나의 고등학교 생활은 어떻게 될 것인가!?",
+                "avg_rating": 4.6,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40247,
+                "name": "슈퍼커브",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2b55d2cc-6491-4ccb-aa3a-f78bfc2e580e.jpg",
+                        "crop_ratio": "0,425,1000,988"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/a3778529-b129-4fc5-ad61-53d923feffbb.jpg",
+                        "crop_ratio": "3,0,997,559"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": false,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "일상",
+                    "치유"
+                ],
+                "content": "나에게는 아무것도 없다. 라고 생각했다.\r\n야마나시현 호쿠토시의 고등학교에 다니는 여자아이 코구마.\r\n부모님도 친구도 취미도 없는, 아무것도 없는 나날을 보내는 그녀지만, 문득 본 중고 슈퍼 커브를 구입한 것으로 조금씩 단조로웠던 매일이 변하기 시작한다.",
+                "avg_rating": 4.5,
+                "is_avod": true,
+                "avod_status": "all",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            }
+        ]
+    },
+    {
+        "id": "O219",
+        "type": "OPERATION_RECOMMEND",
+        "name": "모든 굴레와 속박을 벗어 던지고 라프텔로 떠납니다",
+        "item_list": [
+            {
+                "id": 16152,
+                "name": "(더빙) 이누야샤 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/026ed278-0db8-4b0c-bf47-3283e8c118a6.jpg",
+                        "crop_ratio": "0,127,480,397"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/0f7152de-b1cc-4277-a59f-7ae0146aa4f7.jpg",
+                        "crop_ratio": "14,0,1009,560"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "사혼의 구슬을 노리던 이누야사는 키쿄우의 화살에 맞아 봉인되고 사혼의 구슬은 키쿄우의 죽음과 함께 영원히 사라지게 된다. \r\n이야기는 현대로 돌아가 오래된 신사에 사는 중학교 3학년 가영은 어느 날 우연히 사당 안에 있는 우물 속에서 나타난 지네요괴를 만나게 되고 자신도 모르는 사이에 전국시대로 넘어오게 된다. \r\n숲에서 봉인된 이누야샤와 만난 가영은 또 다시 지네 요괴의 습격을 받게 되고 이 요괴의 퇴치를 위해 이누야사의 봉인을 풀게 되는데...",
+                "avg_rating": 4.1,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38955,
+                "name": "(더빙) 이누야샤 2기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/6d2a9b3f-d7cf-456f-96f5-d684beeec77d.jpg",
+                        "crop_ratio": "0,303,480,573"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38956,
+                "name": "(더빙) 이누야샤 3기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/83363a07-24f9-4b98-a4df-910da3ac093d.jpg",
+                        "crop_ratio": "0,124,479,394"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38957,
+                "name": "(더빙) 이누야샤 4기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/b0cbf521-069a-4f09-af26-193703907a87.jpg",
+                        "crop_ratio": "0,150,479,420"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38958,
+                "name": "(더빙) 이누야샤 5기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/f5ab488a-97d0-49fe-aba4-91bade34f6e1.jpg",
+                        "crop_ratio": "0,297,480,567"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38959,
+                "name": "(더빙) 이누야샤 6기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/2f0c36ad-164a-42f6-ae15-dd73c6f0aeee.jpg",
+                        "crop_ratio": "0,283,480,553"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물",
+                    "이세계"
+                ],
+                "content": "",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 38963,
+                "name": "(더빙) 이누야샤 완결편",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/149ab061-efcd-421c-8622-f29d4ac3050d.jpg",
+                        "crop_ratio": "0,240,406,468"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/a14b7703-945a-43b5-85c8-4c188ba1a320.jpg",
+                        "crop_ratio": "0,0,640,360"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "전체 이용가",
+                "is_ending": true,
+                "genre": [
+                    "이세계",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "현대와 전국시대를 오가던 가영과 이누야샤는 카라로부터 숙적 나락의 급소인 심장이 어디에 있는지를 알게 된다. 하쿠도시와 아기는 심장이 없는 나락은 껍데기일 뿐이라 생각하고, 스스로 나락의 대신이 되기 위해, 사혼의 구슬조각을 모으면서 모료마루의 힘을 키운다. 이에 말려드는 셋쇼마루와 사혼의 구슬조각을 가진 코하쿠,  코우가.  한편 금강은 사혼의 구슬을 완성시켜 나락을 소멸시키려 하고, 나락은 사악한 인간의 마음을 손에 넣고 금강을 기다리고 있다. 사혼의 구슬이 완성되는 순간, 마지막 싸움이 시작된다! 이누야샤와 가영은, 미륵, 산고, 싯포와 함께 밝은 미래를 \r\n 맞이할 수 있을 것인가?",
+                "avg_rating": 4.5,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40116,
+                "name": "(더빙) 반요 야샤히메 1기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/7f34d5f9-7ad0-411b-97f8-155abefd0f35.jpg",
+                        "crop_ratio": "0,202,480,472"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/3ea2ca23-9619-413e-94e1-ce1d0968280d.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "개그",
+                    "판타지",
+                    "액션",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "토와, 세츠나, 모로하는 요괴와 인간의 피를 이어받는 반요의 소녀들이다.\r\n\r\n어린 시절 숲의 화재에 휩쓸려 헤어진 쌍둥이 소녀, 토와와 세츠나. 언니인 토와는 시대수의 시공을 넘는 터널로 전국시대부터 현대에 시간여행을 해, 카고메의 남동생 소타의 도움을 받은 것을 계기로 히구라시 가의 딸로 양육되어 무도를 잘하는 중학생으로 성장했다.\r\n\r\n한편, 전국시대에 남겨진 여동생인 세츠나는 요괴 퇴치사의 우두머리가 된 코하쿠 밑에서 요괴 퇴치를 생업으로 하고 있었다. 카고메와 이누야샤의 딸 모로하 역시 현상금 사냥꾼으로 '귀신 잡는 모로하'란 별명을 얻으며 역시 요괴 퇴치를 일삼고 있다.\r\n\r\n토와와 세츠나가 헤어진 지 10년, 시대수의 시공을 넘는 터널이 다시 열린다. 토와는 현대에 온 세츠나와 재회하지만, 그녀는 왜인지 토와를 잊어버리고 있었다. 이렇게 되어 세츠나와 같이 현대에 온 모로하가 가세해 그녀들 \"반요 야차공주\"가 현대와 전국시대를 종횡무진 뛰어다닌다.",
+                "avg_rating": 4.6,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            },
+            {
+                "id": 40598,
+                "name": "(더빙) 반요 야샤히메 2기",
+                "images": [
+                    {
+                        "option_name": "home_default",
+                        "img_url": "https://thumbnail.laftel.net/items/full/0bf668ca-7e6b-4ae8-b726-93649f983573.jpg",
+                        "crop_ratio": "1,438,707,834"
+                    },
+                    {
+                        "option_name": "home_custom",
+                        "img_url": "https://thumbnail.laftel.net/items/home/56ba00fb-a559-45cc-af95-e112435d7a46.jpg",
+                        "crop_ratio": "0,0,1024,576"
+                    }
+                ],
+                "is_adult": false,
+                "is_uncensored": false,
+                "is_dubbed": true,
+                "medium": "TVA",
+                "is_laftel_only": false,
+                "is_laftel_original": false,
+                "content_rating": "15세 이용가",
+                "is_ending": true,
+                "genre": [
+                    "판타지",
+                    "액션",
+                    "개그",
+                    "모험",
+                    "로맨스",
+                    "시대물"
+                ],
+                "content": "요괴와 인간의 피를 이어받은\r\n반요 소녀들의 새로운 이야기!\r\n\r\n드디어 개막하는 대망의 두 번째 장!!",
+                "avg_rating": 4.7,
+                "is_avod": false,
+                "avod_status": "",
+                "logo_img": null,
+                "color_code": null,
+                "description": null,
+                "is_viewing": true
+            }
+        ]
+    }
+]

@@ -1,3 +1,4 @@
+
 import Login from 'pages/Login';
 import Register from 'pages/Register';
 import Layout from './Layout';
@@ -9,10 +10,12 @@ import React from 'react';
 // 1. react-router-dom을 사용하기 위해서 아래 API들을 import 합니다.
 import Ost from '../pages/ost/Ost';
 
+
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate replace to="/" />} />
@@ -21,6 +24,7 @@ const Router = () => {
 
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+
       </Routes>
     </BrowserRouter>
   );
