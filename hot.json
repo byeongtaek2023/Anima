@@ -1,0 +1,142 @@
+{
+    "count": 10,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 41666,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/ec327547-3f22-43ee-a1b1-8fe3a9b49ae6.jpg",
+                    "crop_ratio": "0,274,624,625"
+                }
+            ],
+            "name": "장송의 프리렌"
+        },
+        {
+            "id": 41613,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/2b5c5b8a-54cc-4f61-9b37-b4d7e46d7729.jpg",
+                    "crop_ratio": "6,320,1024,893"
+                }
+            ],
+            "name": "주술회전 2기 : 시부야 사변"
+        },
+        {
+            "id": 41679,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/cd074b54-39e0-4d36-8da2-fbd9f316580b.jpg",
+                    "crop_ratio": "0,428,1024,1005"
+                }
+            ],
+            "name": "샹그릴라 프론티어 ~망겜 헌터, 갓겜에 도전하다~"
+        },
+        {
+            "id": 41675,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/71d57ba0-5452-4a09-9238-d5833a76e0b3.jpg",
+                    "crop_ratio": "0,274,624,625"
+                }
+            ],
+            "name": "미기와 다리"
+        },
+        {
+            "id": 41720,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/f0558d48-6103-4272-8168-05eb289764d6.jpg",
+                    "crop_ratio": "6,451,1017,1020"
+                },
+                {
+                    "option_name": "home_custom",
+                    "img_url": "https://thumbnail.laftel.net/items/home/59eea0b5-ab59-4f11-b334-47b757d4e5ec.jpg",
+                    "crop_ratio": "0,0,1024,576"
+                }
+            ],
+            "name": "폭식의 베르세르크"
+        },
+        {
+            "id": 15983,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/22ecb7ba-64e6-4b45-9941-d5edcb117494.jpg",
+                    "crop_ratio": "0,148,1023,723"
+                },
+                {
+                    "option_name": "home_custom",
+                    "img_url": "https://thumbnail.laftel.net/items/home/22f1d09c-f7b3-4658-9c9b-7606edf4471f.jpg",
+                    "crop_ratio": "9,13,1010,576"
+                }
+            ],
+            "name": "(더빙) 꿈빛 파티시엘 리마스터"
+        },
+        {
+            "id": 39986,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/e77734bd-d57b-4a25-b086-2e49d602e5ce.jpg",
+                    "crop_ratio": "0,400,624,751"
+                },
+                {
+                    "option_name": "home_custom",
+                    "img_url": "https://thumbnail.laftel.net/items/home/e37723a4-16e6-424d-9019-f675776439d7.jpg",
+                    "crop_ratio": "4,0,834,467"
+                }
+            ],
+            "name": "주술회전 1기 part 1"
+        },
+        {
+            "id": 41218,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/e6d18b55-6760-4123-b570-a37380d9f790.jpg",
+                    "crop_ratio": "0,175,1024,751"
+                },
+                {
+                    "option_name": "home_custom",
+                    "img_url": "https://thumbnail.laftel.net/items/home/302e9782-5c2a-4de8-b9a4-80aba221b840.jpg",
+                    "crop_ratio": "0,0,1024,576"
+                }
+            ],
+            "name": "터무니없는 스킬로 이세계 방랑 밥"
+        },
+        {
+            "id": 23232,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/fcaf8ec0-b7bd-4a1d-93ba-ba6421bf181b.jpg",
+                    "crop_ratio": "0,0,624,351"
+                },
+                {
+                    "option_name": "home_custom",
+                    "img_url": "https://thumbnail.laftel.net/items/home/f60bcd03-0083-4827-b0ff-d19d0a850820.jpg",
+                    "crop_ratio": "0,0,1024,576"
+                }
+            ],
+            "name": "진격의 거인 1기"
+        },
+        {
+            "id": 41715,
+            "images": [
+                {
+                    "option_name": "home_default",
+                    "img_url": "https://thumbnail.laftel.net/items/full/a156002c-39a6-4dd1-a4b8-d481af6e2fbd.jpg",
+                    "crop_ratio": "17,431,1024,998"
+                }
+            ],
+            "name": "언데드 언럭"
+        }
+    ]
+}
