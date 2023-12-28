@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {utubeApi} from 'xios/utube';
+import { utubeApi } from 'xios/utube';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 // import * as S from '../ost/OstStlye';
@@ -37,7 +37,7 @@ const Ost = () => {
                   width: '560',
                   height: '315',
                   playerVars: {
-                    autoplay: 0, //자동재생 
+                    autoplay: 0, //자동재생
                     modestbranding: 1 // 컨트롤 바에 youtube 로고를 표시하지 않음
                   }
                 }}
