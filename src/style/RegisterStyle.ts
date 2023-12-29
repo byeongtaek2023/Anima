@@ -77,6 +77,7 @@ export const IdInput = styled.input`
   margin-left: 10px;
   width: 340.19px;
   border-bottom: 1px solid #616060;
+  color: #fff;
 
   &:focus {
     border-bottom: 1px solid #5199f5;
@@ -97,11 +98,11 @@ export const PasswordInputBox = styled.div`
   width: 100%;
   letter-spacing: 1px;
   margin-top: 20px;
+  color: #fff;
 `;
 
 export const PasswordLabel = styled.label`
   font-size: 15px;
-  color: #fff;
 `;
 
 export const PasswordInput = styled.input`

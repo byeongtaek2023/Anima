@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import * as St from '../style/LoginStyle';
+import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from 'api/supabase/supabase';
+import { supabase } from 'App';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -67,13 +67,13 @@ const Register = () => {
         </St.PasswordInputBox>
 
         <>
-          <St.RegisterButton
+          <St.LoginButton
             onClick={() => {
               registerClickHandler();
             }}
           >
             회원가입
-          </St.RegisterButton>
+          </St.LoginButton>
         </>
 
         <div>

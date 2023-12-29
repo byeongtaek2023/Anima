@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
 function Login() {
+  const navigate = useNavigate();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
+  const loginClickHandler = () => {};
+
   return (
     <St.Container>
       <St.Form
@@ -52,7 +54,13 @@ function Login() {
         </St.PasswordInputBox>
 
         <>
-          <St.LoginButton>로그인</St.LoginButton>
+          <St.LoginButton
+            onClick={() => {
+              loginClickHandler();
+            }}
+          >
+            로그인
+          </St.LoginButton>
         </>
 
         <div>

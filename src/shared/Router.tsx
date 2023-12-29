@@ -8,6 +8,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import React from 'react';
 // 1. react-router-dom을 사용하기 위해서 아래 API들을 import 합니다.
 import Ost from '../pages/ost/Ost';
+import AniList from 'components/AniList';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate replace to="/" />} />
           <Route path="/a" element={<Ost />} />
+          <Route path="/b" element={<AniList />} />
         </Route>
 
         <Route path="/login" element={<Login />} />
