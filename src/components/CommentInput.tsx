@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
+import { supabase } from 'App';
 
 const CommentInput = () => {
   const [text, setText] = useState<string>('');
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newComment = {};
+    const { data, error } = await supabase.from('comments').insert({
+      nickname: 'test',
+      content: text
+    });
+    window.location.reload();
   };
 
   return (
