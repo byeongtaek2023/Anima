@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
+import ImageSlideshow from './ImageSlideShow';
 
 type AnimeItem = {
   id: number;
@@ -23,7 +25,7 @@ const AniList: React.FC = () => {
       try {
         const dbResponse = await AniJson.get('/db');
         setDbData(dbResponse.data);
-        console.log(dbResponse.data.recomend[0].item_list);
+        // console.log(dbResponse.data.recomend[0].item_list);
       } catch (error) {
         console.error('Error', error);
       }
@@ -34,64 +36,62 @@ const AniList: React.FC = () => {
 
   const renderList = (data: AnimeItem[]) => {
     return data.map((item) => (
-      <div key={item.id}>
+      <S.ItemContainer key={item.id}>
         <img src={item.img} alt={item.name} width={'300px'} height={'300px'} />
         <p>{item.name}</p>
-      </div>
+      </S.ItemContainer>
     ));
   };
 
   const renderList2 = (data: AnimeItem[]) => {
     return data.map((item) => (
-      <div key={item.id}>
+      <S.ItemContainer key={item.id}>
         {item.images && item.images.length > 0 && item.images[0].img_url && (
           <img src={item.images[0].img_url} alt={item.name} width={'300px'} height={'300px'} />
         )}
         <p>{item.name}</p>
-      </div>
+      </S.ItemContainer>
     ));
   };
 
   const renderList3 = (data: AnimeItem[]) => {
     return data.map((item) => (
-      <div key={item.id}>
+      <S.Container key={item.id}>
         <h1>{item.name}</h1>
-        {item.item_list?.map((item) => (
-          <div key={item.id}>
-            {item.images && item.images.length > 0 && item.images[0].img_url && (
-              <img src={item.images[0].img_url} alt={item.name} width={'300px'} height={'300px'} />
-            )}
-            <p>{item.name}</p>
-          </div>
-        ))}
-      </div>
+        <S.ItemListContainer>
+          {item.item_list?.map((item) => (
+            <S.ItemContainer key={item.id}>
+              {item.images && item.images.length > 0 && item.images[0].img_url && (
+                <img src={item.images[0].img_url} alt={item.name} width={'300px'} height={'300px'} />
+              )}
+              <p>{item.name}</p>
+            </S.ItemContainer>
+          ))}
+        </S.ItemListContainer>
+      </S.Container>
     ));
   };
   // "id","name","img" //hot re,re2는 형식 안맞음.
-  return (
-    <div>
-      <div>
-        <h1>DB Data</h1>
-        {renderList(dbData.db)}
-      </div>
-      <div>
-        <h1>Ranking Data</h1>
-        {renderList(dbData.ranking)}
-      </div>
-      <div>
-        <h1>Hot Data</h1>
-        {renderList2(dbData.hot)}
-      </div>
 
-      <div>
-        <h1>Recomend Data</h1>
-        {renderList3(dbData.recomend)}
-      </div>
-      <div>
-        <h1>Recomend2 Data</h1>
-        {renderList3(dbData.recomend2)}
-      </div>
-    </div>
+  return (
+    <>
+      <ImageSlideshow />
+
+      <S.RenderWarp>
+        <h1>DB Data</h1>
+        <S.renderWarpList>{renderList(dbData.db)}</S.renderWarpList>
+
+        <h1>Ranking Data</h1>
+        <S.renderWarpList>{renderList(dbData.ranking)}</S.renderWarpList>
+
+        <h1>Hot Data</h1>
+        <S.renderWarpList2>{renderList2(dbData.hot)}</S.renderWarpList2>
+
+        <S.renderWarpList3>{renderList3(dbData.recomend)}</S.renderWarpList3>
+
+        <S.renderWarpList3>{renderList3(dbData.recomend2)}</S.renderWarpList3>
+      </S.RenderWarp>
+    </>
   );
 };
 export default React.memo(AniList);
