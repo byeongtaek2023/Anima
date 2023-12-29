@@ -131,15 +131,7 @@ const MenuWrapper = styled.div`
   position: absolute;
   right: 1000px;
 `;
-const MenuList = styled.ul`
-  & li {
-    position: relative;
-    z-index: 999;
-    background-color: #cbcbcb;
-    padding: 3px;
-    cursor: pointer;
-  }
-`;
+
 const UserWrapper = styled.div`
   display: flex;
   flex-direction: column;
