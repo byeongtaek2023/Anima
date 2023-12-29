@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from 'api/supabase/supabase';
 
 const Register = () => {
-  const [id, setId] = useState('');
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
+  const registerClickHandler = async () => {
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password
+      });
+      if (error) console.error(error);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <St.Container>
       <St.Form
@@ -26,14 +40,14 @@ const Register = () => {
         </St.LoginTitleWrapper>
 
         <St.IdInputBox>
-          <St.IdLabel htmlFor="id">이메일</St.IdLabel>
+          <St.IdLabel htmlFor="email">이메일</St.IdLabel>
           <St.IdInput
             onChange={(e) => {
-              setId(e.target.value);
+              setEmail(e.target.value);
             }}
             autoComplete="off"
-            id="id"
-            value={id}
+            id="email"
+            value={email}
             placeholder="이메일을 입력해주세요."
             type="text"
           />
@@ -53,7 +67,13 @@ const Register = () => {
         </St.PasswordInputBox>
 
         <>
-          <St.LoginButton>회원가입</St.LoginButton>
+          <St.RegisterButton
+            onClick={() => {
+              registerClickHandler();
+            }}
+          >
+            회원가입
+          </St.RegisterButton>
         </>
 
         <div>
