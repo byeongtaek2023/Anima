@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from 'App';
 function Login() {
   const navigate = useNavigate();
-  const [id, setId] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const loginClickHandler = () => {};
+  const loginClickHandler = async () => {
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+      alert('로그인 완료!');
+      navigate('/home');
+      if (error) console.error(error);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <St.Container>
@@ -30,11 +44,11 @@ function Login() {
           <St.IdLabel htmlFor="id">이메일</St.IdLabel>
           <St.IdInput
             onChange={(e) => {
-              setId(e.target.value);
+              setEmail(e.target.value);
             }}
             autoComplete="off"
             id="id"
-            value={id}
+            value={email}
             placeholder="이메일을 입력해주세요."
             type="text"
           />

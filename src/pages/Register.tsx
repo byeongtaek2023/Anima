@@ -8,12 +8,15 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
   const registerClickHandler = async () => {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
         password
       });
+      alert('회원가입 성공!');
+      navigate('/login');
       if (error) console.error(error);
       console.log(data);
     } catch (error) {

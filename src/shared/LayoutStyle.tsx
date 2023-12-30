@@ -16,14 +16,14 @@ export const HeaderWrapper = styled.section`
 `;
 
 export const HeaderTitleLogo = styled.button`
-  width: 70px;
+  /* width: 70px;
   height: 70px;
   border-radius: 20px;
   background-color: transparent;
 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   &:hover {
     cursor: pointer;
@@ -31,7 +31,7 @@ export const HeaderTitleLogo = styled.button`
 `;
 
 export const ButtonWrapper = styled.div`
-  /* position: fixed;
+  position: fixed;
   display: flex;
   width: 100%;
   height: 70px;
@@ -39,7 +39,7 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   top: 0.5%;
   color: #fff;
-  z-index: 20; */
+  z-index: 20;
 `;
 
 export const LoginBtn = styled.button`
