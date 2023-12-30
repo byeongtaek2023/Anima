@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
-import * as St from '../style/LoginStyle';
+import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
-
+import { supabase } from 'App';
 const Register = () => {
-  const [id, setId] = useState('');
-  const [password, setPassword] = useState('');
-
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
+  const registerClickHandler = async () => {
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password
+      });
+      alert('회원가입 성공!');
+      navigate('/login');
+      if (error) console.error(error);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <St.Container>
       <St.Form
@@ -24,21 +38,19 @@ const Register = () => {
             로그인
           </St.RegisterTitle>
         </St.LoginTitleWrapper>
-
         <St.IdInputBox>
-          <St.IdLabel htmlFor="id">이메일</St.IdLabel>
+          <St.IdLabel htmlFor="email">이메일</St.IdLabel>
           <St.IdInput
             onChange={(e) => {
-              setId(e.target.value);
+              setEmail(e.target.value);
             }}
             autoComplete="off"
-            id="id"
-            value={id}
+            id="email"
+            value={email}
             placeholder="이메일을 입력해주세요."
             type="text"
           />
         </St.IdInputBox>
-
         <St.PasswordInputBox>
           <St.PasswordLabel htmlFor="password">비밀번호</St.PasswordLabel>
           <St.PasswordInput
@@ -51,11 +63,15 @@ const Register = () => {
             type="password"
           />
         </St.PasswordInputBox>
-
         <>
-          <St.LoginButton>회원가입</St.LoginButton>
+          <St.LoginButton
+            onClick={() => {
+              registerClickHandler();
+            }}
+          >
+            회원가입
+          </St.LoginButton>
         </>
-
         <div>
           <p>소셜 로그인</p>
           <ul>
@@ -64,14 +80,13 @@ const Register = () => {
             <li>카카오톡</li>
             <li>구글</li>
           </ul>
-
           <div>
             <St.RegisterButton
               onClick={() => {
                 navigate('/login');
               }}
             >
-              🤔 이미 회원이신가요?
+              :생각하는_얼굴: 이미 회원이신가요?
             </St.RegisterButton>
           </div>
         </div>
@@ -79,5 +94,4 @@ const Register = () => {
     </St.Container>
   );
 };
-
 export default Register;
