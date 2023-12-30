@@ -9,7 +9,6 @@ import React from 'react';
 // 1. react-router-dom을 사용하기 위해서 아래 API들을 import 합니다.
 import Ost from '../pages/ost/Ost';
 import AniList from 'components/AniList';
-import Auth from 'pages/Auth';
 
 const Router = () => {
   return (
@@ -24,7 +23,6 @@ const Router = () => {
 
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/auth" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   );
