@@ -7,7 +7,16 @@ const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // 이메일 정규식
+  const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
 
+  const emailValidChk = (email: string) => {
+    if (email_regex.test(email) === false) {
+      return alert('이메일 형식이 올바르지 않습니다.');
+    } else {
+      return true;
+    }
+  };
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
   const registerClickHandler = async () => {
     try {
@@ -15,10 +24,11 @@ const Register = () => {
         email,
         password
       });
-      alert('회원가입 성공!');
-      navigate('/login');
-      if (error) console.error(error);
-      console.log(data);
+      if (email_regex.test(email) === false) {
+        return alert('이메일 형식이 올바르지 않습니다.');
+      } else {
+        return alert('회원가입 성공!'), navigate('/login');
+      }
     } catch (error) {
       console.error(error);
     }
