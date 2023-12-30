@@ -71,7 +71,7 @@ const AniList: React.FC = () => {
       </S.Container>
     ));
   };
-  // "id","name","img" //hot re,re2는 형식 안맞음...
+  // "id","name","img" //hot re,re2는 형식 안맞음.
 
   return (
     <>

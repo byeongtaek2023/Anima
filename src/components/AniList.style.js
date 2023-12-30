@@ -9,7 +9,7 @@ export const RenderWarp = styled.div`
     font-weight: bold;
   }
   p {
-    font-size: 24px;
+    font-size: 14px;
   }
 `;
 
@@ -41,3 +41,4 @@ export const ItemListContainer = styled.div`
 export const ItemContainer = styled.div`
   margin-right: 10px;
 `;
+
