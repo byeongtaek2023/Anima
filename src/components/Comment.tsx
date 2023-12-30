@@ -18,10 +18,19 @@ interface EditComment {
 const Comment = () => {
   const [commentList, setCommentList] = useState<commentParams[]>([]);
   const [editComment, setEditComment] = useState<EditComment>({ id: '', content: '' });
+  const [currentUser, setCurrentUser] = useState<any>(null);
 
   useEffect(() => {
+    checkCurrentUser();
     getCommentList();
   }, []);
+
+  const checkCurrentUser = async () => {
+    // 현재 로그인된 사용자의 정보를 가져옵니다.
+    const { data } = await supabase.auth.getSession();
+    console.log(data);
+    setCurrentUser(data);
+  };
 
   const getCommentList = async () => {
     const { data, error } = await supabase.from('comments').select('*');
@@ -103,11 +112,12 @@ const Comment = () => {
                       <Date>{item.created_at}</Date>
                     </UserInfo>
                     <CommentWrapper>
-                      <div>
-                        <UserComment>{item.content}</UserComment>
-                        <button onClick={() => startEdit(item)}>수정</button>
-                        <button onClick={() => confirmDelete(item.id)}>삭제</button>
-                      </div>
+                      {currentUser && (
+                        <div>
+                          <button onClick={() => startEdit(item)}>수정</button>
+                          <button onClick={() => confirmDelete(item.id)}>삭제</button>
+                        </div>
+                      )}
                     </CommentWrapper>
                   </UserWrapper>
                 </Comments>

@@ -6,6 +6,7 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
 
   const loginClickHandler = async () => {
@@ -14,6 +15,12 @@ function Login() {
         email,
         password
       });
+
+      alert('로그인 완료!');
+      navigate('/home');
+      if (error) console.error(error);
+      console.log(data);
+
       if (email_regex.test(email) === false) {
         return alert('이메일 형식이 올바르지 않습니다.');
       } else {
@@ -41,7 +48,6 @@ function Login() {
             회원가입
           </St.RegisterTitle>
         </St.LoginTitleWrapper>
-
         <St.IdInputBox>
           <St.IdLabel htmlFor="id">이메일</St.IdLabel>
           <St.IdInput
@@ -55,7 +61,6 @@ function Login() {
             type="text"
           />
         </St.IdInputBox>
-
         <St.PasswordInputBox>
           <St.PasswordLabel htmlFor="password">비밀번호</St.PasswordLabel>
           <St.PasswordInput
@@ -68,7 +73,6 @@ function Login() {
             type="password"
           />
         </St.PasswordInputBox>
-
         <>
           <St.LoginButton
             onClick={() => {
@@ -78,7 +82,6 @@ function Login() {
             로그인
           </St.LoginButton>
         </>
-
         <div>
           <p>소셜 로그인</p>
           <ul>
@@ -87,14 +90,13 @@ function Login() {
             <li>카카오톡</li>
             <li>구글</li>
           </ul>
-
           <div>
             <St.RegisterButton
               onClick={() => {
                 navigate('/register');
               }}
             >
-              👉 회원이 아니신가요?
+              :오른쪽을_가리키는_손_모양: 회원이 아니신가요?
             </St.RegisterButton>
           </div>
         </div>
@@ -102,5 +104,4 @@ function Login() {
     </St.Container>
   );
 }
-
 export default Login;
