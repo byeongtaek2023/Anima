@@ -6,20 +6,31 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+
   const loginClickHandler = async () => {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password
       });
+
       alert('로그인 완료!');
       navigate('/home');
       if (error) console.error(error);
       console.log(data);
+
+      if (email_regex.test(email) === false) {
+        return alert('이메일 형식이 올바르지 않습니다.');
+      } else {
+        return alert('로그인 완료!'), navigate('/login');
+      }
     } catch (error) {
       console.error(error);
     }
   };
+
   return (
     <St.Container>
       <St.Form
