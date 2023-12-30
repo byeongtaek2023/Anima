@@ -1,4 +1,3 @@
-
 import Login from 'pages/Login';
 import Register from 'pages/Register';
 import Layout from './Layout';
@@ -12,12 +11,10 @@ import Ost from '../pages/ost/Ost';
 import AniList from 'components/AniList';
 import ImageSlideshow from 'components/ImageSlideShow';
 
-
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate replace to="/" />} />
@@ -28,7 +25,6 @@ const Router = () => {
 
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-
       </Routes>
     </BrowserRouter>
   );

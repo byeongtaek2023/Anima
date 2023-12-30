@@ -62,11 +62,11 @@ export const IdInputBox = styled.div`
   width: 100%;
   letter-spacing: 1px;
   margin-top: 32px;
+  color: #fff;
 `;
 
 export const IdLabel = styled.label`
   font-size: 15px;
-  color: #fff;
 `;
 
 export const IdInput = styled.input`
@@ -97,6 +97,7 @@ export const PasswordInputBox = styled.div`
   width: 100%;
   letter-spacing: 1px;
   margin-top: 20px;
+  color: #fff;
 `;
 
 export const PasswordLabel = styled.label`
