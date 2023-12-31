@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from 'App';
 import { useSetRecoilState } from 'recoil';
 import { TokenAtom } from 'recoil/acccessToken';
+import { loginHandler, supabase } from 'api/supabase/supabase';
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -14,6 +14,7 @@ function Login() {
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
   const pattern = /s/g;
+
   const spaceRegexHandler = () => {
     if (email.replace(pattern, '') == '') {
       return alert('공백은 제출할 수 없습니다.');
@@ -21,28 +22,29 @@ function Login() {
       return false;
     }
   };
+
   // 클릭 했을 때 로그인 정보 가져오기
   const loginClickHandler = async (email: string, password: string) => {
     try {
-      const { data } = await supabase.auth.signInWithPassword({
-        email,
-        password
-      });
-
-      alert('로그인 완료!');
-      navigate('/home');
-      // if (error) console.error(error);
-      console.log(data);
-
-      if (email_regex.test(email) === false) {
-        return alert('형식이 올바르지 않습니다.');
-      }
-      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때
-      else if (data?.user) {
-        return console.log('로그인 성공'), alert('로그인 완료!'), navigate('/home');
+      const data = await loginHandler(email, password);
+      if (data?.user) {
+        alert('로그인 완료!');
+        navigate('/home');
       } else {
-        return console.log(data), alert('아이디 또는 비밀번호가 틀렸습니다. 다시 시도해주세요!');
+        alert('아이디 비밀번호 확인 필요');
       }
+      // if (error) console.error(error);
+
+      // if (email_regex.test(email) === false) {
+      //   return alert('형식이 올바르지 않습니다.');
+      // }
+
+      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때 홈 화면 이동
+      //     else if (data?.user) {
+      //       return console.log('로그인 성공'), alert('로그인 완료!'), navigate('/home');
+      //     } else {
+      //       return  alert('아이디 또는 비밀번호가 틀렸습니다. 다시 시도해주세요!');
+      //     }
     } catch (error) {
       console.error('로그인 오류', error);
     }
@@ -86,7 +88,6 @@ function Login() {
           <St.IdInput
             onChange={(e) => {
               setEmail(e.target.value);
-              spaceRegexHandler();
             }}
             autoComplete="off"
             id="email"
@@ -130,7 +131,7 @@ function Login() {
                 navigate('/register');
               }}
             >
-              :오른쪽을_가리키는_손_모양: 회원이 아니신가요?
+              👉 회원이 아니신가요?
             </St.RegisterButton>
           </div>
         </div>

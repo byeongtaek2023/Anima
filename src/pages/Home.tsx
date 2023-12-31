@@ -1,4 +1,4 @@
-import { supabase } from 'App';
+import { getUserData } from 'api/supabase/supabase';
 import Comment from 'components/Comment';
 import CommentInput from 'components/CommentInput';
 import React, { useEffect } from 'react';
@@ -15,13 +15,14 @@ const Home = () => {
   //   }
   // };
 
-  const getUserData = async () => {
-    const {
-      data: { user }
-    } = await supabase.auth.getUser();
-    return user;
-  };
+  // const getUserData = async () => {
+  //   const {
+  //     data: { user }
+  //   } = await supabase.auth.getUser();
+  //   return user;
+  // };
 
+  // 마운트 되었을 때 유저 정보 받아오기
   useEffect(() => {
     getUserData();
   }, []);
