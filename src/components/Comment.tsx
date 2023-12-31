@@ -112,6 +112,7 @@ const Comment = () => {
                       <Date>{item.created_at}</Date>
                     </UserInfo>
                     <CommentWrapper>
+                      <UserComment>{item.content}</UserComment>
                       {currentUser && (
                         <div>
                           <button onClick={() => startEdit(item)}>수정</button>
