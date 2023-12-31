@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from 'App';
-import { useSetRecoilState } from 'recoil';
+// import { useSetRecoilState } from 'recoil';
 // import { TokenAtom } from 'recoil/acccessToken';
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const setAccessToken = useSetRecoilState(TokenAtom);
+  // const setAccessToken = useSetRecoilState(TokenAtom);
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
   const pattern = /s/g;
