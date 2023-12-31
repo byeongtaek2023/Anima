@@ -77,7 +77,6 @@ const Comment = () => {
       if (!error && data) {
         window.alert('삭제되었습니다.');
       } else {
-        console.log(error);
         window.alert(error?.message);
       }
     }
