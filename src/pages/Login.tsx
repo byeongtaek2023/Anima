@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from 'App';
+import { useSetRecoilState } from 'recoil';
+import { TokenAtom } from 'recoil/acccessToken';
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -9,9 +11,22 @@ function Login() {
 
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
 
-  const loginClickHandler = async () => {
+  const setAccessToken = useSetRecoilState(TokenAtom);
+
+  // 이메일 정규식
+  const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+  const pattern = /s/g;
+  const spaceRegexHandler = () => {
+    if (email.replace(pattern, '') == '') {
+      return alert('공백은 제출할 수 없습니다.');
+    } else {
+      return false;
+    }
+  };
+  // 클릭 했을 때 로그인 정보 가져오기
+  const loginClickHandler = async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { data } = await supabase.auth.signInWithPassword({
         email,
         password
       });
@@ -22,14 +37,34 @@ function Login() {
       console.log(data);
 
       if (email_regex.test(email) === false) {
-        return alert('이메일 형식이 올바르지 않습니다.');
+        return alert('형식이 올바르지 않습니다.');
+      }
+      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때
+      else if (data?.user) {
+        return console.log('로그인 성공'), alert('로그인 완료!'), navigate('/home');
       } else {
-        return alert('로그인 완료!'), navigate('/login');
+        return console.log(data), alert('아이디 또는 비밀번호가 틀렸습니다. 다시 시도해주세요!');
       }
     } catch (error) {
-      console.error(error);
+      console.error('로그인 오류', error);
     }
   };
+
+  // const getUserData = async () => {
+  //   const {
+  //     data: { user }
+  //   } = await supabase.auth.getUser();
+  //   return user;
+  // };
+
+  // const getAuth = async () => {
+  //   const user = await getUserData();
+  //   console.log(user);
+  // };
+
+  // useEffect(() => {
+  //   getAuth();
+  // }, []);
 
   return (
     <St.Container>
@@ -49,13 +84,14 @@ function Login() {
           </St.RegisterTitle>
         </St.LoginTitleWrapper>
         <St.IdInputBox>
-          <St.IdLabel htmlFor="id">이메일</St.IdLabel>
+          <St.IdLabel htmlFor="email">이메일</St.IdLabel>
           <St.IdInput
             onChange={(e) => {
               setEmail(e.target.value);
+              spaceRegexHandler();
             }}
             autoComplete="off"
-            id="id"
+            id="email"
             value={email}
             placeholder="이메일을 입력해주세요."
             type="text"
@@ -76,7 +112,7 @@ function Login() {
         <>
           <St.LoginButton
             onClick={() => {
-              loginClickHandler();
+              loginClickHandler(email, password);
             }}
           >
             로그인
