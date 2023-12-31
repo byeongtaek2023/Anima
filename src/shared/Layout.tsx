@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     <>
       {/* 헤더와 푸터 CSS 작업은 LayoutStyle.ts 파일에서 하시면 됩니다*/}
-      <Header />
+
       <St.HeaderWrapper>
         <St.HeaderTitleLogo
           onClick={() => {
