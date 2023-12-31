@@ -31,7 +31,7 @@ function Login() {
       if (email_regex.test(email) === false) {
         return alert('형식이 올바르지 않습니다.');
       }
-      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때
+      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때 홈 화면 이동
       else if (data?.user) {
         return console.log('로그인 성공'), alert('로그인 완료!'), navigate('/home');
       } else {
@@ -81,7 +81,6 @@ function Login() {
           <St.IdInput
             onChange={(e) => {
               setEmail(e.target.value);
-              spaceRegexHandler();
             }}
             autoComplete="off"
             id="email"

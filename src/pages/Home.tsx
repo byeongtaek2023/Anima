@@ -22,6 +22,7 @@ const Home = () => {
     return user;
   };
 
+  // 마운트 되었을 때 유저 정보 받아오기
   useEffect(() => {
     getUserData();
   }, []);
