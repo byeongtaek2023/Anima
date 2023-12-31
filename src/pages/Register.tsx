@@ -10,6 +10,8 @@ const Register = () => {
   const [password, setPassword] = useState('');
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+  // 영문 + 숫자 조합으로 5~8글자 제한
+  const pattern = new RegExp('^[a-zA-Z][0-9a-zA-Z]{4,7}$');
 
   // const emailValidChk = (email: string) => {
   //   if (email_regex.test(email) === false) {
@@ -18,6 +20,11 @@ const Register = () => {
   //     return true;
   //   }
   // };
+  const passwordValidChk = () => {
+    if (pattern.test(password) === false) {
+      alert('비밀번호는 5~8글자 영문 + 숫자 형식으로 입력해주세요 ');
+    }
+  };
 
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
   const registerClickHandler = async (email: string, password: string) => {
@@ -28,8 +35,8 @@ const Register = () => {
       });
       if (email_regex.test(email) === false) {
         return alert('이메일 형식이 올바르지 않습니다.');
-      } else {
-        return alert('회원가입 성공!'), navigate('/login');
+      } else if (data?.user) {
+        return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
       }
     } catch (error) {
       console.error(error);

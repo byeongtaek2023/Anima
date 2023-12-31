@@ -13,7 +13,7 @@ function Login() {
 
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-  const pattern = /\s/g;
+  const pattern = /s/g;
   const spaceRegexHandler = () => {
     if (email.replace(pattern, '') == '') {
       return alert('공백은 제출할 수 없습니다.');
@@ -24,17 +24,18 @@ function Login() {
   // 클릭 했을 때 로그인 정보 가져오기
   const loginClickHandler = async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { data } = await supabase.auth.signInWithPassword({
         email,
         password
       });
       if (email_regex.test(email) === false) {
-        return alert('이메일 형식이 올바르지 않습니다.');
+        return alert('형식이 올바르지 않습니다.');
       }
-      if (data?.user) {
+      // 회원 가입할 때 데이터와 로그인 데이터가 일치했을 때
+      else if (data?.user) {
         return console.log('로그인 성공'), alert('로그인 완료!'), navigate('/home');
       } else {
-        return console.log(data), alert('로그인 완료!');
+        return console.log(data), alert('아이디 또는 비밀번호가 틀렸습니다. 다시 시도해주세요!');
       }
     } catch (error) {
       console.error('로그인 오류', error);
@@ -80,6 +81,7 @@ function Login() {
           <St.IdInput
             onChange={(e) => {
               setEmail(e.target.value);
+              spaceRegexHandler();
             }}
             autoComplete="off"
             id="email"
