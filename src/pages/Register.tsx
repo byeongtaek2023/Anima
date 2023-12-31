@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
+
+import { supabase } from 'App';
+import { StringDecoder } from 'string_decoder';
+
 import { StringDecoder } from 'string_decoder';
 import { registerClickHandler } from 'api/supabase/supabase';
 
@@ -25,23 +29,24 @@ const Register = () => {
       alert('비밀번호는 5~8글자 영문 + 숫자 형식으로 입력해주세요 ');
     }
   };
-
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
-  // const registerClickHandler = async (email: string, password: string) => {
-  //   try {
-  //     const { data, error } = await supabase.auth.signUp({
-  //       email,
-  //       password
-  //     });
-  //     if (email_regex.test(email) === false) {
-  //       return alert('이메일 형식이 올바르지 않습니다.');
-  //     } else if (data?.user) {
-  //       return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+
+  const registerClickHandler = async (email: string, password: string) => {
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password
+      });
+      if (email_regex.test(email) === false) {
+        return alert('이메일 형식이 올바르지 않습니다.');
+      } else if (data?.user) {
+        return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
   return (
     <St.Container>

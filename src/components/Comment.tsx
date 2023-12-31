@@ -75,7 +75,11 @@ const Comment = () => {
       if (confirmDeleteData) {
         return;
       } else {
+
+        window.alert(error?.message);
+
         window.alert('삭제 완료');
+
       }
       // if (!confirmDeleteData.error && confirmDeleteData.data) {
       //   window.alert('삭제되었습니다.');
