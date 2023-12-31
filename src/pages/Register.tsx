@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from 'App';
+import { StringDecoder } from 'string_decoder';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -10,15 +11,16 @@ const Register = () => {
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
 
-  const emailValidChk = (email: string) => {
-    if (email_regex.test(email) === false) {
-      return alert('이메일 형식이 올바르지 않습니다.');
-    } else {
-      return true;
-    }
-  };
+  // const emailValidChk = (email: string) => {
+  //   if (email_regex.test(email) === false) {
+  //     return alert('이메일 형식이 올바르지 않습니다.');
+  //   } else {
+  //     return true;
+  //   }
+  // };
+
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
-  const registerClickHandler = async () => {
+  const registerClickHandler = async (email: string, password: string) => {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -82,7 +84,7 @@ const Register = () => {
         <>
           <St.LoginButton
             onClick={() => {
-              registerClickHandler();
+              registerClickHandler(email, password);
             }}
           >
             회원가입

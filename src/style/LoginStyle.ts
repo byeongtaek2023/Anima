@@ -153,3 +153,7 @@ export const RegisterButton = styled.button`
     color: #5199f5;
   }
 `;
+export const SpaceRegex = styled.div`
+  color: white;
+  font-size: 20px;
+`;
