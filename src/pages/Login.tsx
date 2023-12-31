@@ -9,8 +9,6 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-
   const setAccessToken = useSetRecoilState(TokenAtom);
 
   // 이메일 정규식
@@ -33,7 +31,7 @@ function Login() {
 
       alert('로그인 완료!');
       navigate('/home');
-      if (error) console.error(error);
+      // if (error) console.error(error);
       console.log(data);
 
       if (email_regex.test(email) === false) {
