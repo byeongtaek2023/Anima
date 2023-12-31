@@ -1,4 +1,4 @@
-import { supabase } from 'App';
+import { getUserSession, handleLogout } from 'api/supabase/supabase';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
@@ -20,31 +20,39 @@ const Header = () => {
     navigate('/login');
   };
 
-  const getUserSession = async () => {
-    const { data, error } = await supabase.auth.getSession();
-    console.log(data);
-    if (error) throw error;
-    return data;
-  };
+  // const getUserSession = async () => {
+  //   const { data, error } = await supabase.auth.getSession();
+  //   console.log(data);
+  //   if (error) throw error;
+  //   return data;
+  // };
 
-  const handleLogout = async () => {
-    try {
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
+  // const handleLogout = async () => {
+  //   try {
+  //     const { error } = await supabase.auth.signOut();
+  //     if (error) throw error;
 
-      setIsLoggin(false);
-      navigate('/'); // 로그아웃 후 홈페이지로 이동
-    } catch (error) {
-      console.error('로그아웃 실패:', error);
-    }
-  };
+  //     setIsLoggin(false);
+  //     navigate('/'); // 로그아웃 후 홈페이지로 이동
+  //   } catch (error) {
+  //     console.error('로그아웃 실패:', error);
+  //   }
+  // };
 
   return (
     <Container>
       <LoginBox>
         {Isloggin ? (
           <div>
-            <button onClick={handleLogout}>로그아웃</button>
+            <button
+              onClick={() => {
+                handleLogout();
+                setIsLoggin(false);
+                navigate('/'); // 로그아웃 후 홈페이지로 이동
+              }}
+            >
+              로그아웃
+            </button>
           </div>
         ) : (
           <div>

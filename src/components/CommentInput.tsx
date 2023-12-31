@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import { supabase } from 'App';
+import { commentInsert } from 'api/supabase/supabase';
 
 const CommentInput = () => {
   const [text, setText] = useState<string>('');
@@ -21,10 +21,7 @@ const CommentInput = () => {
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { data, error } = await supabase.from('comments').insert({
-      nickname: 'test',
-      content: text
-    });
+    await commentInsert(text);
     window.location.reload();
   };
 

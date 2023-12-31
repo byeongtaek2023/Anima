@@ -1,7 +1,7 @@
-import { supabase } from 'App';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Menu from '../image/kebab.png';
+import { confirmDeleteComment, confirmEditComment, getComment, getUserSession } from 'api/supabase/supabase';
 
 interface commentParams {
   id: string;
@@ -27,20 +27,21 @@ const Comment = () => {
 
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
-    const { data } = await supabase.auth.getSession();
+    const data = await getUserSession();
     console.log(data);
     setCurrentUser(data);
   };
 
   const getCommentList = async () => {
-    const { data, error } = await supabase.from('comments').select('*');
-    console.log(data);
-    if (!error && data) {
-      setCommentList(data);
+    const commentListData = await getComment();
+    console.log(commentListData.data);
+    if (!commentListData.error && commentListData.data) {
+      setCommentList(commentListData.data);
     } else {
       setCommentList([]);
     }
   };
+
   // 댓글 편집 핸들러
   const handleEditChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditComment({ ...editComment, content: e.target.value });
@@ -53,17 +54,14 @@ const Comment = () => {
   // 댓글 수정 확인
   const confirmEdit = async () => {
     if (editComment.id && editComment.content.trim() !== '') {
-      const { data, error } = await supabase
-        .from('comments')
-        .update({ content: editComment.content })
-        .match({ id: editComment.id });
+      const confirmData = await confirmEditComment(editComment);
 
-      if (!error && data) {
+      if (!confirmData.error && confirmData.data) {
         window.alert('댓글이 수정되었습니다.');
         setEditComment({ id: '', content: '' }); // 상태 초기화
         getCommentList(); // 댓글 목록 갱신
       } else {
-        window.alert(error?.message);
+        window.alert(confirmData.error?.message);
       }
     }
   };
@@ -72,13 +70,22 @@ const Comment = () => {
   const confirmDelete = async (id: string) => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
-      const { data, error } = await supabase.from('comments').delete().eq('id', id);
-      console.log(data);
-      if (!error && data) {
-        window.alert('삭제되었습니다.');
+      const confirmDeleteData = await confirmDeleteComment(id);
+      // console.log(confirmDeleteData);
+      if (confirmDeleteData) {
+        return;
       } else {
+
         window.alert(error?.message);
+
+        window.alert('삭제 완료');
+
       }
+      // if (!confirmDeleteData.error && confirmDeleteData.data) {
+      //   window.alert('삭제되었습니다.');
+      // } else {
+      //   window.alert(confirmDeleteData.error?.message);
+      // }
     }
   };
 

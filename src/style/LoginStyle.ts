@@ -23,7 +23,7 @@ export const Form = styled.form`
   border-radius: 20px;
 `;
 
-export const LoginTitleWrapper = styled.h2`
+export const LoginTitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@ export const RegisterTitle = styled.h2`
   }
 `;
 
-export const LoginTitle = styled.h2`
+export const LoginTitle = styled.div`
   font-family: 'ONE-Mobile-Title';
   font-size: 36px;
   margin-top: 30px;
@@ -152,4 +152,8 @@ export const RegisterButton = styled.button`
     cursor: pointer;
     color: #5199f5;
   }
+`;
+export const SpaceRegex = styled.div`
+  color: white;
+  font-size: 20px;
 `;
