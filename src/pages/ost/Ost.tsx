@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 // import * as S from '../ost/OstStlye';
 
-
 const Ost = () => {
   const [utubeData, setUtubeDats] = useState<any>([]);
 

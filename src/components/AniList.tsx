@@ -37,7 +37,7 @@ const AniList: React.FC = () => {
 
   //랜더1번
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalImagesToShow = 6;
+  const totalImagesToShow = 5;
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImagesToShow) % totalImagesToShow);
@@ -64,7 +64,7 @@ const AniList: React.FC = () => {
 
   //랜더 2번
   const [currentIndex2, setCurrentIndex2] = useState(0);
-  const totalImagesToShow2 = 6;
+  const totalImagesToShow2 = 5;
 
   const handlePrev2 = () => {
     setCurrentIndex2((prevIndex) => (prevIndex - 1 + totalImagesToShow2) % totalImagesToShow2);
@@ -91,7 +91,7 @@ const AniList: React.FC = () => {
 
   // 랜더 3번
   const [currentIndex3, setCurrentIndex3] = useState(0);
-  const totalImagesToShow3 = 6;
+  const totalImagesToShow3 = 5;
 
   const handlePrev3 = () => {
     setCurrentIndex3((prevIndex) => (prevIndex - 1 + totalImagesToShow3) % totalImagesToShow3);
