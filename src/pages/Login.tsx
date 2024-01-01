@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as St from '../style/LoginStyle';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { TokenAtom } from 'recoil/acccessToken';
 import { getUserSession, loginHandler, supabase } from 'api/supabase/supabase';
-import { get } from 'http';
+// import { get } from 'http';
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const setAccessToken = useSetRecoilState(TokenAtom);
-
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
   const pattern = /s/g;
@@ -44,7 +42,6 @@ function Login() {
       console.error('로그인 오류', error);
     }
   };
-
   return (
     <St.Container>
       <St.Form
@@ -110,7 +107,7 @@ function Login() {
                 navigate('/register');
               }}
             >
-              👉 회원이 아니신가요?
+              :오른쪽을_가리키는_손_모양: 회원이 아니신가요?
             </St.RegisterButton>
           </div>
         </div>

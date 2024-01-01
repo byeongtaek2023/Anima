@@ -64,7 +64,7 @@ export const registerClick = async (email: string, password: string) => {
 // comment 추가하는 부분 / commentInput.tsx
 export const commentInsert = async (text: string) => {
   const { data, error } = await supabase.from('comments').insert({
-    nickname: 'test',
+    nickname: 'nickname',
     content: text
   });
 };

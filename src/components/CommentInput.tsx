@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import { commentInsert } from 'api/supabase/supabase';
+import { commentInsert, supabase } from 'api/supabase/supabase';
 
 const CommentInput = () => {
   const [text, setText] = useState<string>('');
+  const [currentUser, setCurrentUser] = useState<any>(null);
+
+  useEffect(() => {
+    checkCurrentUser();
+  }, []);
+
+  //왜 로그인해도 세션이 널이지?ㅠㅠㅠㅠㅠㅠㅠㅠ
+  const checkCurrentUser = async () => {
+    // 현재 로그인된 사용자의 정보를 가져옵니다.
+    const { data } = await supabase.auth.getSession();
+    console.log(data);
+    setCurrentUser(data);
+  };
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
 import ImageSlideshow from './ImageSlideShow';
+import ItemListContainer from './ItemListContainer';
 
-type AnimeItem = {
+export type AnimeItem = {
   id: number;
   name: string;
   img: string;
@@ -34,62 +35,132 @@ const AniList: React.FC = () => {
     fetchData();
   }, []);
 
-  const renderList = (data: AnimeItem[]) => {
-    return data.map((item) => (
+  //랜더1번
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalImagesToShow = 6;
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImagesToShow) % totalImagesToShow);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImagesToShow);
+  };
+
+  const renderCarouselItems = (getData: () => AnimeItem[]) => {
+    const data = getData(); // 함수를 호출하여 데이터를 가져오고, 이를 data 변수에 저장하는 부분
+    const startIndex = currentIndex;
+    const endIndex = (currentIndex + totalImagesToShow) % data.length;
+
+    const carouselItems = data.slice(startIndex, endIndex + 1);
+
+    return carouselItems.map((item) => (
       <S.ItemContainer key={item.id}>
-        <img src={item.img} alt={item.name} width={'300px'} height={'300px'} />
+        <S.Image src={item.img} alt={item.name} />
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
   };
 
-  const renderList2 = (data: AnimeItem[]) => {
-    return data.map((item) => (
+  //랜더 2번
+  const [currentIndex2, setCurrentIndex2] = useState(0);
+  const totalImagesToShow2 = 6;
+
+  const handlePrev2 = () => {
+    setCurrentIndex2((prevIndex) => (prevIndex - 1 + totalImagesToShow2) % totalImagesToShow2);
+  };
+
+  const handleNext2 = () => {
+    setCurrentIndex2((prevIndex) => (prevIndex + 1) % totalImagesToShow2);
+  };
+
+  const renderCarouselItems2 = (getData: () => AnimeItem[]) => {
+    const data = getData(); // 함수를 호출하여 데이터를 가져오고, 이를 data 변수에 저장하는 부분
+    const startIndex = currentIndex2;
+    const endIndex = (currentIndex2 + totalImagesToShow2) % data.length;
+
+    const carouselItems = data.slice(startIndex, endIndex + 1);
+
+    return carouselItems.map((item) => (
+      <S.ItemContainer key={item.id}>
+        <S.Image src={item.img} alt={item.name} />
+        <p>{item.name}</p>
+      </S.ItemContainer>
+    ));
+  };
+
+  // 랜더 3번
+  const [currentIndex3, setCurrentIndex3] = useState(0);
+  const totalImagesToShow3 = 6;
+
+  const handlePrev3 = () => {
+    setCurrentIndex3((prevIndex) => (prevIndex - 1 + totalImagesToShow3) % totalImagesToShow3);
+  };
+
+  const handleNext3 = () => {
+    setCurrentIndex3((prevIndex) => (prevIndex + 1) % totalImagesToShow3);
+  };
+
+  const renderCarouselItems3 = (getData: () => AnimeItem[]) => {
+    const data = getData(); // 함수를 호출하여 데이터를 가져오고, 이를 data 변수에 저장하는 부분
+    const startIndex = currentIndex3;
+    const endIndex = (currentIndex3 + totalImagesToShow3) % data.length;
+
+    const carouselItems = data.slice(startIndex, endIndex + 1);
+
+    return carouselItems.map((item) => (
       <S.ItemContainer key={item.id}>
         {item.images && item.images.length > 0 && item.images[0].img_url && (
-          <img src={item.images[0].img_url} alt={item.name} width={'300px'} height={'300px'} />
+          <S.Image src={item.images[0].img_url} alt={item.name} />
         )}
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
   };
 
-  const renderList3 = (data: AnimeItem[]) => {
-    return data.map((item) => (
+  const renderList3 = (getData: () => AnimeItem[]) => {
+    const data = getData();
+    //보여지는 이미지
+
+
+    return data.map((item, index) => (
       <S.Container key={item.id}>
         <h1>{item.name}</h1>
-        <S.ItemListContainer>
-          {item.item_list?.map((item) => (
-            <S.ItemContainer key={item.id}>
-              {item.images && item.images.length > 0 && item.images[0].img_url && (
-                <img src={item.images[0].img_url} alt={item.name} width={'300px'} height={'300px'} />
-              )}
-              <p>{item.name}</p>
-            </S.ItemContainer>
-          ))}
-        </S.ItemListContainer>
+        <S.Container key={item.id}>
+          <ItemListContainer item={item} />
+        </S.Container>
       </S.Container>
     ));
   };
-  // "id","name","img" //hot re,re2는 형식 안맞음...
+
+  // "id","name","img" //hot re,re2는 형식 안맞음.
 
   return (
     <>
       <ImageSlideshow />
-
       <S.RenderWarp>
-        <h1>DB Data</h1>
-        <S.renderWarpList>{renderList(dbData.db)}</S.renderWarpList>
-
-        <h1>Ranking Data</h1>
-        <S.renderWarpList>{renderList(dbData.ranking)}</S.renderWarpList>
-
-        <h1>Hot Data</h1>
-        <S.renderWarpList2>{renderList2(dbData.hot)}</S.renderWarpList2>
-
-        <S.renderWarpList3>{renderList3(dbData.recomend)}</S.renderWarpList3>
-
-        <S.renderWarpList3>{renderList3(dbData.recomend2)}</S.renderWarpList3>
+        <S.Container>
+          <h1>DB Data</h1>
+          <S.ItemListContainer>
+            <S.LeftButton onClick={handlePrev}>Prev</S.LeftButton>
+            {renderCarouselItems(() => dbData.db)}
+            <S.RightButton onClick={handleNext}>Next</S.RightButton>
+          </S.ItemListContainer>
+          <h1>Ranking Data</h1>
+          <S.ItemListContainer>
+            <S.LeftButton onClick={handlePrev2}>Prev</S.LeftButton>
+            {renderCarouselItems2(() => dbData.ranking)}
+            <S.RightButton onClick={handleNext2}>Next</S.RightButton>
+          </S.ItemListContainer>
+          <h1>Hot data</h1>
+          <S.ItemListContainer>
+            <S.LeftButton onClick={handlePrev3}>Prev</S.LeftButton>
+            {renderCarouselItems3(() => dbData.hot)}
+            <S.RightButton onClick={handleNext3}>Next</S.RightButton>
+          </S.ItemListContainer>
+          {renderList3(() => dbData.recomend)}
+          {renderList3(() => dbData.recomend2)}
+        </S.Container>
       </S.RenderWarp>
     </>
   );

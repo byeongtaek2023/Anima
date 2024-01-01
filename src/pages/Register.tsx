@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
+
+import { supabase } from '../api/supabase/supabase';
 import { StringDecoder } from 'string_decoder';
 import { registerClick } from 'api/supabase/supabase';
 
@@ -25,7 +27,6 @@ const Register = () => {
       alert('비밀번호는 5~8글자 영문 + 숫자 형식으로 입력해주세요 ');
     }
   };
-
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
   const registerClickHandler = async (email: string, password: string) => {
     try {
