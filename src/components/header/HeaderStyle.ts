@@ -65,21 +65,14 @@ export const LogoutBtn = styled.button`
     color: #ff9d52;
   }
 `;
-
-export const FooterWrapper = styled.div`
+export const MypageBtn = styled.button`
+  all: unset;
   position: absolute;
-  bottom: 10;
+  left: 85%;
+  font-size: 16px;
 
-  width: 100%;
-  height: 70px;
-  background-color: #000;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    color: #fff;
-    font-size: 18px;
+  &:hover {
+    cursor: pointer;
+    color: #ff9d52;
   }
 `;

@@ -11,7 +11,7 @@ import Ost from '../pages/ost/Ost';
 import AniList from 'components/AniList';
 
 import ImageSlideshow from 'components/ImageSlideShow';
-
+import Mypage from 'pages/Mypage';
 
 const Router = () => {
   return (
@@ -25,6 +25,7 @@ const Router = () => {
           <Route path="/c" element={<ImageSlideshow />} />
         </Route>
 
+        <Route path="/mypage" element={<Mypage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
