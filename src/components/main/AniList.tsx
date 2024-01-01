@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
 import ImageSlideshow from './ImageSlideShow';
-import ItemListContainer from './ItemListContainer';
+import ItemListContainer from './ItemListContainer'
+import Modal from './maindetail/MainDetailModal';
+
 
 export type AnimeItem = {
   id: number;
@@ -34,10 +36,22 @@ const AniList: React.FC = () => {
 
     fetchData();
   }, []);
+  type ModalData = {
+    isOpen: boolean;
+    imageUrl: string;
+    itemName: string;
+  }
 
+  const [modalData, setModalData] = useState<ModalData>({ isOpen: false, imageUrl: '', itemName: '' });
+  const openModal = (imageUrl: string, itemName: string) => {
+    setModalData({ isOpen: true, imageUrl, itemName });
+  };
+  const closeModal = () => {
+    setModalData({ isOpen: false, imageUrl: '', itemName: '' });
+  };
   //랜더1번
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalImagesToShow = 6;
+  const totalImagesToShow = 5;
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImagesToShow) % totalImagesToShow);
@@ -55,8 +69,8 @@ const AniList: React.FC = () => {
     const carouselItems = data.slice(startIndex, endIndex + 1);
 
     return carouselItems.map((item) => (
-      <S.ItemContainer key={item.id}>
-        <S.Image src={item.img} alt={item.name} />
+      <S.ItemContainer key={item.id} onClick={() => openModal(item.img, item.name)}>
+        <S.Image src={item.img}  alt={item.name} />
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
@@ -64,7 +78,7 @@ const AniList: React.FC = () => {
 
   //랜더 2번
   const [currentIndex2, setCurrentIndex2] = useState(0);
-  const totalImagesToShow2 = 6;
+  const totalImagesToShow2 = 5;
 
   const handlePrev2 = () => {
     setCurrentIndex2((prevIndex) => (prevIndex - 1 + totalImagesToShow2) % totalImagesToShow2);
@@ -82,7 +96,7 @@ const AniList: React.FC = () => {
     const carouselItems = data.slice(startIndex, endIndex + 1);
 
     return carouselItems.map((item) => (
-      <S.ItemContainer key={item.id}>
+      <S.ItemContainer key={item.id} onClick={() => openModal(item.img, item.name)}>
         <S.Image src={item.img} alt={item.name} />
         <p>{item.name}</p>
       </S.ItemContainer>
@@ -91,7 +105,7 @@ const AniList: React.FC = () => {
 
   // 랜더 3번
   const [currentIndex3, setCurrentIndex3] = useState(0);
-  const totalImagesToShow3 = 6;
+  const totalImagesToShow3 = 5;
 
   const handlePrev3 = () => {
     setCurrentIndex3((prevIndex) => (prevIndex - 1 + totalImagesToShow3) % totalImagesToShow3);
@@ -109,7 +123,7 @@ const AniList: React.FC = () => {
     const carouselItems = data.slice(startIndex, endIndex + 1);
 
     return carouselItems.map((item) => (
-      <S.ItemContainer key={item.id}>
+      <S.ItemContainer key={item.id} onClick={() => openModal(item.images?.[0]?.img_url || '', item.name)}>
         {item.images && item.images.length > 0 && item.images[0].img_url && (
           <S.Image src={item.images[0].img_url} alt={item.name} />
         )}
@@ -118,16 +132,15 @@ const AniList: React.FC = () => {
     ));
   };
 
+
+  
   const renderList3 = (getData: () => AnimeItem[]) => {
     const data = getData();
-    //보여지는 이미지
-
-
     return data.map((item, index) => (
       <S.Container key={item.id}>
         <h1>{item.name}</h1>
         <S.Container key={item.id}>
-          <ItemListContainer item={item} />
+          <ItemListContainer item={item} openModal={openModal}/>
         </S.Container>
       </S.Container>
     ));
@@ -140,6 +153,9 @@ const AniList: React.FC = () => {
       <ImageSlideshow />
       <S.RenderWarp>
         <S.Container>
+        {modalData.isOpen && (
+        <Modal imageUrl={modalData.imageUrl} itemName={modalData.itemName} closeModal={closeModal} />
+      )}
           <h1>DB Data</h1>
           <S.ItemListContainer>
             <S.LeftButton onClick={handlePrev}>Prev</S.LeftButton>
