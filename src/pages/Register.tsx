@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { supabase } from '../api/supabase/supabase';
 import { StringDecoder } from 'string_decoder';
-
-import { registerClickHandler } from 'api/supabase/supabase';
+import { registerClick } from 'api/supabase/supabase';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -29,18 +28,21 @@ const Register = () => {
     }
   };
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
-
   const registerClickHandler = async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password
-      });
-      if (email_regex.test(email) === false) {
-        return alert('이메일 형식이 올바르지 않습니다.');
-      } else if (data?.user) {
-        return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
+      const registerData = await registerClick(email, password);
+      console.log(registerData);
+      if (registerData) {
+        if (registerData.error) {
+          alert('형식에 맞게 작성해주세요.');
+        }
       }
+
+      // if (email_regex.test(email) === false) {
+      //   return alert('이메일 형식이 올바르지 않습니다.');
+      // } else if (data?.user) {
+      //   return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
+      // }
     } catch (error) {
       console.error(error);
     }

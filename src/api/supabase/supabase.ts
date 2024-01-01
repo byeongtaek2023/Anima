@@ -2,10 +2,20 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Navigate } from 'react-router-dom';
 
+// supabase를 사용할 때 필요한 부분은 언제든 꺼내 쓸 수 있게 이 파일에 정리했습니다.
+
 interface EditComment {
   id: string;
   content: string;
 }
+
+// 세션 받아오기
+export const getUserSession = async () => {
+  const { data, error } = await supabase.auth.getSession();
+  console.log('유저 세션 받아오기', data);
+  if (error) throw error;
+  return data;
+};
 
 // QueryClient를 생성
 export const supabase = createClient(process.env.REACT_APP_SUPABASE_URL!, process.env.REACT_APP_SUPABASE_ANON_KEY!);
@@ -20,8 +30,21 @@ export const loginHandler = async (email: string, password: string) => {
   return data;
 };
 
+// 로그아웃
+// Header.tsx 에서 사용
+export const handleLogout = async () => {
+  try {
+    const { error } = await supabase.auth.signOut();
+    // 로그아웃 될 때 유저 정보 지우기
+    sessionStorage.removeItem('user');
+    if (error) throw error;
+  } catch (error) {
+    console.error('로그아웃 실패:', error);
+  }
+};
+
 // 회원가입
-export const registerClickHandler = async (email: string, password: string) => {
+export const registerClick = async (email: string, password: string) => {
   try {
     const { data, error } = await supabase.auth.signUp({
       email,
@@ -32,6 +55,7 @@ export const registerClickHandler = async (email: string, password: string) => {
     // } else if (data?.user) {
     //   return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
     // }
+    return { data, error };
   } catch (error) {
     console.error(error);
   }
@@ -65,23 +89,6 @@ export const confirmEditComment = async (editComment: EditComment) => {
 export const confirmDeleteComment = async (id: string) => {
   const { data } = await supabase.from('comments').delete().eq('id', id);
   return data;
-};
-
-// Header.tsx 에서 사용
-export const getUserSession = async () => {
-  const { data, error } = await supabase.auth.getSession();
-  console.log(data);
-  if (error) throw error;
-  return data;
-};
-
-export const handleLogout = async () => {
-  try {
-    const { error } = await supabase.auth.signOut();
-    if (error) throw error;
-  } catch (error) {
-    console.error('로그아웃 실패:', error);
-  }
 };
 
 // Home.tsx에서 사용
