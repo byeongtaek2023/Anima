@@ -1,8 +1,13 @@
+import { getUserData } from 'api/supabase/supabase';
 import Comment from 'components/Comment';
 import CommentInput from 'components/CommentInput';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    getUserData();
+  }, []);
+
   return (
     <div>
       <CommentInput />

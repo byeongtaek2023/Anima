@@ -53,7 +53,7 @@ export const LoginBtn = styled.button`
     cursor: pointer;
   }
 `;
-export const RegisterBtn = styled.button`
+export const LogoutBtn = styled.button`
   all: unset;
   position: absolute;
   right: 10px;
