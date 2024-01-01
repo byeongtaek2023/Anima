@@ -8,9 +8,9 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import React from 'react';
 // 1. react-router-dom을 사용하기 위해서 아래 API들을 import 합니다.
 import Ost from '../pages/ost/Ost';
-import AniList from 'components/AniList';
+import AniList from 'components/main/AniList';
 
-import ImageSlideshow from 'components/ImageSlideShow';
+import ImageSlideshow from 'components/main/ImageSlideShow';
 import Mypage from 'pages/Mypage';
 
 const Router = () => {

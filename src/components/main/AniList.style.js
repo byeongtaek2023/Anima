@@ -4,33 +4,32 @@ export const RenderWarp = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
-  
+
   h1 {
     font-size: 24px;
     font-weight: bold;
 
-    @media (min-width: 768px) {
-      font-size: 30px;  
+    @media (min-width: 300px) {
+      font-size: 10px;
     }
 
     @media (min-width: 1024px) {
-      font-size: 38px;  
+      font-size: 38px;
     }
   }
 
   p {
     font-size: 14px;
 
-    @media (min-width: 768px) {
-      font-size: 16px;  
+    @media (min-width: 300px) {
+      font-size: 6px;
     }
 
     @media (min-width: 1024px) {
-      font-size: 18px;  
+      font-size: 18px;
     }
   }
 `;
-
 
 export const renderWarpList = styled.div`
   display: flex;
@@ -56,6 +55,7 @@ export const Container = styled.div`
 export const ItemListContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-direction: center;
   position: relative;
   overflow: hidden;
 `;
@@ -64,24 +64,24 @@ export const ItemContainer = styled.div`
   margin-right: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  transition: margin-left 0.3s ease; 
+  transition: margin-left 0.3s ease;
   box-sizing: border-box;
   width: 300px;
 `;
 
 export const Image = styled.img`
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
 
-  @media (min-width: 768px) {
-   
-    max-width: 90%; 
+  @media (min-width: 300px) {
+    max-width: 80%;
   }
 
   @media (min-width: 1024px) {
-
-    max-width:80%; 
+    max-width: 80%;
   }
 `;
 
@@ -95,7 +95,7 @@ export const LeftButton = styled.button`
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2; 
+  z-index: 2;
 `;
 
 export const RightButton = styled.button`
@@ -104,5 +104,5 @@ export const RightButton = styled.button`
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2; 
+  z-index: 2;
 `;

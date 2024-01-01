@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './ImageSlideShow.style';
-import karinaImg from '../assets/pre/karina.jpg';
-import WinterImg from '../assets/pre/winter.jpg';
-import JijelImg from '../assets/pre/Jijel.jpg';
-import NingNingImg from '../assets/pre/NingNing.jpg';
+import karinaImg from '../../assets/pre/karina.jpg';
+import WinterImg from '../../assets/pre/winter.jpg';
+import JijelImg from '../../assets/pre/Jijel.jpg';
+import NingNingImg from '../../assets/pre/NingNing.jpg';
 
 const images = [
   { image: karinaImg, alt: 'Karina' },

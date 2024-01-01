@@ -7,6 +7,12 @@ export const SlideshowContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  @media (min-width: 300px) {
+    height: 40vh;
+  }
+
+  @media (min-width: 1024px) {
+    height: 100vh;
 `;
 
 export const fadeInOut = keyframes`
