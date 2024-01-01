@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Menu from '../image/kebab.png';
-import { confirmDeleteComment, confirmEditComment, getComment, getUserSession } from 'api/supabase/supabase';
+import { confirmDeleteComment, confirmEditComment, getComment, getUserSession, supabase } from 'api/supabase/supabase';
 
 interface commentParams {
   id: string;
@@ -54,41 +54,37 @@ const Comment = () => {
   // 댓글 수정 확인
   const confirmEdit = async () => {
     if (editComment.id && editComment.content.trim() !== '') {
-      const confirmData = await confirmEditComment(editComment);
+      // Supabase를 이용하여 댓글을 수정합니다.
+      const { data, error } = await supabase
+        .from('comments')
+        .update({ content: editComment.content })
+        .eq('id', editComment.id);
 
-      if (!confirmData.error && confirmData.data) {
+      if (error) {
+        window.alert('댓글 수정 중 오류가 발생했습니다: ' + error.message);
+      } else {
         window.alert('댓글이 수정되었습니다.');
         setEditComment({ id: '', content: '' }); // 상태 초기화
         getCommentList(); // 댓글 목록 갱신
-      } else {
-        window.alert(confirmData.error?.message);
       }
     }
   };
 
-  //데이터 삭제
+  // 데이터 삭제
   const confirmDelete = async (id: string) => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
-      const confirmDeleteData = await confirmDeleteComment(id);
-      // console.log(confirmDeleteData);
-      if (confirmDeleteData) {
-        return;
+      // Supabase를 이용하여 댓글을 삭제합니다.
+      const { error } = await supabase.from('comments').delete().eq('id', id);
+
+      if (error) {
+        window.alert('댓글 삭제 중 오류가 발생했습니다: ' + error.message);
       } else {
-
-        window.alert(error?.message);
-
         window.alert('삭제 완료');
-
+        getCommentList(); // 댓글 목록 갱신
       }
-      // if (!confirmDeleteData.error && confirmDeleteData.data) {
-      //   window.alert('삭제되었습니다.');
-      // } else {
-      //   window.alert(confirmDeleteData.error?.message);
-      // }
     }
   };
-
   return (
     <div>
       <ul>
