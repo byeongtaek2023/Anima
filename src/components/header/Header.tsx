@@ -1,76 +1,95 @@
-import { getUserSession, handleLogout } from 'api/supabase/supabase';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
-import styled from 'styled-components';
+import * as St from '../header/HeaderStyle';
+import { useNavigate } from 'react-router-dom';
+import { getUserSession, handleLogout } from 'api/supabase/supabase';
 
 const Header = () => {
-  useEffect(() => {
-    getUserSession().then((result) => {
-      if (result) {
-        console.log(result);
-        setIsLoggin(true);
-      }
-    });
-  }, []);
-
+  const [Islogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
-  const [Isloggin, setIsLoggin] = useState(false);
 
-  const login = () => {
-    navigate('/login');
+  // 라우터 이동 핸들러
+  const handleNavigateAndReload = (path: string) => {
+    navigate(path);
   };
 
-  // const getUserSession = async () => {
-  //   const { data, error } = await supabase.auth.getSession();
-  //   console.log(data);
-  //   if (error) throw error;
-  //   return data;
-  // };
+  // 마운트 되었을 때 로그인 상태 true
+  // useEffect(() => {
+  //   getUserSession().then((result) => {
+  //     // 유저정보 있으면 true
+  //     // 없으면 false
+  //     if (result) {
+  //       console.log(result);
+  //       setIsLogin(true);
+  //     }
+  //   });
+  // }, []);
 
-  // const handleLogout = async () => {
-  //   try {
-  //     const { error } = await supabase.auth.signOut();
-  //     if (error) throw error;
+  useEffect(() => {
+    const checkUserSession = async () => {
+      try {
+        const result = sessionStorage.getItem('user');
+        setIsLogin(!!result);
+      } catch (error) {
+        console.error('유저 세션를 확인하는데에 문제가 발생했습니다.', error);
+      }
+    };
 
-  //     setIsLoggin(false);
-  //     navigate('/'); // 로그아웃 후 홈페이지로 이동
-  //   } catch (error) {
-  //     console.error('로그아웃 실패:', error);
-  //   }
+    checkUserSession();
+  }, []);
+
+  // 세션 스토리지에서 사용자 정보 가져오는 로직
+  const getStoreUser = () => {
+    const storeUser = sessionStorage.getItem('user');
+    return storeUser ? JSON.parse(storeUser) : null;
+  };
+
+  // // 로그아웃 될 때 유저 정보 지우기
+  // const clearUserSession = () => {
+  //   sessionStorage.removeItem('user');
   // };
 
   return (
-    <Container>
-      <LoginBox>
-        {Isloggin ? (
-          <div>
-            <button
+    <>
+      {/* 헤더와 푸터 CSS 작업은 LayoutStyle.ts 파일에서 하시면 됩니다*/}
+
+      <St.HeaderWrapper>
+        <St.HeaderTitleLogo
+          onClick={() => {
+            handleNavigateAndReload('/');
+          }}
+        />
+        <St.ButtonWrapper>
+          {Islogin ? (
+            <>
+              <St.LogoutBtn
+                onClick={() => {
+                  handleLogout();
+                  setIsLogin(false);
+                }}
+              >
+                Logout
+              </St.LogoutBtn>
+              <St.MypageBtn
+                onClick={() => {
+                  navigate('/mypage');
+                }}
+              >
+                마이페이지
+              </St.MypageBtn>
+            </>
+          ) : (
+            <St.LoginBtn
               onClick={() => {
-                handleLogout();
-                setIsLoggin(false);
-                navigate('/'); // 로그아웃 후 홈페이지로 이동
+                handleNavigateAndReload('/login');
               }}
             >
-              로그아웃
-            </button>
-          </div>
-        ) : (
-          <div>
-            <button onClick={login}>로그인/가입</button>
-          </div>
-        )}
-      </LoginBox>
-    </Container>
+              Login
+            </St.LoginBtn>
+          )}
+        </St.ButtonWrapper>
+      </St.HeaderWrapper>
+    </>
   );
 };
 
 export default Header;
-
-const Container = styled.header`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-const LoginBox = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
