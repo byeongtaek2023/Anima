@@ -3,6 +3,7 @@ import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
 import ImageSlideshow from './ImageSlideShow';
 import ItemListContainer from './ItemListContainer';
+import MainDetailModal from './maindetail/MainDetailModal';
 
 export type AnimeItem = {
   id: number;
@@ -56,7 +57,7 @@ const AniList: React.FC = () => {
 
     return carouselItems.map((item) => (
       <S.ItemContainer key={item.id}>
-        <S.Image src={item.img} alt={item.name} />
+        <S.Image src={item.img}  alt={item.name} />
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
@@ -132,14 +133,17 @@ const AniList: React.FC = () => {
       </S.Container>
     ));
   };
-
+  const [isModalOpen, setModalOpen] = useState(false);
   // "id","name","img" //hot re,re2는 형식 안맞음.
-
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
   return (
     <>
       <ImageSlideshow />
       <S.RenderWarp>
         <S.Container>
+        {isModalOpen && <MainDetailModal toggleModal={toggleModal}/>}
           <h1>DB Data</h1>
           <S.ItemListContainer>
             <S.LeftButton onClick={handlePrev}>Prev</S.LeftButton>
