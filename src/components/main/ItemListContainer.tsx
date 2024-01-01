@@ -5,10 +5,11 @@ import * as S from './AniList.style';
 type ItemListContainerProps = {
   
     item: AnimeItem;
+    openModal: (imageUrl: string, itemName: string) => void;
   }
 
 
-const ItemListContainer:React.FC<ItemListContainerProps> = ({ item }) => {
+const ItemListContainer:React.FC<ItemListContainerProps> = ({ item, openModal }) => {
     const [currentIndex5, setCurrentIndex5] = useState(0);
         const itemsPerPage = 6;
     const handlePrevClick = () => {
@@ -29,6 +30,7 @@ const ItemListContainer:React.FC<ItemListContainerProps> = ({ item }) => {
           style={{
             display: subIndex >= currentIndex5 && subIndex < currentIndex5 + itemsPerPage ? 'flex' : 'none',
           }}
+          onClick={() => subItem.images && subItem.images[0] && openModal(subItem.images[0].img_url || '', subItem.name)}
         >
           {subItem.images && subItem.images.length > 0 && subItem.images[0].img_url && (
             <S.Image src={subItem.images[0].img_url} alt={subItem.name} />

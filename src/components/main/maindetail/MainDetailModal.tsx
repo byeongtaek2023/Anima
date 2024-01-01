@@ -1,29 +1,28 @@
+import * as S from './MainDetailModal.stlye';
+// import React, { useState } from 'react';
 
-import * as S from './MainDetailModal.stlye'
-import React from 'react';
-import './Modal.css'; // 모달 스타일을 정의한 CSS 파일
-
-type MainDetailModalProps = {
-  toggleModal: () => void;
+// Modal.js
+type MainDetailModalProps ={
+  imageUrl: string;
+  itemName: string;
+  closeModal: () => void;
 }
 
-const MainDetailModal:React.FC<MainDetailModalProps>= ({toggleModal}) => {
-  
 
+const Modal:React.FC<MainDetailModalProps> = ({ imageUrl, itemName, closeModal }) => {
 
 
   return (
-    <div>
-      <S.ModalOverlay  onClick={toggleModal}>
-        <S.ModalContent onClick={(e) => e.stopPropagation()}>
-          <S.ModalClose className="close" onClick={toggleModal}>
+    <S.ModalOverlay onClick={closeModal}>
+      <S.ModalContent onClick={(e) => e.stopPropagation()}>
+      <S.ModalClose className="close" onClick={closeModal}>
             &times;
           </S.ModalClose>
-          {/* <WriteModalSearch setSelectVideo={setSelectVideo} selectVideo={selectVideo} toggleModal={toggleModal} /> */}
-        </S.ModalContent>
-      </S.ModalOverlay>
-    </div>
+        <S.ModalImage src={imageUrl} alt={itemName} />
+        <p>{itemName}</p>
+      </S.ModalContent>
+    </S.ModalOverlay>
   );
 };
 
-export default MainDetailModal;
+export default Modal;
