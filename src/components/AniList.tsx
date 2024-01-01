@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
 import ImageSlideshow from './ImageSlideShow';
+import SubItemList from './SubItemList';
 
 export type AnimeItem = {
   id: number;
@@ -61,7 +62,7 @@ const AniList: React.FC = () => {
 
     return carouselItems.map((item) => (
       <S.ItemContainer key={item.id}>
-        <img src={item.img} alt={item.name}  />
+        <S.Image src={item.img} alt={item.name}  />
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
@@ -238,11 +239,16 @@ const AniList: React.FC = () => {
   //   ));
   // };
   const [currentIndex5, setCurrentIndex5] = useState(0);
-
+// 지금 데이터가 배열 이다. 데이터 안에 있는 아이템들 한테 
+// 커렌트 인덱스를 1:1로 하나씩 더해야 되는데
+// 컨테이너 자체를 통째로 컴포넌트. 
+// 스태이트를 넣어주면 된다 
   const renderList3 = (getData: () => AnimeItem[]) => {
     const data = getData();
+    //보여지는 이미지 
     const itemsPerPage = 6;
 
+    //무한루프
     const handlePrevClick = () => {
       setCurrentIndex5((prevIndex) => (prevIndex - 1 + data.length) % data.length);
     };
@@ -256,19 +262,11 @@ const AniList: React.FC = () => {
         <h1>{item.name}</h1>
         <S.ItemListContainer>
           <S.LeftButton onClick={() => handlePrevClick()}>Previous</S.LeftButton>
-          {item.item_list?.map((subItem, subIndex) => (
-            <S.ItemContainer
-              key={subItem.id}
-              style={{
-                display: subIndex >= currentIndex5 && subIndex < currentIndex5 + itemsPerPage ? 'flex' : 'none'
-              }}
-            >
-              {subItem.images && subItem.images.length > 0 && subItem.images[0].img_url && (
-                <S.Image src={subItem.images[0].img_url} alt={subItem.name}  />
-              )}
-              <p>{subItem.name}</p>
-            </S.ItemContainer>
-          ))}
+          <SubItemList
+            subItems={item.item_list || []}
+            currentIndex={currentIndex5}
+            itemsPerPage={itemsPerPage}
+          />
           <S.RightButton onClick={() => handleNextClick()}>Next</S.RightButton>
         </S.ItemListContainer>
       </S.Container>
