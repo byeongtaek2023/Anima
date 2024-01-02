@@ -1,10 +1,22 @@
-import { supabase } from 'api/supabase/supabase';
-import { useState } from 'react';
+import { getUserSession, supabase } from 'api/supabase/supabase';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const Comment = ({ item, currentUser, getCommentList }: any) => {
+const Comment = ({ item, getCommentList }: any) => {
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState(item.content);
+  const [currentUser, setCurrentUser] = useState<any>(null);
+
+  useEffect(() => {
+    checkCurrentUser();
+  }, [currentUser]);
+
+  const checkCurrentUser = async () => {
+    // 현재 로그인된 사용자의 정보를 가져옵니다.
+    const data = await getUserSession();
+
+    setCurrentUser(data.session);
+  };
 
   // 댓글 수정 확인
   const confirmEdit = async (id: string) => {
@@ -38,7 +50,7 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
   };
 
   return isEditing ? (
-    <div>
+    <EditingWrapper>
       <input type="text" value={content.content} onChange={(e) => setContent(e.target.value)} />
       <button onClick={() => confirmEdit(item.id)}>저장</button>
       <button
@@ -49,7 +61,7 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
       >
         취소
       </button>
-    </div>
+    </EditingWrapper>
   ) : (
     <Container key={item.id}>
       <UserIcon>
@@ -81,6 +93,14 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
 };
 
 export default Comment;
+
+const EditingWrapper = styled.div`
+  input {
+    :focus {
+      outline: none;
+    }
+  }
+`;
 const Container = styled.li`
   display: flex;
   padding: 10px;
