@@ -1,6 +1,5 @@
 import { getUserData } from 'api/supabase/supabase';
-import Comment from 'components/Comment';
-import CommentInput from 'components/CommentInput';
+import Replies from 'components/Replies';
 import React, { useEffect } from 'react';
 
 const Home = () => {
@@ -10,8 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      <CommentInput />
-      <Comment />
+      <Replies />
     </div>
   );
 };

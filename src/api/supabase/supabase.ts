@@ -76,22 +76,29 @@ export const insertUserData = async (email: string) => {
 
 // comment 추가하는 부분 / commentInput.tsx
 export const commentInsert = async (text: string) => {
-  const { data, error } = await supabase.from('comments').insert({
-    nickname: 'nickname',
-    content: text
-  });
+  console.log(text);
+  const session = localStorage.getItem('sb-mrzjkibhsbvwscaesazp-auth-token');
+
+  if (session) {
+    const parseSession = JSON.parse(session);
+    const { data, error } = await supabase.from('replies').insert({
+      nickname: 'nickname',
+      content: text,
+      user_id: parseSession?.user?.id
+    });
+  }
 };
 
 // comment.tsx 에서 사용
 export const getComment = async () => {
-  const { data, error } = await supabase.from('comments').select('*');
+  const { data, error } = await supabase.from('replies').select('*');
   return { data, error };
 };
 
 // 댓글 수정
 export const confirmEditComment = async (editComment: EditComment) => {
   const { data, error } = await supabase
-    .from('comments')
+    .from('replies')
     .update({ content: editComment.content })
     .match({ id: editComment.id });
 
@@ -100,7 +107,7 @@ export const confirmEditComment = async (editComment: EditComment) => {
 
 // 댓글 삭제
 export const confirmDeleteComment = async (id: string) => {
-  const { data } = await supabase.from('comments').delete().eq('id', id);
+  const { data } = await supabase.from('replies').delete().eq('id', id);
   return data;
 };
 
