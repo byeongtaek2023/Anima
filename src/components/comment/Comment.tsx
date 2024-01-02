@@ -1,16 +1,25 @@
-import { supabase } from 'api/supabase/supabase';
-import { useState } from 'react';
+import { getUserSession, supabase } from 'api/supabase/supabase';
+import { useEffect, useState } from 'react';
 import * as St from './CommentStyle';
-
-const Comment = ({ item, currentUser, getCommentList }: any) => {
+const Comment = ({ item, getCommentList }: any) => {
+  // any 쓰믄 안되는데 급해서 썻읍니다.. 죄송함니다
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState(item.content);
+  const [currentUser, setCurrentUser] = useState<any>(null);
 
+  useEffect(() => {
+    checkCurrentUser();
+  }, [currentUser]);
+
+  const checkCurrentUser = async () => {
+    // 현재 로그인된 사용자의 정보를 가져옵니다.
+    const data = await getUserSession();
+    setCurrentUser(data.session);
+  };
   // 댓글 수정 확인
   const confirmEdit = async (id: string) => {
     // Supabase를 이용하여 댓글을 수정합니다.
     const { error } = await supabase.from('replies').update({ content: content }).match({ id: id });
-
     if (error) {
       window.alert('댓글 수정 중 오류가 발생했습니다: ' + error.message);
       setIsEditing(false);
@@ -21,13 +30,11 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
       setIsEditing(false);
     }
   };
-
   // 데이터 삭제
   const confirmDelete = async (id: string) => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
       const { error } = await supabase.from('replies').delete().eq('id', id);
-
       if (error) {
         window.alert('댓글 삭제 중 오류가 발생했습니다: ' + error.message);
       } else {
@@ -36,30 +43,33 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
       }
     }
   };
-
   return isEditing ? (
-    <div>
-      <input type="text" value={content.content} onChange={(e) => setContent(e.target.value)} />
-      <button onClick={() => confirmEdit(item.id)}>저장</button>
-      <button
-        onClick={() => {
-          setContent(item.content);
-          setIsEditing(false);
-        }}
-      >
-        취소
-      </button>
-    </div>
+    <St.EditingWrapper>
+      <St.EditInput
+        placeholder="수정할 내용을 작성해주세요."
+        type="text"
+        value={content.content}
+        onChange={(e) => setContent(e.target.value)}
+      />
+      <St.SaveAndCancelBtnWrapper>
+        <St.SaveButton onClick={() => confirmEdit(item.id)}>저장</St.SaveButton>
+        <St.CancelButton
+          onClick={() => {
+            setContent(item.content);
+            setIsEditing(false);
+          }}
+        >
+          취소
+        </St.CancelButton>
+      </St.SaveAndCancelBtnWrapper>
+    </St.EditingWrapper>
   ) : (
     <St.Container key={item.id}>
-      <div>
-        <St.UserIcon />
-      </div>
+      <St.UserIcon></St.UserIcon>
       <St.UserWrapper style={{ display: 'flex' }}>
         <St.UserInfo>
           <St.UserId>{item.nickname}</St.UserId>
-          <div />
-          <St.Date> {item.created_at}</St.Date>
+          <St.Date>{item.created_at}</St.Date>
         </St.UserInfo>
         <St.CommentWrapper>
           <St.UserComment>{item.content}</St.UserComment>
@@ -80,5 +90,4 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
     </St.Container>
   );
 };
-
 export default Comment;

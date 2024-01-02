@@ -13,26 +13,32 @@ interface commentParams {
 const Replies = () => {
   const [commentList, setCommentList] = useState<commentParams[]>([]);
 
+  const user = () => {
+    const tokenString = localStorage.getItem('sb-mrzjkibhsbvwscaesazp-auth-token');
+    if (tokenString) {
+      // 문자열을 JSON 객체로 변환합니다.
+      const tokenObj = JSON.parse(tokenString);
+      // `user` 객체에서 `email` 속성을 찾습니다.
+      const email = tokenObj?.user?.email;
+      console.log(email);
+      return email;
+    }
+    return null; // 토큰이 없거나 `email` 정보가 없는 경우 null 반환
+  };
+
   useEffect(() => {
     getUserData();
     getCommentList();
-    getUesrNickname();
+    user();
   }, []);
 
   const getCommentList = async () => {
     const commentListData = await getComment();
-    console.log(commentListData.data);
     if (!commentListData.error && commentListData.data) {
       setCommentList(commentListData.data);
-      console.log(commentListData);
     } else {
       setCommentList([]);
     }
-  };
-
-  const getUesrNickname = async () => {
-    let { data: users } = await supabase.from('users').select('nickname');
-    console.log(users);
   };
 
   return (

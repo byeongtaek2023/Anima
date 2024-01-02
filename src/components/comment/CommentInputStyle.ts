@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.form`
   width: 600px;
   margin-bottom: 30px;
+  margin-left: 70px;
+  margin-top: 30px;
 `;
 export const Footer = styled.footer`
   display: flex;

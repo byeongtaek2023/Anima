@@ -50,7 +50,7 @@ export const ModalImage = styled.img`
   width: 70vh;
   height: 80vh;
   border-radius: 4px;
-  margin-top: 34rem;
+  margin-top: 54rem;
   z-index: 1002; // 모달보다 2 높은 값으로 설정
 `;
 
@@ -67,7 +67,7 @@ export const ModalClose = styled.span`
   top: -80%;
   &:hover,
   &:focus {
-    color: #ff683b;
+    color: #fff;
     text-decoration: none;
   }
 `;

@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.li`
   display: flex;
   padding: 10px;
-  width: 36rem;
+  width: 45rem;
   height: 10rem;
   position: relative;
   align-items: center;
   border: 1px solid #ff683b;
   border-radius: 20px;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 60px;
 `;
 
 export const MenuWrapper = styled.div`
@@ -86,4 +86,32 @@ export const DeleteButton = styled.button`
     color: #ff683b;
     cursor: pointer;
   }
+`;
+
+export const EditingWrapper = styled.div`
+  margin-left: 80px;
+  padding: 10px;
+
+  margin-top: 100px;
+`;
+export const SaveAndCancelBtnWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+`;
+export const EditInput = styled.input`
+  all: unset;
+  border-bottom: 2px solid #5199f0;
+  width: 30rem;
+  height: 3rem;
+  font-size: 16px;
+  align-items: center;
+`;
+export const SaveButton = styled.button`
+  all: unset;
+  font-family: 'ONE-Mobile-Title';
+`;
+export const CancelButton = styled.button`
+  all: unset;
+  font-family: 'ONE-Mobile-Title';
 `;
