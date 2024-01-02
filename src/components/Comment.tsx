@@ -59,7 +59,7 @@ const Comment = () => {
     console.log(editComment);
     if (id && editComment.content.trim() !== '') {
       // Supabase를 이용하여 댓글을 수정합니다.
-      const { data, error } = await supabase.from('comments').update({ content: editComment.content }).eq('id', id);
+      const { error } = await supabase.from('comments').update({ content: editComment.content }).eq('id', id);
 
       if (error) {
         window.alert('댓글 수정 중 오류가 발생했습니다: ' + error.message);
