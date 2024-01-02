@@ -11,7 +11,6 @@ import Ost from '../pages/ost/Ost';
 import AniList from 'components/main/AniList';
 import Mypage from 'pages/Mypage';
 import { useRecoilState } from 'recoil';
-import { LoginState } from 'recoil/acccessToken';
 
 // 로그인 되었을 때만 마이페이지 이동하도록
 // const [isLogin, setIsLogin] = useRecoilState(LoginState);
@@ -25,7 +24,7 @@ const Router = () => {
           <Route path="*" element={<Navigate replace to="/" />} />
           <Route path="/a" element={<Ost />} />
           <Route path="/b" element={<AniList />} />
- 
+
           <Route path="/mypage" element={<Mypage />} />
         </Route>
 

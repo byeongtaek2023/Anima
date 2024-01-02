@@ -98,13 +98,17 @@ export const CommentTitleBox = styled.div`
   }
 `;
 export const CommentTitle = styled.div`
-  margin-top: 19px;
+  margin-top: 30px;
   margin-left: 3px;
   font-size: 22px;
 `;
 
 export const CommentWrapper = styled.div`
   background-color: green;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 `;
 export const Nickname = styled.div``;
 export const CommentAvatarBox = styled.div``;
