@@ -11,6 +11,8 @@ const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [nickname, setNickname] = useState('');
+
   // 이메일 정규식
   const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
   // 영문 + 숫자 조합으로 5~8글자 제한
@@ -31,30 +33,20 @@ const Register = () => {
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
   const registerClickHandler = async (email: string, password: string) => {
     try {
-      const registerData = await registerClick(email, password);
+      const registerData = await registerClick(email, password, nickname);
 
       if (registerData) {
         if (registerData.error) {
-          alert('회원가입 중 에러가 발생했습니다 ㅠ ㅁㅠ');
+          alert('이메일 형식과 비밀번호는 6글자 이상 작성해주세요.');
 
           console.log(registerData.error);
+        } else if (email_regex.test(email) === false) {
+          return alert('이메일 형식에 맞춰 이메일을 작성해주세요');
         } else {
+          insertUserData(email, nickname);
           return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
         }
       }
-
-      // const { data, error } = await supabase
-      // .from('users')
-      // .insert([
-      //   { some_column: 'someValue', other_column: 'otherValue' },
-      // ])
-      // .select()
-
-      // if (email_regex.test(email) === false) {
-      //   return alert('이메일 형식이 올바르지 않습니다.');
-      // } else if (data?.user) {
-      //   return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
-      // }
     } catch (error) {
       console.error(error);
     }
@@ -104,6 +96,19 @@ const Register = () => {
             type="password"
           />
         </St.PasswordInputBox>
+        <St.NicknameInputBox>
+          <St.NicknameLabel htmlFor="nickname">닉네임</St.NicknameLabel>
+          <St.NicknameInput
+            value={nickname}
+            onChange={(e) => {
+              setNickname(e.target.value);
+            }}
+            id="nickname"
+            placeholder="닉네임을 입력해주세요."
+            type="text"
+            autoComplete="off"
+          ></St.NicknameInput>
+        </St.NicknameInputBox>
 
         <>
           <St.LoginButton

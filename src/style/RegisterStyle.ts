@@ -19,7 +19,7 @@ export const Form = styled.form`
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid;
   width: 500px;
-  height: 460px;
+  height: 600px;
   border-radius: 20px;
 `;
 
@@ -111,6 +111,40 @@ export const PasswordInput = styled.input`
   padding: 15px;
   text-align: left;
   width: 340.19px;
+  border-bottom: 1px solid #616060;
+
+  &:focus {
+    border-bottom: 1px solid #5199f5;
+    caret-color: #5199f5;
+    color: #fff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+`;
+
+export const NicknameInputBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  letter-spacing: 1px;
+  margin-top: 22px;
+  color: #fff;
+`;
+
+export const NicknameLabel = styled.label`
+  font-size: 15px;
+`;
+export const NicknameInput = styled.input`
+  all: unset;
+  font-size: 17px;
+  padding: 15px;
+  text-align: left;
+  width: 340.19px;
+  margin-left: 14px;
   border-bottom: 1px solid #616060;
 
   &:focus {

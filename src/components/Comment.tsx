@@ -29,7 +29,7 @@ const Comment = ({ commentList }: { commentList: commentParams[] }) => {
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
     const data = await getUserSession();
-    console.log(data);
+    // console.log(data);
     setCurrentUser(data);
   };
 
