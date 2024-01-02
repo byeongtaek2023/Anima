@@ -17,9 +17,9 @@ const Mypage = () => {
     setCurrentUser(data);
   };
 
-  // console.log(currentUser);
+  console.log(currentUser);
 
-  // 세션 안에 있는 닉네임 가져오는 함수
+  // 세션 안에 있는 닉네임,이메일 가져오는 함수
   const getSession = async () => {
     const session = await getUserSession();
     if (session && session.session) {
@@ -33,25 +33,38 @@ const Mypage = () => {
     return;
   };
   getSession();
+  console.log(nickname);
+
+  // 댓글 가져오는 함수
 
   return (
-    <St.ProfileWrapper>
-      <St.ProfileBox>
-        <St.ImageWrapper>
-          <St.ProfileImage></St.ProfileImage>
-        </St.ImageWrapper>
+    <>
+      <St.ProfileWrapper>
+        <St.ProfileBox>
+          <St.ImageWrapper>
+            <St.ProfileImage></St.ProfileImage>
+          </St.ImageWrapper>
 
-        <St.NicknameWrapper>
-          <St.Nickname>{nickname}님</St.Nickname>
-        </St.NicknameWrapper>
-        <St.EmailWrapper>
-          <St.Email> {email} </St.Email>
-        </St.EmailWrapper>
-        <St.LikeBox>
-          <St.Like>My Like List ♥️</St.Like>
-        </St.LikeBox>
-      </St.ProfileBox>
-    </St.ProfileWrapper>
+          <St.NicknameWrapper>
+            <St.UserNickname>{nickname}님</St.UserNickname>
+          </St.NicknameWrapper>
+          <St.EmailWrapper>
+            <St.Email> {email} </St.Email>
+          </St.EmailWrapper>
+          <St.CommentTitleBox>
+            <St.CommentTitle>My Comment List ♥️</St.CommentTitle>
+          </St.CommentTitleBox>
+        </St.ProfileBox>
+      </St.ProfileWrapper>
+
+      <St.CommentWrapper>
+        <St.CommentAvatarBox>
+          <St.Avatar>아바타 이미지</St.Avatar>
+        </St.CommentAvatarBox>
+        <St.Nickname>닉네임</St.Nickname>
+        <St.Comment></St.Comment>
+      </St.CommentWrapper>
+    </>
 
     // 좋아요 남긴 기록 넣기
   );

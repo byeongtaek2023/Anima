@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { insertUserData, supabase } from '../api/supabase/supabase';
 import { StringDecoder } from 'string_decoder';
+
 import { registerClick } from 'api/supabase/supabase';
 
 const Register = () => {

@@ -13,6 +13,7 @@ export default Button;
 
 const Buttons = styled.button`
   border: none;
+  color: #fff;
   background-color: transparent;
   padding: 0.5rem;
   cursor: pointer;

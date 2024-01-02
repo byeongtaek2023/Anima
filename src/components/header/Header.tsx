@@ -31,9 +31,25 @@ const Header = () => {
     return storeUser ? JSON.parse(storeUser) : null;
   };
 
+  //헤더 색상 변경
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    // 스크롤 이벤트에 핸들러 추가
+    window.addEventListener('scroll', handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
-      <St.HeaderWrapper>
+      <St.HeaderWrapper style={{ backgroundColor: scrollPosition > 0 ? 'black' : 'transparent' }}>
         <St.ButtonWrapper>
           <St.TitleLogoWrapper>
             <St.HeaderTitleLogo

@@ -5,7 +5,8 @@ export const ProfileWrapper = styled.div`
   height: 90vh;
   display: flex;
   justify-content: center;
-  background-color: black;
+  color: var(--color-dark-gray);
+  background-color: transparent;
 
   @media (max-width: 1000px) {
     background-color: black;
@@ -62,7 +63,7 @@ export const NicknameWrapper = styled.div`
   }
 `;
 
-export const Nickname = styled.p`
+export const UserNickname = styled.p`
   color: white;
   font-size: 3rem;
   font-weight: bold;
@@ -76,27 +77,36 @@ export const Nickname = styled.p`
 
 export const EmailWrapper = styled.div`
   position: absolute;
-  right: 37%;
+  right: 26%;
   bottom: 65%;
 `;
 export const Email = styled.p`
-  color: white;
   font-size: 1.7rem;
   color: #8a8e94;
   margin-bottom: 3rem;
+  width: 25rem;
+  padding: 0 3rem;
 
   @media (max-width: 1000px) {
     display: none;
   }
 `;
 
-export const LikeBox = styled.div`
+export const CommentTitleBox = styled.div`
   @media (max-width: 1000px) {
     align-items: center;
   }
 `;
-export const Like = styled.div`
+export const CommentTitle = styled.div`
   margin-top: 19px;
   margin-left: 3px;
   font-size: 22px;
 `;
+
+export const CommentWrapper = styled.div`
+  background-color: green;
+`;
+export const Nickname = styled.div``;
+export const CommentAvatarBox = styled.div``;
+export const Avatar = styled.div``;
+export const Comment = styled.div``;

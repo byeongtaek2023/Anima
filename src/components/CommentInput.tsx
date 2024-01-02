@@ -3,15 +3,19 @@ import styled from 'styled-components';
 import Button from './Button';
 import { commentInsert, supabase } from 'api/supabase/supabase';
 
-const CommentInput = () => {
+interface CommentInputProps {
+  getCommentList: () => Promise<void>;
+}
+
+const CommentInput: React.FC<CommentInputProps> = ({ getCommentList }) => {
   const [text, setText] = useState<string>('');
   const [currentUser, setCurrentUser] = useState<any>(null);
   // console.log(currentUser);
   useEffect(() => {
     checkCurrentUser();
+    getCommentList();
   }, []);
 
-  //왜 로그인해도 세션이 널이지?ㅠㅠㅠㅠㅠㅠㅠㅠ
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
     try {
@@ -24,13 +28,10 @@ const CommentInput = () => {
   };
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    try {
-      e.preventDefault();
-      // await commentInsert(text, nickname, userId);
-      window.location.reload();
-    } catch (error) {
-      console.error(error);
-    }
+    e.preventDefault();
+    await commentInsert(text);
+
+    // window.location.reload();
   };
 
   return (

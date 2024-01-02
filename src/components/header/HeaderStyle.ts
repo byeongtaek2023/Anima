@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
-  top: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
   z-index: 20;
+  height: 60px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -41,12 +40,14 @@ export const HeaderTitleLogo = styled.a`
 
 export const ButtonWrapper = styled.nav`
   margin: 0;
+  background-color: var(--background-color);
   position: fixed;
   display: flex;
   width: 100%;
   height: 70px;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.05);
   top: 0.5%;
   color: #fff;
   z-index: 20;
