@@ -13,7 +13,6 @@ import AniList from 'components/main/AniList';
 import ImageSlideshow from 'components/main/ImageSlideShow';
 import Mypage from 'pages/Mypage';
 import { useRecoilState } from 'recoil';
-import { LoginState } from 'recoil/acccessToken';
 
 // 로그인 되었을 때만 마이페이지 이동하도록
 // const [isLogin, setIsLogin] = useRecoilState(LoginState);

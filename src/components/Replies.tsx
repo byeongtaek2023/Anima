@@ -1,5 +1,5 @@
 import { getComment, getUserData, supabase } from 'api/supabase/supabase';
-import Comment from 'components/Comment';
+import Comment from 'components/Comments';
 import CommentInput from 'components/CommentInput';
 import React, { useEffect, useState } from 'react';
 
@@ -24,20 +24,21 @@ const Replies = () => {
     console.log(commentListData.data);
     if (!commentListData.error && commentListData.data) {
       setCommentList(commentListData.data);
+      console.log(commentListData);
     } else {
       setCommentList([]);
     }
   };
 
   const getUesrNickname = async () => {
-    let { data: users, error } = await supabase.from('users').select('nickname');
+    let { data: users } = await supabase.from('users').select('nickname');
     console.log(users);
   };
 
   return (
     <div>
       <CommentInput getCommentList={getCommentList} />
-      <Comment commentList={commentList} />
+      <Comment commentList={commentList} getCommentList={getCommentList} />
     </div>
   );
 };
