@@ -32,14 +32,14 @@ const Header = () => {
   };
 
   //헤더 색상 변경
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
     };
 
-    // 스크롤 이벤트에 핸들러 추가
     window.addEventListener('scroll', handleScroll);
 
     // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
@@ -49,7 +49,7 @@ const Header = () => {
   }, []);
   return (
     <>
-      <St.HeaderWrapper style={{ backgroundColor: scrollPosition > 0 ? 'black' : 'transparent' }}>
+      <St.HeaderWrapper>
         <St.ButtonWrapper>
           <St.TitleLogoWrapper>
             <St.HeaderTitleLogo
@@ -59,6 +59,14 @@ const Header = () => {
             >
               anima
             </St.HeaderTitleLogo>
+            <St.Slash>/</St.Slash>
+            <St.HeaderOstLogo
+              onClick={() => {
+                handleNavigateAndReload('/ost');
+              }}
+            >
+              Ost
+            </St.HeaderOstLogo>
           </St.TitleLogoWrapper>
 
           <St.LoginAndMyPageBox>

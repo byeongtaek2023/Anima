@@ -1,20 +1,35 @@
 import styled from 'styled-components';
-const ItemContainer = styled.div`
-
+export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 
   &:last-child {
     margin-bottom: 0;
   }
 `;
 
-const GridContainer = styled.div`
+export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 270px; /* Adjust the gap between items as needed */
+  gap: 155px; /* Adjust the gap between items as needed */
+  overflow-x: hidden;
 `;
 
-export { ItemContainer, GridContainer };
+export const StyledButton = styled.button`
+  margin-left: 10px;
+  background-color: rgba(224, 224, 224, 0.3);
+  /* 반투명한 연회색 배경색 */
+  color: #ffffff;
+  /* 흰색 글자색 */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 7rem;
+  margin-left: 20px;
+`;

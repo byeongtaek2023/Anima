@@ -1,6 +1,6 @@
 import { getComment, getUserData, supabase } from 'api/supabase/supabase';
-import Comment from 'components/Comments';
-import CommentInput from 'components/CommentInput';
+import Comment from 'components/comment/Comments';
+import CommentInput from 'components/comment/CommentInput';
 import React, { useEffect, useState } from 'react';
 
 interface commentParams {

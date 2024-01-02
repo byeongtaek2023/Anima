@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './ImageSlideShow.style';
-
 import { AnimeItem } from './AniList';
-
-
 
 const ImageSlideshow = (props: { data: AnimeItem[] }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = props.data.slice(0, 5);
+  const images = props.data.slice(0, 6);
 
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 1));
@@ -25,7 +22,9 @@ const ImageSlideshow = (props: { data: AnimeItem[] }) => {
 
   return (
     <S.SlideshowContainer>
-      <S.PrevButton onClick={handlePrevClick}>Previous</S.PrevButton>
+      <S.PrevButton onClick={handlePrevClick}>
+        <S.LeftIcon>prev</S.LeftIcon>
+      </S.PrevButton>
       {images.map((image, index) => (
         <S.SlideshowImage
           key={index}
@@ -34,7 +33,9 @@ const ImageSlideshow = (props: { data: AnimeItem[] }) => {
           alt={image.name}
         />
       ))}
-      <S.NextButton onClick={handleNextClick}>Next</S.NextButton>
+      <S.NextButton onClick={handleNextClick}>
+        <S.RightIcon>next</S.RightIcon>
+      </S.NextButton>
     </S.SlideshowContainer>
   );
 };

@@ -120,23 +120,13 @@ const Register = () => {
         </>
 
         <div>
-          <p>소셜 로그인</p>
-          <ul>
-            <li>페이스북</li>
-            <li>트위터</li>
-            <li>카카오톡</li>
-            <li>구글</li>
-          </ul>
-
-          <div>
-            <St.RegisterButton
-              onClick={() => {
-                navigate('/login');
-              }}
-            >
-              🤔 이미 회원이신가요?
-            </St.RegisterButton>
-          </div>
+          <St.RegisterButton
+            onClick={() => {
+              navigate('/login');
+            }}
+          >
+            🤔 이미 회원이신가요?
+          </St.RegisterButton>
         </div>
       </St.Form>
     </St.Container>

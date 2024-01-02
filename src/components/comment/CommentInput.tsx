@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { commentInsert, supabase } from 'api/supabase/supabase';
+import * as St from './CommentInputStyle';
 
 interface CommentInputProps {
   getCommentList: () => Promise<void>;
 }
-
+interface CommentInputProps {
+  getCommentList: () => Promise<void>;
+}
 const CommentInput: React.FC<CommentInputProps> = ({ getCommentList }) => {
   const [text, setText] = useState<string>('');
-
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await commentInsert(text);
@@ -18,36 +19,19 @@ const CommentInput: React.FC<CommentInputProps> = ({ getCommentList }) => {
   };
 
   return (
-    <Container onSubmit={onSubmitHandler}>
-      <Textarea
+    <St.Container onSubmit={onSubmitHandler}>
+      <St.Textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="댓글을 남겨보세요"
         maxLength={1000}
-      ></Textarea>
-      <Footer>
+      ></St.Textarea>
+      <St.Footer>
         <Button text={'취소'} />
         <Button text={'작성'} />
-      </Footer>
-    </Container>
+      </St.Footer>
+    </St.Container>
   );
 };
 
 export default CommentInput;
-
-const Container = styled.form`
-  width: 600px;
-`;
-const Footer = styled.footer`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-`;
-const Textarea = styled.textarea`
-  box-sizing: border-box;
-  resize: none;
-  width: 100%;
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem 0.688rem;
-  height: 2.75rem;
-`;

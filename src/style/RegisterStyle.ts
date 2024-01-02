@@ -19,7 +19,7 @@ export const Form = styled.form`
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid;
   width: 500px;
-  height: 600px;
+  height: 500px;
   border-radius: 20px;
 `;
 
@@ -180,7 +180,7 @@ export const RegisterButton = styled.button`
   all: unset;
   color: #fff;
   font-size: 15px;
-  margin-top: 14px;
+  margin-top: 23px;
 
   &:hover {
     cursor: pointer;

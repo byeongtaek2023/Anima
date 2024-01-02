@@ -3,6 +3,7 @@ import { utubeApi } from 'xios/utube';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 import * as S from './Ost.Stlye';
+import ScrollToTop from 'components/scrolltop/ScrollToTop';
 
 const Ost = () => {
   const [utubeData, setUtubeData] = useState<any>([]);
@@ -19,7 +20,6 @@ const Ost = () => {
 
     getUtube();
   }, [searchTerm]);
-
 
   const handleItemClick = (videoId: string) => {
     setVideoStates((prevStates) => ({
@@ -74,13 +74,14 @@ const Ost = () => {
     <>
       <div>
         <h1>애니메이션 OST 선택</h1>
-        <br />
-        <button onClick={() => handleButtonClick('슬플때 듣는 애니메이션 ost')}>슬픔  </button>
-        <button onClick={() => handleButtonClick('신날때 듣는 애니메이션 ost')}>신남  </button>
-        <button onClick={() => handleButtonClick('운동할때 듣는 애니메이션 ost')}>운동 </button>
-        <button onClick={() => handleButtonClick('공부할때   듣는 애니메이션 ost')}>공부</button>
-        <button onClick={() => handleButtonClick('행복할때 듣는 애니메이션 ost')}>행복</button>
-        <button onClick={() => handleButtonClick('로맨스 애니메이션 ost')}>로맨스</button>
+        <S.ButtonWrapper>
+          <S.StyledButton onClick={() => handleButtonClick('슬플때 듣는 애니메이션 ost')}>슬픔 </S.StyledButton>
+          <S.StyledButton onClick={() => handleButtonClick('신날때 듣는 애니메이션 ost')}>신남 </S.StyledButton>
+          <S.StyledButton onClick={() => handleButtonClick('운동할때 듣는 애니메이션 ost')}>운동 </S.StyledButton>
+          <S.StyledButton onClick={() => handleButtonClick('공부할때   듣는 애니메이션 ost')}>공부</S.StyledButton>
+          <S.StyledButton onClick={() => handleButtonClick('행복할때 듣는 애니메이션 ost')}>행복</S.StyledButton>
+          <S.StyledButton onClick={() => handleButtonClick('로맨스 애니메이션 ost')}>로맨스</S.StyledButton>
+        </S.ButtonWrapper>
       </div>
       <br />
       <S.GridContainer>
@@ -117,6 +118,7 @@ const Ost = () => {
             </S.ItemContainer>
           ))}
         {isVideoPlaying && <div>{/* Additional content to display while video is playing, if needed */}</div>}
+        <ScrollToTop />
       </S.GridContainer>
     </>
   );
