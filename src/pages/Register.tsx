@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
 
+import { insertUserData, supabase } from '../api/supabase/supabase';
+import { StringDecoder } from 'string_decoder';
+
 import { registerClick } from 'api/supabase/supabase';
 
 const Register = () => {
@@ -29,12 +32,23 @@ const Register = () => {
   const registerClickHandler = async (email: string, password: string) => {
     try {
       const registerData = await registerClick(email, password);
-      console.log(registerData);
+
       if (registerData) {
         if (registerData.error) {
-          alert('형식에 맞게 작성해주세요.');
+          alert('회원가입 중 에러가 발생했습니다 ㅠ ㅁㅠ');
+
+          console.log(registerData.error);
+        } else {
+          return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
         }
       }
+
+      // const { data, error } = await supabase
+      // .from('users')
+      // .insert([
+      //   { some_column: 'someValue', other_column: 'otherValue' },
+      // ])
+      // .select()
 
       // if (email_regex.test(email) === false) {
       //   return alert('이메일 형식이 올바르지 않습니다.');

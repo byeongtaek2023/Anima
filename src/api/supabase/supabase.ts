@@ -50,12 +50,25 @@ export const registerClick = async (email: string, password: string) => {
       email,
       password
     });
-    // if (email_regex.test(email) === false) {
-    //   return alert('이메일 형식이 올바르지 않습니다.');
-    // } else if (data?.user) {
-    //   return console.log('회원가입 성공'), alert('회원가입 성공!'), navigate('/login');
-    // }
     return { data, error };
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const insertUserData = async (email: string) => {
+  try {
+    const { data, error } = await supabase
+      .from('users')
+      // 들어가야할 것 : nickname , email , userImage
+      .insert([
+        {
+          email: email,
+          user_image:
+            'https://mrzjkibhsbvwscaesazp.supabase.co/storage/v1/object/public/avatars/default%20image/avatar.png'
+        }
+      ])
+      .select();
   } catch (error) {
     console.error(error);
   }
