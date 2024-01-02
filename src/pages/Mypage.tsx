@@ -44,7 +44,6 @@ const Mypage = () => {
           <St.ImageWrapper>
             <St.ProfileImage></St.ProfileImage>
           </St.ImageWrapper>
-
           <St.NicknameWrapper>
             <St.UserNickname>{nickname}님</St.UserNickname>
           </St.NicknameWrapper>
@@ -52,18 +51,18 @@ const Mypage = () => {
             <St.Email> {email} </St.Email>
           </St.EmailWrapper>
           <St.CommentTitleBox>
-            <St.CommentTitle>My Comment List ♥️</St.CommentTitle>
+            <St.CommentTitle>My Comment List</St.CommentTitle>
           </St.CommentTitleBox>
         </St.ProfileBox>
+        {/* <div></div> */}
+        {/* <St.CommentWrapper>
+          <St.CommentAvatarBox>
+            <St.Avatar>아바타 이미지</St.Avatar>
+          </St.CommentAvatarBox>
+          <St.Nickname>닉네임</St.Nickname>
+          <St.Comment></St.Comment>
+        </St.CommentWrapper> */}
       </St.ProfileWrapper>
-
-      <St.CommentWrapper>
-        <St.CommentAvatarBox>
-          <St.Avatar>아바타 이미지</St.Avatar>
-        </St.CommentAvatarBox>
-        <St.Nickname>닉네임</St.Nickname>
-        <St.Comment></St.Comment>
-      </St.CommentWrapper>
     </>
 
     // 좋아요 남긴 기록 넣기
