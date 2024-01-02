@@ -2,54 +2,126 @@ import axios from 'axios';
 import { utubeApi } from 'xios/utube';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
-// import * as S from '../ost/OstStlye';
+import * as S from './Ost.Stlye';
 
 const Ost = () => {
-  const [utubeData, setUtubeDats] = useState<any>([]);
+  const [utubeData, setUtubeData] = useState<any>([]);
+  const [videoStates, setVideoStates] = useState<{ [videoId: string]: boolean }>({});
+  const [videoWidth, setVideoWidth] = useState<{ [videoId: string]: number }>({});
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('애니메이션 ost');
 
   useEffect(() => {
     async function getUtube() {
-      const date = await axios.get(`${utubeApi}&q=Animation ost`);
-      setUtubeDats(date.data.items);
+      const response = await axios.get(`${utubeApi}&q=${searchTerm}`);
+      setUtubeData(response.data.items);
     }
-    getUtube();
-  }, []);
 
-  console.log('데이터받아오니', utubeData);
-  // id.playlistId
-  // id.videoId
-  // snippet.title
-  // snippet.thumbnails.high
+    getUtube();
+  }, [searchTerm]);
+
+  // 애니메이션 제목?
+  // ost 모음
+  // 애니메이션 주제가
+  //
+
+  const handleItemClick = (videoId: string) => {
+    setVideoStates((prevStates) => ({
+      ...prevStates,
+      [videoId]: !prevStates[videoId] // Toggle the video state on each click
+    }));
+
+    setVideoWidth((prevWidths) => ({
+      ...prevWidths,
+      [videoId]: 0
+    }));
+
+    const interval = setInterval(() => {
+      setVideoWidth((prevWidths) => {
+        const currentWidth = prevWidths[videoId];
+        if (currentWidth < 500) {
+          return {
+            ...prevWidths,
+            [videoId]: currentWidth + 10
+          };
+        } else {
+          clearInterval(interval);
+          return {
+            ...prevWidths,
+            [videoId]: 500
+          };
+        }
+      });
+    }, 16);
+  };
+
+  const handleMouseLeave = (videoId: string) => {
+    setVideoStates((prevStates) => ({
+      ...prevStates,
+      [videoId]: false
+    }));
+  };
+
+  const handlePlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsVideoPlaying(false);
+  };
+
+  const handleButtonClick = (newSearchTerm: string) => {
+    setSearchTerm(newSearchTerm);
+  };
+
   return (
     <>
-      {utubeData &&
-        utubeData?.map((item: any) => {
-          return (
-            <div key={item.id}>
-              {/* // 비디오를 보여주는 부분 */}
-              <YouTube
-                //videoId : https://www.youtube.com/watch?v={videoId} 유튜브 링크의 끝부분에 있는 고유한 아이디
-                videoId={item.id.videoId}
-                //opts(옵션들): 플레이어의 크기나 다양한 플레이어 매개 변수를 사용할 수 있음.
-                //밑에서 더 설명하겠습니다.
-                opts={{
-                  width: '560',
-                  height: '315',
-                  playerVars: {
-                    autoplay: 0, //자동재생
-                    modestbranding: 1 // 컨트롤 바에 youtube 로고를 표시하지 않음
-                  }
-                }}
-                //이벤트 리스너
-                onEnd={(e) => {
-                  e.target.stopVideo(0);
-                }}
-              />
-              {/* // 이미지를 보여주는 부분 */}
-              <img src={item.snippet.thumbnails.high.url} alt="앨범이미지" />
-            </div>
-          );
-        })}
+      <div>
+        <h1>애니메이션 OST 선택</h1>
+        <br />
+        <button onClick={() => handleButtonClick('슬플때 듣는 애니메이션 ost')}>슬픔  </button>
+        <button onClick={() => handleButtonClick('신날때 듣는 애니메이션 ost')}>신남  </button>
+        <button onClick={() => handleButtonClick('운동할때 듣는 애니메이션 ost')}>운동 </button>
+        <button onClick={() => handleButtonClick('공부할때   듣는 애니메이션 ost')}>공부</button>
+        <button onClick={() => handleButtonClick('행복할때 듣는 애니메이션 ost')}>행복</button>
+        <button onClick={() => handleButtonClick('로맨스 애니메이션 ost')}>로맨스</button>
+      </div>
+      <br />
+      <S.GridContainer>
+        {utubeData &&
+          utubeData.map((item: any) => (
+            <S.ItemContainer
+              key={item.id}
+              onClick={() => handleItemClick(item.id.videoId)}
+              onMouseLeave={() => handleMouseLeave(item.id.videoId)}
+            >
+              <div>
+                {videoStates[item.id.videoId] ? (
+                  <YouTube
+                    videoId={item.id.videoId}
+                    opts={{
+                      width: `${videoWidth[item.id.videoId]}`,
+                      height: '315',
+                      playerVars: {
+                        rel: 0,
+                        modestbranding: 1,
+                        autoplay: 1
+                      }
+                    }}
+                    onEnd={(e) => {
+                      e.target.stopVideo(0);
+                    }}
+                    onPause={handlePause}
+                    onPlay={handlePlay}
+                  />
+                ) : (
+                  <img src={item.snippet.thumbnails.high.url} alt="앨범이미지" />
+                )}
+              </div>
+            </S.ItemContainer>
+          ))}
+        {isVideoPlaying && <div>{/* Additional content to display while video is playing, if needed */}</div>}
+      </S.GridContainer>
     </>
   );
 };
