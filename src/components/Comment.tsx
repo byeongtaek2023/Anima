@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Menu from '../image/kebab.png';
-import { confirmDeleteComment, confirmEditComment, getComment, getUserSession, supabase } from 'api/supabase/supabase';
+import { getComment, getUserSession, supabase } from 'api/supabase/supabase';
 
 interface commentParams {
   id: string;
@@ -15,14 +15,15 @@ interface EditComment {
   content: string;
 }
 
-const Comment = () => {
-  const [commentList, setCommentList] = useState<commentParams[]>([]);
+const Comment = ({ commentList }: { commentList: commentParams[] }) => {
   const [editComment, setEditComment] = useState<EditComment>({ id: '', content: '' });
+  const [isEditing, setIsEditing] = useState(false);
+  const [commentId, setCommentId] = useState(0);
+  console.log(editComment);
   const [currentUser, setCurrentUser] = useState<any>(null);
 
   useEffect(() => {
     checkCurrentUser();
-    getCommentList();
   }, []);
 
   const checkCurrentUser = async () => {
@@ -32,40 +33,30 @@ const Comment = () => {
     setCurrentUser(data);
   };
 
-  const getCommentList = async () => {
-    const commentListData = await getComment();
-    console.log(commentListData.data);
-    if (!commentListData.error && commentListData.data) {
-      setCommentList(commentListData.data);
-    } else {
-      setCommentList([]);
-    }
-  };
-
   // 댓글 편집 핸들러
   const handleEditChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditComment({ ...editComment, content: e.target.value });
   };
   // 댓글 수정 시작
-  const startEdit = (comment: commentParams) => {
-    setEditComment({ id: comment.id, content: comment.content });
+  const startEdit = () => {
+    setIsEditing(true);
   };
 
   // 댓글 수정 확인
-  const confirmEdit = async () => {
-    if (editComment.id && editComment.content.trim() !== '') {
+  const confirmEdit = async (id: string) => {
+    console.log(editComment);
+    if (id && editComment.content.trim() !== '') {
       // Supabase를 이용하여 댓글을 수정합니다.
-      const { data, error } = await supabase
-        .from('comments')
-        .update({ content: editComment.content })
-        .eq('id', editComment.id);
+      const { error } = await supabase.from('replies').update({ content: editComment.content }).eq('id', id);
 
       if (error) {
         window.alert('댓글 수정 중 오류가 발생했습니다: ' + error.message);
+        setIsEditing(false);
       } else {
         window.alert('댓글이 수정되었습니다.');
         setEditComment({ id: '', content: '' }); // 상태 초기화
-        getCommentList(); // 댓글 목록 갱신
+        // CommentList(); // 댓글 목록 갱신
+        setIsEditing(false);
       }
     }
   };
@@ -75,13 +66,13 @@ const Comment = () => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
       // Supabase를 이용하여 댓글을 삭제합니다.
-      const { error } = await supabase.from('comments').delete().eq('id', id);
+      const { error } = await supabase.from('replies').delete().eq('id', id);
 
       if (error) {
         window.alert('댓글 삭제 중 오류가 발생했습니다: ' + error.message);
       } else {
         window.alert('삭제 완료');
-        getCommentList(); // 댓글 목록 갱신
+        // getCommentList(); // 댓글 목록 갱신
       }
     }
   };
@@ -92,11 +83,12 @@ const Comment = () => {
         {commentList.map((item) => {
           return (
             <>
-              {editComment.id === item.id ? (
+              {/* 편집 모드인지 아닌지 상태 관리 */}
+              {isEditing ? (
                 // 편집 모드 UI
                 <div>
                   <input type="text" value={editComment.content} onChange={handleEditChange} />
-                  <button onClick={confirmEdit}>저장</button>
+                  <button onClick={() => confirmEdit(item.id)}>저장</button>
                   <button onClick={() => setEditComment({ id: '', content: '' })}>취소</button>
                 </div>
               ) : (
@@ -117,7 +109,7 @@ const Comment = () => {
                       <UserComment>{item.content}</UserComment>
                       {currentUser && (
                         <div>
-                          <button onClick={() => startEdit(item)}>수정</button>
+                          <button onClick={startEdit}>수정</button>
                           <button onClick={() => confirmDelete(item.id)}>삭제</button>
                         </div>
                       )}
