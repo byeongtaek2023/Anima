@@ -1,6 +1,7 @@
 import CommentInput from 'components/CommentInput';
 import * as S from './MainDetailModal.stlye';
 import Comment from 'components/Comment';
+import Replies from 'components/Replies';
 // import React, { useState } from 'react';
 
 // Modal.js
@@ -21,8 +22,7 @@ const Modal: React.FC<MainDetailModalProps> = ({ imageUrl, itemName, closeModal 
         </div>
         <S.ModalImage src={imageUrl} alt={itemName} />
         <p>{itemName}</p>
-        <CommentInput />
-        <Comment />
+        <Replies/>
       </S.ModalContent>
     </S.ModalOverlay>
   );
