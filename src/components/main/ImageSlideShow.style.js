@@ -1,14 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 
 export const SlideshowContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+position: relative;
+width: 100%;
+height: 100vh; // Use viewport height to fill the entire screen
+
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5)
   @media (min-width: 300px) {
-    height: 40vh;
+    height: 100vh;
   }
 
   @media (min-width: 1024px) {
@@ -30,7 +31,7 @@ export const SlideshowImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 30% 30%;
+  object-position: 30% 40%;
   position: absolute;
   top: 0;
   left: 0;

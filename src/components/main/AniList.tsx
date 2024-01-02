@@ -151,10 +151,10 @@ const AniList: React.FC = () => {
   };
 
   // "id","name","img" //hot re,re2는 형식 안맞음.
-
+// 컴포넌트화 해서 빼니까 css 망가짐 . css가 제일어렵네...
   return (
     <>
-      <ImageSlideshow />
+      <ImageSlideshow data={dbData.db} />
       <S.RenderWarp>
         <S.Container>
         {modalData.isOpen && (
