@@ -1,19 +1,22 @@
 import styled, { keyframes } from 'styled-components';
+import leftIcon from '../../image/left_btn2.png';
+import rightIcon from '../../image/right_btn.png';
 
 export const SlideshowContainer = styled.div`
-position: relative;
-width: 100%;
-height: 100vh; // Use viewport height to fill the entire screen
+  position: relative;
+  width: 100%;
+  height: 100vh; // Use viewport height to fill the entire screen
 
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5)
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   @media (min-width: 300px) {
-    height: 100vh;
+    height: 80vh;
   }
 
   @media (min-width: 1024px) {
-    height: 100vh;
+    height: 80vh;
+  }
 `;
 
 export const fadeInOut = keyframes`
@@ -29,9 +32,9 @@ export const fadeInOut = keyframes`
 
 export const SlideshowImage = styled.img`
   width: 100%;
-  height: 100%;
+  height: 80vh;
   object-fit: cover;
-  object-position: 30% 40%;
+  object-position: 20% 40%;
   position: absolute;
   top: 0;
   left: 0;
@@ -62,8 +65,8 @@ export const PrevButton = styled.button`
 
 export const NextButton = styled.button`
   position: absolute;
-  top: 50%;
-  right: 16px;
+  top: 53%;
+  right: 1.4%;
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
@@ -71,4 +74,35 @@ export const NextButton = styled.button`
   font-size: 18px;
   cursor: pointer;
   z-index: 2;
+`;
+
+export const LeftIcon = styled.span`
+  background: url(${leftIcon}) no-repeat 50%;
+  text-indent: -9999px;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -17px;
+  width: 50px;
+  height: 40px;
+  text-indent: -9999px;
+  font-size: 0;
+  background-size: 40px 60px;
+`;
+
+export const RightIcon = styled.span`
+  background: url(${rightIcon}) no-repeat 50%;
+  text-indent: -9999px;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -17px;
+  width: 50px;
+  height: 40px;
+  text-indent: -9999px;
+  font-size: 0;
+  background-size: 40px 60px;
+  border-radius: 80%;
 `;

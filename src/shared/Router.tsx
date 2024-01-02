@@ -22,8 +22,7 @@ const Router = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate replace to="/" />} />
-          <Route path="/a" element={<Ost />} />
-          <Route path="/b" element={<AniList />} />
+          <Route path="/ost" element={<Ost />} />
 
           <Route path="/mypage" element={<Mypage />} />
         </Route>

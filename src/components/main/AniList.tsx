@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import * as S from './AniList.style';
 import AniJson from 'xios/anijson';
 import ImageSlideshow from './ImageSlideShow';
-import ItemListContainer from './ItemListContainer'
+import ItemListContainer from './ItemListContainer';
 import Modal from './maindetail/MainDetailModal';
-
 
 export type AnimeItem = {
   id: number;
@@ -40,8 +39,8 @@ const AniList: React.FC = () => {
     isOpen: boolean;
     imageUrl: string;
     itemName: string;
-  }
-//모달데이터 
+  };
+  //모달데이터
   const [modalData, setModalData] = useState<ModalData>({ isOpen: false, imageUrl: '', itemName: '' });
 
   const openModal = (imageUrl: string, itemName: string) => {
@@ -51,7 +50,6 @@ const AniList: React.FC = () => {
   const closeModal = () => {
     setModalData({ isOpen: false, imageUrl: '', itemName: '' });
   };
-
 
   //랜더1번
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +72,7 @@ const AniList: React.FC = () => {
 
     return carouselItems.map((item) => (
       <S.ItemContainer key={item.id} onClick={() => openModal(item.img, item.name)}>
-        <S.Image src={item.img}  alt={item.name} />
+        <S.Image src={item.img} alt={item.name} />
         <p>{item.name}</p>
       </S.ItemContainer>
     ));
@@ -136,7 +134,6 @@ const AniList: React.FC = () => {
     ));
   };
 
-
   //랜더 리스트 동적//
   const renderList3 = (getData: () => AnimeItem[]) => {
     const data = getData();
@@ -144,39 +141,53 @@ const AniList: React.FC = () => {
       <S.Container key={item.id}>
         <h1>{item.name}</h1>
         <S.Container key={item.id}>
-          <ItemListContainer item={item} openModal={openModal}/>
+          <ItemListContainer item={item} openModal={openModal} />
         </S.Container>
       </S.Container>
     ));
   };
 
   // "id","name","img" //hot re,re2는 형식 안맞음.
-// 컴포넌트화 해서 빼니까 css 망가짐 . css가 제일어렵네...
+  // 컴포넌트화 해서 빼니까 css 망가짐 . css가 제일어렵네...
   return (
     <>
       <ImageSlideshow data={dbData.db} />
       <S.RenderWarp>
         <S.Container>
-        {modalData.isOpen && (
-        <Modal imageUrl={modalData.imageUrl} itemName={modalData.itemName} closeModal={closeModal} />
-      )}
-          <h1>DB Data</h1>
+          {modalData.isOpen && (
+            <Modal imageUrl={modalData.imageUrl} itemName={modalData.itemName} closeModal={closeModal} />
+          )}
+          <S.AniTitle>따끈따끈한 신작 애니</S.AniTitle>
           <S.ItemListContainer>
-            <S.LeftButton onClick={handlePrev}>Prev</S.LeftButton>
+            <S.LeftButton onClick={handlePrev}>
+              <S.LeftIcon>left</S.LeftIcon>
+            </S.LeftButton>
             {renderCarouselItems(() => dbData.db)}
-            <S.RightButton onClick={handleNext}>Next</S.RightButton>
+            <S.RightButton onClick={handleNext}>
+              <S.RightIcon>next</S.RightIcon>
+            </S.RightButton>
           </S.ItemListContainer>
-          <h1>Ranking Data</h1>
+          <S.AniTitle>월간 랭킹</S.AniTitle>
           <S.ItemListContainer>
-            <S.LeftButton onClick={handlePrev2}>Prev</S.LeftButton>
+            <S.LeftButton onClick={handlePrev2}>
+              <S.LeftIcon>left</S.LeftIcon>
+            </S.LeftButton>
             {renderCarouselItems2(() => dbData.ranking)}
-            <S.RightButton onClick={handleNext2}>Next</S.RightButton>
+            <S.RightButton onClick={handleNext2}>
+              {' '}
+              <S.RightIcon>next</S.RightIcon>
+            </S.RightButton>
           </S.ItemListContainer>
-          <h1>Hot data</h1>
+          <S.AniTitle>금주의 인기 애니</S.AniTitle>
           <S.ItemListContainer>
-            <S.LeftButton onClick={handlePrev3}>Prev</S.LeftButton>
+            <S.LeftButton onClick={handlePrev3}>
+              <S.LeftIcon>left</S.LeftIcon>
+            </S.LeftButton>
             {renderCarouselItems3(() => dbData.hot)}
-            <S.RightButton onClick={handleNext3}>Next</S.RightButton>
+            <S.RightButton onClick={handleNext3}>
+              {' '}
+              <S.RightIcon>next</S.RightIcon>
+            </S.RightButton>
           </S.ItemListContainer>
           {renderList3(() => dbData.recomend)}
           {renderList3(() => dbData.recomend2)}
