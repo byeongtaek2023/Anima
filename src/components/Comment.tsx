@@ -15,8 +15,7 @@ interface EditComment {
   content: string;
 }
 
-const Comment = () => {
-  const [commentList, setCommentList] = useState<commentParams[]>([]);
+const Comment = ({ commentList }: { commentList: commentParams[] }) => {
   const [editComment, setEditComment] = useState<EditComment>({ id: '', content: '' });
   const [isEditing, setIsEditing] = useState(false);
   const [commentId, setCommentId] = useState(0);
@@ -25,7 +24,6 @@ const Comment = () => {
 
   useEffect(() => {
     checkCurrentUser();
-    getCommentList();
   }, []);
 
   const checkCurrentUser = async () => {
@@ -33,16 +31,6 @@ const Comment = () => {
     const data = await getUserSession();
     console.log(data);
     setCurrentUser(data);
-  };
-
-  const getCommentList = async () => {
-    const commentListData = await getComment();
-    console.log(commentListData.data);
-    if (!commentListData.error && commentListData.data) {
-      setCommentList(commentListData.data);
-    } else {
-      setCommentList([]);
-    }
   };
 
   // 댓글 편집 핸들러
@@ -59,7 +47,7 @@ const Comment = () => {
     console.log(editComment);
     if (id && editComment.content.trim() !== '') {
       // Supabase를 이용하여 댓글을 수정합니다.
-      const { error } = await supabase.from('comments').update({ content: editComment.content }).eq('id', id);
+      const { error } = await supabase.from('replies').update({ content: editComment.content }).eq('id', id);
 
       if (error) {
         window.alert('댓글 수정 중 오류가 발생했습니다: ' + error.message);
@@ -67,7 +55,7 @@ const Comment = () => {
       } else {
         window.alert('댓글이 수정되었습니다.');
         setEditComment({ id: '', content: '' }); // 상태 초기화
-        getCommentList(); // 댓글 목록 갱신
+        // CommentList(); // 댓글 목록 갱신
         setIsEditing(false);
       }
     }
@@ -78,13 +66,13 @@ const Comment = () => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
       // Supabase를 이용하여 댓글을 삭제합니다.
-      const { error } = await supabase.from('comments').delete().eq('id', id);
+      const { error } = await supabase.from('replies').delete().eq('id', id);
 
       if (error) {
         window.alert('댓글 삭제 중 오류가 발생했습니다: ' + error.message);
       } else {
         window.alert('삭제 완료');
-        getCommentList(); // 댓글 목록 갱신
+        // getCommentList(); // 댓글 목록 갱신
       }
     }
   };
