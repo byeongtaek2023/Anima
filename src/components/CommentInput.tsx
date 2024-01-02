@@ -6,7 +6,7 @@ import { commentInsert, supabase } from 'api/supabase/supabase';
 const CommentInput = () => {
   const [text, setText] = useState<string>('');
   const [currentUser, setCurrentUser] = useState<any>(null);
-
+  // console.log(currentUser);
   useEffect(() => {
     checkCurrentUser();
   }, []);
@@ -14,15 +14,23 @@ const CommentInput = () => {
   //왜 로그인해도 세션이 널이지?ㅠㅠㅠㅠㅠㅠㅠㅠ
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
-    const { data } = await supabase.auth.getSession();
-    console.log(data);
-    setCurrentUser(data);
+    try {
+      const { data } = await supabase.auth.getSession();
+      // console.log(data);
+      setCurrentUser(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    await commentInsert(text);
-    window.location.reload();
+    try {
+      e.preventDefault();
+      // await commentInsert(text, nickname, userId);
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

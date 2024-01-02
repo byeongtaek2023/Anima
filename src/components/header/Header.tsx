@@ -12,25 +12,13 @@ const Header = () => {
     navigate(path);
   };
 
-  // 마운트 되었을 때 로그인 상태 true
-  // useEffect(() => {
-  //   getUserSession().then((result) => {
-  //     // 유저정보 있으면 true
-  //     // 없으면 false
-  //     if (result) {
-  //       console.log(result);
-  //       setIsLogin(true);
-  //     }
-  //   });
-  // }, []);
-
   useEffect(() => {
     const checkUserSession = async () => {
       try {
         const result = sessionStorage.getItem('user');
         setIsLogin(!!result);
       } catch (error) {
-        console.error('유저 세션를 확인하는데에 문제가 발생했습니다.', error);
+        console.error('유저 세션 확인 중 문제가 발생했습니다.', error);
       }
     };
 
@@ -43,49 +31,49 @@ const Header = () => {
     return storeUser ? JSON.parse(storeUser) : null;
   };
 
-  // // 로그아웃 될 때 유저 정보 지우기
-  // const clearUserSession = () => {
-  //   sessionStorage.removeItem('user');
-  // };
-
   return (
     <>
-      {/* 헤더와 푸터 CSS 작업은 LayoutStyle.ts 파일에서 하시면 됩니다*/}
-
       <St.HeaderWrapper>
-        <St.HeaderTitleLogo
-          onClick={() => {
-            handleNavigateAndReload('/');
-          }}
-        />
         <St.ButtonWrapper>
-          {Islogin ? (
-            <>
-              <St.LogoutBtn
-                onClick={() => {
-                  handleLogout();
-                  setIsLogin(false);
-                }}
-              >
-                Logout
-              </St.LogoutBtn>
-              <St.MypageBtn
-                onClick={() => {
-                  navigate('/mypage');
-                }}
-              >
-                마이페이지
-              </St.MypageBtn>
-            </>
-          ) : (
-            <St.LoginBtn
+          <St.TitleLogoWrapper>
+            <St.HeaderTitleLogo
               onClick={() => {
-                handleNavigateAndReload('/login');
+                handleNavigateAndReload('/home');
               }}
             >
-              Login
-            </St.LoginBtn>
-          )}
+              anima
+            </St.HeaderTitleLogo>
+          </St.TitleLogoWrapper>
+
+          <St.LoginAndMyPageBox>
+            {Islogin ? (
+              <>
+                <St.LogoutBtn
+                  onClick={() => {
+                    handleLogout();
+                    setIsLogin(false);
+                  }}
+                >
+                  Logout
+                </St.LogoutBtn>
+                <St.MypageBtn
+                  onClick={() => {
+                    navigate('/mypage');
+                  }}
+                >
+                  Mypage
+                </St.MypageBtn>
+              </>
+            ) : (
+              <St.LoginBtn
+                onClick={() => {
+                  handleNavigateAndReload('/login');
+                }}
+              >
+                Login
+              </St.LoginBtn>
+            )}
+          </St.LoginAndMyPageBox>
         </St.ButtonWrapper>
       </St.HeaderWrapper>
     </>

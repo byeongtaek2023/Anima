@@ -28,13 +28,13 @@ const Comment = () => {
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
     const data = await getUserSession();
-    console.log(data);
+    // console.log(data);
     setCurrentUser(data);
   };
 
   const getCommentList = async () => {
     const commentListData = await getComment();
-    console.log(commentListData.data);
+    // console.log(commentListData.data);
     if (!commentListData.error && commentListData.data) {
       setCommentList(commentListData.data);
     } else {

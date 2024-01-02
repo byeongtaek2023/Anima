@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createClient, PostgrestResponse, SupabaseClient } from '@supabase/supabase-js';
 import { Navigate } from 'react-router-dom';
-
+import { User } from '@supabase/supabase-js';
 // supabase를 사용할 때 필요한 부분은 언제든 꺼내 쓸 수 있게 이 파일에 정리했습니다.
 
 interface EditComment {
@@ -12,7 +12,6 @@ interface EditComment {
 // 세션 받아오기
 export const getUserSession = async () => {
   const { data, error } = await supabase.auth.getSession();
-  console.log('유저 세션 받아오기', data);
   if (error) throw error;
   return data;
 };
@@ -44,11 +43,18 @@ export const handleLogout = async () => {
 };
 
 // 회원가입
-export const registerClick = async (email: string, password: string) => {
+export const registerClick = async (email: string, password: string, nickname: string) => {
   try {
     const { data, error } = await supabase.auth.signUp({
       email,
-      password
+      password,
+      options: {
+        data: {
+          nickname: nickname,
+          user_image:
+            'https://mrzjkibhsbvwscaesazp.supabase.co/storage/v1/object/public/avatars/default%20image/avatar.png'
+        }
+      }
     });
     return { data, error };
   } catch (error) {
@@ -56,14 +62,14 @@ export const registerClick = async (email: string, password: string) => {
   }
 };
 
-export const insertUserData = async (email: string) => {
+export const insertUserData = async (email: string, nickname: string) => {
   try {
     const { data, error } = await supabase
       .from('users')
-      // 들어가야할 것 : nickname , email , userImage
       .insert([
         {
           email: email,
+          nickname,
           user_image:
             'https://mrzjkibhsbvwscaesazp.supabase.co/storage/v1/object/public/avatars/default%20image/avatar.png'
         }
@@ -75,10 +81,11 @@ export const insertUserData = async (email: string) => {
 };
 
 // comment 추가하는 부분 / commentInput.tsx
-export const commentInsert = async (text: string) => {
+export const commentInsert = async (text: string, nickname: string, userId: string) => {
   const { data, error } = await supabase.from('comments').insert({
-    nickname: 'nickname',
-    content: text
+    nickname,
+    content: text,
+    user_id: userId
   });
 };
 
