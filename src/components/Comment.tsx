@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Menu from '../image/kebab.png';
-import { confirmDeleteComment, confirmEditComment, getComment, getUserSession, supabase } from 'api/supabase/supabase';
+import { getComment, getUserSession, supabase } from 'api/supabase/supabase';
 
 interface commentParams {
   id: string;
