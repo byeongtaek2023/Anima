@@ -1,6 +1,6 @@
 import CommentInput from 'components/CommentInput';
 import * as S from './MainDetailModal.stlye';
-import Comment from 'components/Comment';
+import Comment from 'components/Comments';
 import Replies from 'components/Replies';
 // import React, { useState } from 'react';
 
