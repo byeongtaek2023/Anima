@@ -1,48 +1,64 @@
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.section`
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
+export const HeaderWrapper = styled.div`
+  position: fixed;
   z-index: 20;
-  background-color: #5199f5;
-  color: #fff;
-  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.05);
-
-  display: flex;
+  height: 60px;
   justify-content: center;
+  display: flex;
   align-items: center;
+  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+
+  @media (max-width: 1000px) {
+    align-items: center;
+  }
 `;
-
-export const HeaderTitleLogo = styled.button`
-  /* width: 70px;
-  height: 70px;
-  border-radius: 20px;
-  background-color: transparent;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+export const TitleLogoWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+export const HeaderTitleLogo = styled.a`
+  width: 200px;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 180px;
 
   &:hover {
     cursor: pointer;
+    color: #ff9d52;
   }
 `;
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled.nav`
+  margin: 0;
+  background-color: var(--background-color);
   position: fixed;
   display: flex;
   width: 100%;
   height: 70px;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.05);
   top: 0.5%;
   color: #fff;
   z-index: 20;
 `;
-
-export const LoginBtn = styled.button`
+export const LoginAndMyPageBox = styled.div`
+  display: flex;
+  width: 200px;
+  gap: 30px;
+  margin-right: 20px;
+`;
+export const LoginBtn = styled.div`
   all: unset;
   position: fixed;
   right: 2%;
@@ -53,9 +69,8 @@ export const LoginBtn = styled.button`
     cursor: pointer;
   }
 `;
-export const LogoutBtn = styled.button`
+export const LogoutBtn = styled.div`
   all: unset;
-  position: absolute;
   right: 10px;
   left: 90%;
   font-size: 20px;
@@ -65,11 +80,10 @@ export const LogoutBtn = styled.button`
     color: #ff9d52;
   }
 `;
-export const MypageBtn = styled.button`
+export const MypageBtn = styled.div`
   all: unset;
-  position: absolute;
-  left: 85%;
-  font-size: 16px;
+  left: 70%;
+  font-size: 20px;
 
   &:hover {
     cursor: pointer;

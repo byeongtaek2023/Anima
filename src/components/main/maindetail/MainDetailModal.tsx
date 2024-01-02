@@ -22,7 +22,7 @@ const Modal: React.FC<MainDetailModalProps> = ({ imageUrl, itemName, closeModal 
         </div>
         <S.ModalImage src={imageUrl} alt={itemName} />
         <p>{itemName}</p>
-        <Replies/>
+        <Replies />
       </S.ModalContent>
     </S.ModalOverlay>
   );
