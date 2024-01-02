@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Comment = ({ item, getCommentList }: any) => {
+  // any 쓰믄 안되는데 급해서 썻읍니다.. 죄송함니다
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState(item.content);
   const [currentUser, setCurrentUser] = useState<any>(null);
@@ -14,7 +15,6 @@ const Comment = ({ item, getCommentList }: any) => {
   const checkCurrentUser = async () => {
     // 현재 로그인된 사용자의 정보를 가져옵니다.
     const data = await getUserSession();
-
     setCurrentUser(data.session);
   };
 

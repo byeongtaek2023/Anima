@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import { commentInsert, supabase } from 'api/supabase/supabase';
@@ -15,8 +15,6 @@ const CommentInput: React.FC<CommentInputProps> = ({ getCommentList }) => {
     await commentInsert(text);
     setText('');
     getCommentList();
-
-    // window.location.reload();
   };
 
   return (
