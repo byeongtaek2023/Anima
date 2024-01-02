@@ -3,7 +3,6 @@ import * as St from '../style/RegisterStyle';
 import { useNavigate } from 'react-router-dom';
 
 import { insertUserData, supabase } from '../api/supabase/supabase';
-import { StringDecoder } from 'string_decoder';
 
 import { registerClick } from 'api/supabase/supabase';
 
@@ -31,7 +30,7 @@ const Register = () => {
     }
   };
   // 회원가입 버튼 눌렀을 때, supabase.auth에 저장
-  const registerClickHandler = async (email: string, password: string) => {
+  const registerClickHandler = async (email: string, password: string, nickname: string) => {
     try {
       const registerData = await registerClick(email, password, nickname);
 
@@ -113,7 +112,7 @@ const Register = () => {
         <>
           <St.LoginButton
             onClick={() => {
-              registerClickHandler(email, password);
+              registerClickHandler(email, password, nickname);
             }}
           >
             회원가입
@@ -121,23 +120,13 @@ const Register = () => {
         </>
 
         <div>
-          <p>소셜 로그인</p>
-          <ul>
-            <li>페이스북</li>
-            <li>트위터</li>
-            <li>카카오톡</li>
-            <li>구글</li>
-          </ul>
-
-          <div>
-            <St.RegisterButton
-              onClick={() => {
-                navigate('/login');
-              }}
-            >
-              🤔 이미 회원이신가요?
-            </St.RegisterButton>
-          </div>
+          <St.RegisterButton
+            onClick={() => {
+              navigate('/login');
+            }}
+          >
+            🤔 이미 회원이신가요?
+          </St.RegisterButton>
         </div>
       </St.Form>
     </St.Container>

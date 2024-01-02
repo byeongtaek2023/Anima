@@ -1,6 +1,6 @@
-import { getComment, getUserData } from 'api/supabase/supabase';
-import Comment from 'components/Comment';
-import CommentInput from 'components/CommentInput';
+import { getComment, getUserData, supabase } from 'api/supabase/supabase';
+import Comment from 'components/comment/Comments';
+import CommentInput from 'components/comment/CommentInput';
 import React, { useEffect, useState } from 'react';
 
 interface commentParams {
@@ -16,6 +16,7 @@ const Replies = () => {
   useEffect(() => {
     getUserData();
     getCommentList();
+    getUesrNickname();
   }, []);
 
   const getCommentList = async () => {
@@ -23,15 +24,21 @@ const Replies = () => {
     console.log(commentListData.data);
     if (!commentListData.error && commentListData.data) {
       setCommentList(commentListData.data);
+      console.log(commentListData);
     } else {
       setCommentList([]);
     }
   };
 
+  const getUesrNickname = async () => {
+    let { data: users } = await supabase.from('users').select('nickname');
+    console.log(users);
+  };
+
   return (
     <div>
       <CommentInput getCommentList={getCommentList} />
-      <Comment commentList={commentList} />
+      <Comment commentList={commentList} getCommentList={getCommentList} />
     </div>
   );
 };

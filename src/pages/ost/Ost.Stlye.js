@@ -13,7 +13,8 @@ export const ItemContainer = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 270px; /* Adjust the gap between items as needed */
+  gap: 155px; /* Adjust the gap between items as needed */
+  overflow-x: hidden;
 `;
 
 export const StyledButton = styled.button`
@@ -26,4 +27,9 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 7rem;
+  margin-left: 20px;
 `;

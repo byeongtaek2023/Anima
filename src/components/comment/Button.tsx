@@ -16,5 +16,11 @@ const Buttons = styled.button`
   color: #fff;
   background-color: transparent;
   padding: 0.5rem;
-  cursor: pointer;
+  font-size: 16px;
+  font-family: 'ONE-Mobile-Title';
+
+  &:hover {
+    cursor: pointer;
+    color: #ff683b;
+  }
 `;
