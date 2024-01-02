@@ -79,16 +79,28 @@ export const insertUserData = async (email: string, nickname: string) => {
     console.error(error);
   }
 };
+///*** 유저 이메일 가져오는 로직 */
+let email = '';
+const user = () => {
+  const tokenString = localStorage.getItem('sb-mrzjkibhsbvwscaesazp-auth-token');
+  if (tokenString) {
+    // 문자열을 JSON 객체로 변환합니다.
+    const tokenObj = JSON.parse(tokenString);
+    // `user` 객체에서 `email` 속성을 찾습니다.
+    email = tokenObj?.user?.email;
+    return email;
+  }
+};
+user();
 
 // comment 추가하는 부분 / commentInput.tsx
 export const commentInsert = async (text: string) => {
-  console.log(text);
   const session = localStorage.getItem('sb-mrzjkibhsbvwscaesazp-auth-token');
 
   if (session) {
     const parseSession = JSON.parse(session);
     const { data, error } = await supabase.from('replies').insert({
-      nickname: 'nickname',
+      nickname: email,
       content: text,
       user_id: parseSession?.user?.id
     });
