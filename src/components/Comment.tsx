@@ -26,7 +26,6 @@ const Comment = ({ item, currentUser, getCommentList }: any) => {
   const confirmDelete = async (id: string) => {
     const ok = window.confirm('코멘트를 지우시겠습니까?');
     if (ok) {
-      // Supabase를 이용하여 댓글을 삭제합니다.
       const { error } = await supabase.from('replies').delete().eq('id', id);
 
       if (error) {
