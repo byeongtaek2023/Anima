@@ -86,10 +86,6 @@ const Container = styled.li`
   padding: 10px;
   position: relative;
 `;
-const MenuWrapper = styled.div`
-  position: absolute;
-  right: 1000px;
-`;
 
 const UserWrapper = styled.div`
   display: flex;
