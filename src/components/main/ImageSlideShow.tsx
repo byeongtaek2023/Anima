@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './ImageSlideShow.style';
-import karinaImg from '../../assets/pre/karina.jpg';
-import WinterImg from '../../assets/pre/winter.jpg';
-import JijelImg from '../../assets/pre/Jijel.jpg';
-import NingNingImg from '../../assets/pre/NingNing.jpg';
 
-const images = [
-  { image: karinaImg, alt: 'Karina' },
-  { image: WinterImg, alt: 'Winter' },
-  { image: JijelImg, alt: 'Jijle' },
-  { image: NingNingImg, alt: 'NingNing' }
-];
+import { AnimeItem } from './AniList';
 
-const ImageSlideshow = () => {
+
+
+const ImageSlideshow = (props: { data: AnimeItem[] }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = props.data.slice(0, 5);
 
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 1));
@@ -35,9 +29,9 @@ const ImageSlideshow = () => {
       {images.map((image, index) => (
         <S.SlideshowImage
           key={index}
-          src={image.image}
+          src={image.img}
           className={index === currentImageIndex ? 'active' : ''}
-          alt={image.alt}
+          alt={image.name}
         />
       ))}
       <S.NextButton onClick={handleNextClick}>Next</S.NextButton>

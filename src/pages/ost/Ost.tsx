@@ -20,10 +20,6 @@ const Ost = () => {
     getUtube();
   }, [searchTerm]);
 
-  // 애니메이션 제목?
-  // ost 모음
-  // 애니메이션 주제가
-  //
 
   const handleItemClick = (videoId: string) => {
     setVideoStates((prevStates) => ({
