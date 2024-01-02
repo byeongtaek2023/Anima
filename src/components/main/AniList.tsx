@@ -41,14 +41,18 @@ const AniList: React.FC = () => {
     imageUrl: string;
     itemName: string;
   }
-
+//모달데이터 
   const [modalData, setModalData] = useState<ModalData>({ isOpen: false, imageUrl: '', itemName: '' });
+
   const openModal = (imageUrl: string, itemName: string) => {
     setModalData({ isOpen: true, imageUrl, itemName });
   };
+
   const closeModal = () => {
     setModalData({ isOpen: false, imageUrl: '', itemName: '' });
   };
+
+
   //랜더1번
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalImagesToShow = 5;
@@ -133,7 +137,7 @@ const AniList: React.FC = () => {
   };
 
 
-  
+  //랜더 리스트 동적//
   const renderList3 = (getData: () => AnimeItem[]) => {
     const data = getData();
     return data.map((item, index) => (
