@@ -1,49 +1,41 @@
-# Getting Started with Create React App
+# Amina
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+애니메이션을 좋아하는 순수한 '영혼'들을 위한 애니메이션 추천 사이트(라틴어 Anima - 영혼)
 
-## Available Scripts
+## Project Type
 
-In the project directory, you can run:
+팀 프로젝트
 
-### `yarn start`
+### Project Members
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+시병택, 박주원, 김지예, 천민규 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Technologies assigned to each individual
 
-### `yarn test`
+- 시병택   애니메이션 JSON 메인페이지에 불러와 넣기
+         메인페이지에 주제별로 애니메이션 분류해서 넣기
+         카테고리 ost (디테일 페이지) //유튜브 api 따옴
+- 박주원   supabase 를 이용한 로그인 / 회원가입 / 전체적인 페이지 CSS 
+- 김지예   supabase 를 이용한 CRUD /
+- 천민규 - 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Duration
 
-### `yarn build`
+2023.12.26 ~ 2024. 1.3 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development Environment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. React
+2. json server
+3. Styled-components
+4. React Router Dom
+5. SubaBase
+6. YOUTUBE API 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# Anima
-# Anima
-# Anima
+1. Build UI
+2. View home page
+3. Login Page
+4. Ost Page
